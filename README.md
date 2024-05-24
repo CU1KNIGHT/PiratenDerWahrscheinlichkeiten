@@ -5,3 +5,6 @@
 
 # Setup
 * Download Project ```git clone https://github.com/CU1KNIGHT/PiratenDerWahrscheinlichkeiten.git ```
+
+# Nextcloud
+https://datashare.tu-dresden.de/apps/files/?dir=/Shared/DDI_MeDida_2024_gr4&fileid=56219083
