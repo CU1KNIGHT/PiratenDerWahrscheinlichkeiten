@@ -32,10 +32,10 @@ expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 237.0
-offset_top = -72.0
-offset_right = 1124.0
-offset_bottom = 742.0
+offset_left = 286.0
+offset_top = -10.0
+offset_right = 1103.0
+offset_bottom = 740.0
 texture = ExtResource("6_rpq23")
 expand_mode = 1
 
