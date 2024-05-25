@@ -1,0 +1,5 @@
+Ein Laplace-Versuch ist wie ein faires Spiel:
+1.	Grundlegendes Verständnis: Ein Laplace-Versuch ist ein Experiment, bei dem jedes mögliche Ergebnis genauso wahrscheinlich ist wie jedes andere. Es wird oft mit einem fairen Würfel oder einer fairen Münze durchgeführt.
+2.	Anzahl der möglichen Ergebnisse: Die Anzahl der möglichen Ergebnisse in einem Laplace-Versuch entspricht der Anzahl der verschiedenen möglichen Ausgänge des Experiments. Zum Beispiel hat ein fairer Würfel 6 mögliche Ergebnisse (die Zahlen 1 bis 6), und eine faire Münze hat 2 mögliche Ergebnisse (Kopf oder Zahl).
+3.	Berechnung der Wahrscheinlichkeit: In einem Laplace-Versuch kann die Wahrscheinlichkeit eines Ereignisses leicht berechnet werden, indem man die Anzahl der günstigen Ergebnisse (die dem Ereignis entsprechen) durch die Anzahl aller möglichen Ergebnisse teilt.
+4.	Anwendung auf andere Szenarien: Laplace-Versuche können auf verschiedene Situationen angewendet werden, wie das Ziehen von Kugeln aus einem Beutel oder das Würfeln eines Würfels. Solange jedes Ergebnis gleich wahrscheinlich ist, kann man die Wahrscheinlichkeiten leicht berechnen.
