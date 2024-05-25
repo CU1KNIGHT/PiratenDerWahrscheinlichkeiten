@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7v4ke8jqwgm2"]
+[gd_scene load_steps=7 format=3 uid="uid://7v4ke8jqwgm2"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_aeec7"]
+[ext_resource type="Texture2D" uid="uid://ffnr8k1lundn" path="res://Icons/buttons menu-03 - play.svg" id="2_pabmm"]
+[ext_resource type="Texture2D" uid="uid://cstfd0fu63ppx" path="res://Icons/buttons menu-02 - compass.svg" id="3_eexsl"]
+[ext_resource type="Texture2D" uid="uid://0iotuqmh0s8p" path="res://Icons/buttons menu-04 - cross.svg" id="4_foyi7"]
+[ext_resource type="Texture2D" uid="uid://b8hd65sknowsw" path="res://menu ui design/menu ui design-02 - hintergrund.svg" id="5_5xjb5"]
+[ext_resource type="Texture2D" uid="uid://dndabeffhuttw" path="res://menu ui design/menu ui design-03 - inseln.svg" id="6_rpq23"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,26 +16,72 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aeec7")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Hintergrund" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -178.0
+offset_right = 177.0
+offset_bottom = 674.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_5xjb5")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 237.0
+offset_top = -72.0
+offset_right = 1124.0
+offset_bottom = 742.0
+texture = ExtResource("6_rpq23")
+expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="Play" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 343.0
+offset_right = -818.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("2_pabmm")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Spielen"
+[node name="Quit" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 1022.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 130.0
+grow_horizontal = 2
+icon = ExtResource("4_foyi7")
+text_overrun_behavior = 4
+icon_alignment = 1
+expand_icon = true
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Optionen"
+[node name="Options" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 130.0
+offset_bottom = 130.0
+icon = ExtResource("3_eexsl")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Schließen"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_spielen_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_optionen_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_schließen_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_optionen_pressed"]

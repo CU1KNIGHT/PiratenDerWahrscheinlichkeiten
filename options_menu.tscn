@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctisrxu8fgusk"]
+[gd_scene load_steps=6 format=3 uid="uid://ctisrxu8fgusk"]
 
 [ext_resource type="Script" path="res://options_menu.gd" id="1_1so1n"]
+[ext_resource type="Texture2D" uid="uid://b8hd65sknowsw" path="res://menu ui design/menu ui design-02 - hintergrund.svg" id="2_wuada"]
+[ext_resource type="Texture2D" uid="uid://dndabeffhuttw" path="res://menu ui design/menu ui design-03 - inseln.svg" id="3_y6dl0"]
+[ext_resource type="Texture2D" uid="uid://cscowvd2utnyh" path="res://menu ui design/back.svg" id="4_4ufhq"]
+[ext_resource type="Texture2D" uid="uid://bfjn64twmxxjl" path="res://menu ui design/audio.svg" id="5_dpb8s"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,20 +15,64 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1so1n")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Hintergrund" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -134.0
+offset_right = 180.0
+offset_bottom = 718.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wuada")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Inseln" type="TextureRect" parent="."]
 layout_mode = 2
+offset_left = 679.0
+offset_top = 201.0
+offset_right = 1129.0
+offset_bottom = 468.0
+texture = ExtResource("3_y6dl0")
+expand_mode = 1
 
-[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Läutstärke"
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.0
+offset_top = 176.0
+offset_right = 361.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Zurück"
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 150.0
+offset_bottom = 150.0
+icon = ExtResource("4_4ufhq")
+vertical_icon_alignment = 0
+expand_icon = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[node name="Volume Symbol" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = -162.0
+offset_right = 207.0
+offset_bottom = -95.0
+grow_vertical = 0
+texture = ExtResource("5_dpb8s")
+expand_mode = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
