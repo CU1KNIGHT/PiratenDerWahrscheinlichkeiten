@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ddib2lgerhd0s"
+
+[deps]
+
+files=["res://resources/Game-Task-and-Questions/Tasks/Q2.subject.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.title.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.question.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.options.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.richtige Antwort.translation"]
+
+source_file="res://resources/Game-Task-and-Questions/Tasks/Q2.csv"
+dest_files=["res://resources/Game-Task-and-Questions/Tasks/Q2.subject.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.title.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.question.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.options.translation", "res://resources/Game-Task-and-Questions/Tasks/Q2.richtige Antwort.translation"]
+
+[params]
+
+compress=true
+delimiter=0
