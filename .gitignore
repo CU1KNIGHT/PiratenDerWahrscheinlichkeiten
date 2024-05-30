@@ -27,3 +27,5 @@ user://
 .DS_Store # macOS desktop services store
 Thumbs.db # Windows thumbnail cache
 *.translation
+#tmp files
+*.tmp
