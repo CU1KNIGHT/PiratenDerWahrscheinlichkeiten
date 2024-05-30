@@ -30,7 +30,7 @@ grow_vertical = 2
 texture = ExtResource("5_5xjb5")
 expand_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Inseln" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 286.0
 offset_top = -10.0
