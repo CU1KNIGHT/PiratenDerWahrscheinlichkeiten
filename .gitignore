@@ -1,2 +1,28 @@
 # Godot 4+ specific ignores
 .godot/
+# Godot-specific ignores
+.import/
+export_presets.cfg
+*.import
+*.autosave
+
+# Logs
+logs/
+
+# Temporary files
+temp/
+tmp/
+
+# User-specific data
+user://
+
+# Mono-specific files (if using C#)
+.mono/
+*.pdb
+
+# IDE-specific settings
+*.user
+
+# OS-specific ignores
+.DS_Store # macOS desktop services store
+Thumbs.db # Windows thumbnail cache
