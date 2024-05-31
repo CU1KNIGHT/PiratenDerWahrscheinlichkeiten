@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b2dcbyg2qnpgx"
+
+[deps]
+
+files=["res://Q1.subject.translation", "res://Q1.title.translation", "res://Q1.question.translation", "res://Q1.options.translation", "res://Q1.richtige Antwort.translation"]
+
+source_file="res://Q1.csv"
+dest_files=["res://Q1.subject.translation", "res://Q1.title.translation", "res://Q1.question.translation", "res://Q1.options.translation", "res://Q1.richtige Antwort.translation"]
+
+[params]
+
+compress=true
+delimiter=0

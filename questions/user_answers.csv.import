@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bo6oa3dv1s0ig"
+
+[deps]
+
+files=["res://user_answers.Eine Gruppe von Piraten trifft sich.translation", "res://user_answers. um zu entscheiden.translation", "res://user_answers. wer das nächste Schiff steuern darf. Sie entscheiden sich für einen Zufallsexperiment mit einer Münze. Der Kapitän wirft eine Münze und entscheidet basierend auf dem Ergebnis.translation", "res://user_answers. wer das Schiff steuern darf. Kopf bedeutet.translation", "res://user_answers. dass der erfahrene Navigator das Schiff steuern wird.translation", "res://user_answers. während Zahl bedeutet.translation", "res://user_answers. dass der aufgeregte junge Pirat das Steuer übernehmen darf. 1.	Was ist die Wahrscheinlichkeit.translation", "res://user_answers. dass der erfahrene Navigator das Schiff steuern wird?.translation", "res://user_answers.0.5.translation", "res://user_answers.dxfha.translation"]
+
+source_file="res://user_answers.csv"
+dest_files=["res://user_answers.Eine Gruppe von Piraten trifft sich.translation", "res://user_answers. um zu entscheiden.translation", "res://user_answers. wer das nächste Schiff steuern darf. Sie entscheiden sich für einen Zufallsexperiment mit einer Münze. Der Kapitän wirft eine Münze und entscheidet basierend auf dem Ergebnis.translation", "res://user_answers. wer das Schiff steuern darf. Kopf bedeutet.translation", "res://user_answers. dass der erfahrene Navigator das Schiff steuern wird.translation", "res://user_answers. während Zahl bedeutet.translation", "res://user_answers. dass der aufgeregte junge Pirat das Steuer übernehmen darf. 1.	Was ist die Wahrscheinlichkeit.translation", "res://user_answers. dass der erfahrene Navigator das Schiff steuern wird?.translation", "res://user_answers.0.5.translation", "res://user_answers.dxfha.translation"]
+
+[params]
+
+compress=true
+delimiter=0
