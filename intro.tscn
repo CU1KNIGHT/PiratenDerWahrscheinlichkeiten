@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7rr1kv2tlwku"]
 
-[ext_resource type="Texture2D" uid="uid://c8yyp6d8rmyep" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://b42pii6iv8gtn" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
+[ext_resource type="Texture2D" uid="uid://pigap6s42ujq" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
 [ext_resource type="Script" path="res://TextureButton.gd" id="3_drdil"]
 
 [node name="intro" type="Control"]
@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Hintergrund" type="TextureRect" parent="."]
+layout_mode = 0
 offset_top = -20.0
 offset_right = 1152.0
 offset_bottom = 902.0
@@ -20,6 +21,7 @@ texture = ExtResource("2_45vkv")
 expand_mode = 1
 
 [node name="Sprechblase" type="Label" parent="."]
+layout_mode = 0
 offset_left = 279.0
 offset_top = 59.0
 offset_right = 976.0
@@ -31,6 +33,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 578.0
 offset_top = 463.0
 offset_right = 1150.0
@@ -41,6 +44,7 @@ ignore_texture_size = true
 script = ExtResource("3_drdil")
 
 [node name="Schrift_Button" type="Label" parent="."]
+layout_mode = 0
 offset_left = 646.0
 offset_top = 514.0
 offset_right = 1080.0
