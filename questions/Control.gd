@@ -140,3 +140,9 @@ func show_score():
 	$Control/VBoxContainer/AnswerInput.hide()
 	$Control/VBoxContainer/SubmitButton.hide()
 
+
+
+func _on_quit_button_button_down():
+	get_tree().quit()  
+	# if user wants turn to main game scene
+	# get_tree().change_scene("res://path_to_your_scene.tscn")

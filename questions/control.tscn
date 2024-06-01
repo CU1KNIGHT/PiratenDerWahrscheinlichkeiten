@@ -63,3 +63,12 @@ placeholder_text = "write here"
 [node name="SubmitButton" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "Submit Answer"
+
+[node name="Quit Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 963.0
+offset_top = -31.0
+offset_right = 995.0
+text = "x"
+
+[connection signal="button_down" from="Control/Quit Button" to="." method="_on_quit_button_button_down"]
