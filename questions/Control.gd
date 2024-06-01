@@ -1,5 +1,6 @@
 extends Node2D
 
+var island_names_mapper_file_path = "res://islandsMap.json"
 var questions_file_path = "res://Q3.csv"
 var answers_file_path = "res://user_answers.csv"
 var column_mapping_file_path = "res://column_mapping.json"
@@ -8,22 +9,34 @@ var current_question = {}
 var total_correct = 0
 var asked_indices = []
 var column_mapping = {}
-
+var islands_subject_map = {}
+var current_island = ""
 func _ready():
 	# Seed the random number generator
 	randomize()
-
+	TranslationServer.set_locale("de")
 	# Load column mappings from file
 	load_column_mapping(column_mapping_file_path)
 	
 	# Load questions from file
 	load_questions_from_file(questions_file_path)
-	
+		
+	# Load islands-subject mapper tions from file
+	load_islands_names(island_names_mapper_file_path)
 	# Connect the button press signal to the handler function
 	$Control/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
 	
 	# Select and display the first question
 	select_random_question()
+func load_islands_names(file_path):
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	if file:
+		var json = file.get_as_text()
+		column_mapping = JSON.parse_string(json)
+		file.close()
+	else:
+		print("island names mapper file not found!")
+		
 func load_column_mapping(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file:
@@ -49,7 +62,6 @@ func load_questions_from_file(file_path):
 				#
 				"title": data[header.find(column_mapping["title"])],
 				"question_text": data[header.find(column_mapping["question_text"])],
-				#"question_text": data[3],
 				"options": data[header.find(column_mapping["options"])].substr(1, data[header.find(column_mapping["options"])].length() - 2).split("; "),
 				"correct_answer": data[header.find(column_mapping["correct_answer"])]
 			}
@@ -65,19 +77,19 @@ func parse_csv_line(line: String) -> Array:
 	var in_quotes = false
 	var i = 0
 	while i < line.length():
-		var char = line[i]
-		if char == '"' and (i == 0 or line[i - 1] != '\\'):
+		var charachter = line[i]
+		if charachter == '"' and (i == 0 or line[i - 1] != '\\'):
 			if in_quotes and i + 1 < line.length() and line[i + 1] == '"':
 			# Handle escaped quotes within quoted text
 				current += '"'
 				i += 1  # Skip the next quote
 			else:
 				in_quotes = not in_quotes
-		elif char == ',' and not in_quotes:
+		elif charachter == ',' and not in_quotes:
 			result.append(current.strip_edges())
 			current = ""
 		else:
-			current += char
+			current += charachter
 		i += 1
 	result.append(current.strip_edges())
 	return result
@@ -121,22 +133,25 @@ func _on_SubmitButton_pressed():
 func check_answer(user_answer, correct_answer):
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
-func save_answer(question_id, question_text, correct_answer, user_answer, file_path):
-	var file = FileAccess.open(file_path, FileAccess.WRITE)
+func save_answer(question_id: String, question_text: String, correct_answer: String, user_answer: String, file_path: String):
+	var file: FileAccess
+	if FileAccess.file_exists(file_path):
+		file = FileAccess.open(file_path, FileAccess.WRITE_READ)
+		file.seek_end()  # Move the file cursor to the end of the file
+	else:
+		file = FileAccess.open(file_path, FileAccess.WRITE)
+	
 	if file:
-		var existing_content = ""
-		if FileAccess.file_exists(file_path):
-			existing_content = FileAccess.open(file_path, FileAccess.READ).get_as_text()
-
-		file.store_string(existing_content + question_id + "," + question_text + "," + correct_answer + "," + user_answer + "\n")
+		var entry = question_id + "," + question_text + "," + correct_answer + "," + user_answer + "\n"
+		file.store_string(entry)
 		file.close()
 	else:
 		print("Failed to open file for writing.")
-		
+
 func show_score():
 	var total_questions = questions.size()
 	var score_text = "You answered " + str(total_correct) + " out of " + str(total_questions) + " questions correctly."
-	#$Control/VBoxContainer/QuestionLabel1.text = score_text
+	$Control/VBoxContainer/QuestionLabel1.text = score_text
 	$Control/VBoxContainer/AnswerInput.hide()
 	$Control/VBoxContainer/SubmitButton.hide()
 
