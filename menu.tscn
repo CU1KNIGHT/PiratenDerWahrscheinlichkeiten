@@ -1,11 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://i2hyi4f1k7mi"]
+[gd_scene load_steps=10 format=3 uid="uid://i2hyi4f1k7mi"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://c72fkghc05my1" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
-[ext_resource type="Texture2D" uid="uid://b7wm7hru1b14i" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://ryc83j5qjltv" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://mrqn4cwknpup" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="Texture2D" uid="uid://bvmmdrbh7asew" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Texture2D" uid="uid://b06g3kw2qhp6x" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
+[ext_resource type="Texture2D" uid="uid://b8dapd4rfnuhm" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b08wr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74qox"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -51,6 +60,7 @@ offset_right = -818.0
 offset_bottom = -30.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxLine_6nmb8")
 icon = ExtResource("3_x70r4")
 icon_alignment = 1
 expand_icon = true
@@ -65,6 +75,7 @@ offset_top = 30.0
 offset_right = -30.0
 offset_bottom = 130.0
 grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b08wr")
 icon = ExtResource("4_oi6gm")
 text_overrun_behavior = 4
 icon_alignment = 1
@@ -78,6 +89,7 @@ offset_left = 30.0
 offset_top = 30.0
 offset_right = 130.0
 offset_bottom = 130.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_74qox")
 icon = ExtResource("6_7vh5f")
 icon_alignment = 1
 expand_icon = true

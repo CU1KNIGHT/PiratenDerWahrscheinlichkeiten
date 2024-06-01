@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7rr1kv2tlwku"]
 
-[ext_resource type="Texture2D" uid="uid://dbily5iqvop27" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://dmvmdsabpral2" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
+[ext_resource type="Texture2D" uid="uid://pigap6s42ujq" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
 [ext_resource type="Script" path="res://TextureButton.gd" id="3_drdil"]
 
 [node name="intro" type="Control"]
