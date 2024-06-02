@@ -1,0 +1,8 @@
+{
+  	"ID": "ID",
+	"subject": "subject",
+	"title": "title",
+	"question_text": "question",
+	"options": "options",
+	"correct_answer": "richtige Antwort"
+}
