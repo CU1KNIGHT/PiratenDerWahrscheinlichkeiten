@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgr4bdcst76ko"]
+
+[ext_resource type="Script" path="res://Scripts/wascheinlichkeiten.gd" id="1_bpa32"]
+[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="1_lvxhd"]
+[ext_resource type="Texture2D" uid="uid://c24uevncj57x8" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_83y2s"]
+[ext_resource type="Texture2D" uid="uid://d3g0yraq74ksr" path="res://resources/character design/pirat captain (player)x160.png" id="3_g5kr3"]
+[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_vjpy2"]
+
+[node name="basic_islands" type="Node2D"]
+script = ExtResource("1_bpa32")
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -172.0
+offset_top = -28.0
+offset_right = 1328.0
+offset_bottom = 1472.0
+scale = Vector2(0.989114, 0.483818)
+texture = ExtResource("1_lvxhd")
+
+[node name="Islands" type="TextureRect" parent="."]
+offset_left = 318.926
+offset_top = 22.3707
+offset_right = 1818.93
+offset_bottom = 1522.37
+scale = Vector2(0.459595, 0.412328)
+texture = ExtResource("2_83y2s")
+
+[node name="Priate" type="TextureRect" parent="."]
+visible = false
+offset_left = 188.0
+offset_top = 288.0
+offset_right = 1688.0
+offset_bottom = 1788.0
+scale = Vector2(0.0551913, 0.0690324)
+texture = ExtResource("3_g5kr3")
+
+[node name="explanation_text" type="TextEdit" parent="."]
+offset_left = 4.0
+offset_top = 28.0
+offset_right = 1127.0
+offset_bottom = 647.0
+text = "Wahrscheinlichkeiten sind wie Wetten mit Zahlen:
+1.	Gewinne und Chancen: Stell dir vor, du wettest auf ein Ereignis, wie das Wetter morgen. Die Wahrscheinlichkeit sagt dir, wie wahrscheinlich es ist, dass deine Wette gewinnt. Sie ist wie eine Zahl, die dir sagt, wie gut deine Chancen stehen.
+2.	Zahlen zwischen 0 und 1: Die Wahrscheinlichkeit ist immer eine Zahl zwischen 0 und 1. Wenn sie 0 ist, bedeutet das, dass das Ereignis überhaupt nicht passieren wird. Wenn sie 1 ist, ist das Ereignis sicher.
+3.	Einfache Experimente: Denk an einfache Spiele oder Experimente, wie das Werfen einer Münze. Die Wahrscheinlichkeit, Kopf zu bekommen, ist 0,5, weil es zwei mögliche Ergebnisse gibt (Kopf oder Zahl) und beide gleich wahrscheinlich sind.
+4.	Spaß mit Wahrscheinlichkeiten: Spiele können verwendet werden, um Wahrscheinlichkeiten zu verstehen. Zum Beispiel, wie wahrscheinlich ist es, dass du eine bestimmte Zahl bei einem Würfelspiel würfelst? Oder wie wahrscheinlich ist es, dass dein Lieblingsteam ein Fußballspiel gewinnt?
+5.	Regeln beachten: Es gibt einfache Regeln für Wahrscheinlichkeiten, wie die Addition und Multiplikation von Wahrscheinlichkeiten. Sie helfen dir, deine Chancen zu berechnen und klug zu wetten.
+"
+placeholder_text = "here text"
+scroll_fit_content_height = true
+
+[node name="OkButton" type="TextureButton" parent="."]
+offset_left = -1.0
+offset_top = 379.0
+offset_right = 543.0
+offset_bottom = 541.0
+scale = Vector2(0.471238, 0.724721)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_vjpy2")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="OkButton"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 66.0
+offset_right = 269.0
+offset_bottom = 121.0
+scale = Vector2(2.67291, 1.15257)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "ok"
+
+[node name="DoneButton" type="TextureButton" parent="."]
+offset_top = 499.0
+offset_right = 584.0
+offset_bottom = 666.0
+scale = Vector2(0.471238, 0.724721)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_vjpy2")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="DoneButton"]
+layout_mode = 0
+offset_left = 167.643
+offset_top = 68.9921
+offset_right = 240.643
+offset_bottom = 123.992
+scale = Vector2(2.67291, 1.15257)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "done"
