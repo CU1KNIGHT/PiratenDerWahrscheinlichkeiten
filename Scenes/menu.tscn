@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=3 uid="uid://i2hyi4f1k7mi"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
+[ext_resource type="Texture2D" uid="uid://ct6j6uhqiyjj0" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://bed7qqid27e32" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://bb6q0j316valm" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://bvq60a0j315ld" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://18k7pgvmc12k" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b08wr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74qox"]
+
+[node name="Menu2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gjep7")
+
+[node name="Hintergrund" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -178.0
+offset_right = 177.0
+offset_bottom = 674.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="Inseln" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -10.0
+offset_right = 1103.0
+offset_bottom = 740.0
+texture = ExtResource("3_v2wmp")
+expand_mode = 1
+
+[node name="Play" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 231.0
+offset_right = -805.0
+offset_bottom = -312.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxLine_6nmb8")
+icon = ExtResource("3_x70r4")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Play_Button" type="Label" parent="Play"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 22.0
+offset_right = 264.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 30
+text = "Spielen"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Quit" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 27.0
+offset_top = 460.0
+offset_right = -804.0
+offset_bottom = 571.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b08wr")
+icon = ExtResource("4_oi6gm")
+text_overrun_behavior = 4
+icon_alignment = 1
+expand_icon = true
+
+[node name="Quit_Button" type="Label" parent="Quit"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 37.0
+offset_right = 307.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 30
+text = "Beenden"
+uppercase = true
+
+[node name="Options" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1.0
+offset_top = 342.0
+offset_right = 372.0
+offset_bottom = 451.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_74qox")
+icon = ExtResource("6_7vh5f")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Options_Button" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 40.0
+offset_right = 393.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 24
+text = "Einstellungen"
+uppercase = true
+
+[connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_optionen_pressed"]
