@@ -7,7 +7,7 @@
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
 
-[node name="Spiel" type="Node2D"]
+[node name="Tasks" type="Node2D"]
 position = Vector2(277, 197)
 scale = Vector2(0.523624, 0.550261)
 script = ExtResource("1_vqom6")

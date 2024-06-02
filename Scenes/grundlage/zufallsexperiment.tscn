@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_yesal"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_u25m7"]
 
-[node name="basic_islands" type="Node2D"]
+[node name="zufallsexperiment" type="Node2D"]
 script = ExtResource("1_nq1vf")
 
 [node name="background" type="TextureRect" parent="."]
