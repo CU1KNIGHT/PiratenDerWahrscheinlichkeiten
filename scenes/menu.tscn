@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://7v4ke8jqwgm2"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
-[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_4tn2u"]
+[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_h08pf"]
+[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_wdran"]
+[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="4_k8rjw"]
+[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="5_mamtk"]
+[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_ijmbc"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gjep7")
+script = ExtResource("1_4tn2u")
 
 [node name="Hintergrund" type="TextureRect" parent="."]
 layout_mode = 1
@@ -36,7 +36,7 @@ offset_right = 177.0
 offset_bottom = 674.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qlvbo")
+texture = ExtResource("2_h08pf")
 expand_mode = 2
 
 [node name="Inseln" type="TextureRect" parent="."]
@@ -45,7 +45,7 @@ offset_left = 286.0
 offset_top = -10.0
 offset_right = 1103.0
 offset_bottom = 740.0
-texture = ExtResource("3_v2wmp")
+texture = ExtResource("3_wdran")
 expand_mode = 1
 
 [node name="Play" type="Button" parent="."]
@@ -61,7 +61,7 @@ offset_bottom = -30.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxLine_6nmb8")
-icon = ExtResource("3_x70r4")
+icon = ExtResource("4_k8rjw")
 icon_alignment = 1
 expand_icon = true
 
@@ -76,7 +76,7 @@ offset_right = -30.0
 offset_bottom = 130.0
 grow_horizontal = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_b08wr")
-icon = ExtResource("4_oi6gm")
+icon = ExtResource("5_mamtk")
 text_overrun_behavior = 4
 icon_alignment = 1
 expand_icon = true
@@ -90,7 +90,7 @@ offset_top = 30.0
 offset_right = 130.0
 offset_bottom = 130.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_74qox")
-icon = ExtResource("6_7vh5f")
+icon = ExtResource("6_ijmbc")
 icon_alignment = 1
 expand_icon = true
 

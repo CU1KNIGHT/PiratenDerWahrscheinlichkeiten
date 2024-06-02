@@ -3,11 +3,11 @@ extends Control
 
 
 func _on_spielen_pressed():
-	get_tree().change_scene_to_file("res://intro.tscn")
+	get_tree().change_scene_to_file("res://scenes/intro.tscn")
 
 
 func _on_optionen_pressed():
-	get_tree().change_scene_to_file("res://options_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
 
 
 func _on_schließen_pressed():

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmgmi711vb4g"]
 
-[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://pigap6s42ujq" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
-[ext_resource type="Script" path="res://TextureButton.gd" id="3_drdil"]
+[ext_resource type="Texture2D" uid="uid://pigap6s42ujq" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="1_8rbll"]
+[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="2_2fniy"]
+[ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="3_wew36"]
 
 [node name="intro" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ layout_mode = 0
 offset_top = -20.0
 offset_right = 1152.0
 offset_bottom = 902.0
-texture = ExtResource("2_45vkv")
+texture = ExtResource("1_8rbll")
 expand_mode = 1
 
 [node name="Sprechblase" type="Label" parent="."]
@@ -39,9 +39,9 @@ offset_top = 463.0
 offset_right = 1150.0
 offset_bottom = 646.0
 size_flags_vertical = 8
-texture_normal = ExtResource("1_xn6fr")
+texture_normal = ExtResource("2_2fniy")
 ignore_texture_size = true
-script = ExtResource("3_drdil")
+script = ExtResource("3_wew36")
 
 [node name="Schrift_Button" type="Label" parent="."]
 layout_mode = 0

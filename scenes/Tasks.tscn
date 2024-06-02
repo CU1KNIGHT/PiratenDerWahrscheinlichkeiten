@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://cx45mucyy5s8k"]
+
+[ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
+[ext_resource type="Texture2D" uid="uid://y74guqpsbmnh" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://besl7yi2svl58" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Script" path="res://Scripts/goToOverview.gd" id="3_pbswq"]
+
+[sub_resource type="Theme" id="Theme_k6e5p"]
+
+[node name="Spiel" type="Node2D"]
+position = Vector2(277, 197)
+scale = Vector2(0.523624, 0.550261)
+script = ExtResource("1_vqom6")
+
+[node name="Tasks" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1280.0
+offset_bottom = 680.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+
+[node name="background" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -411.0
+offset_right = 1694.0
+offset_bottom = 832.0
+texture = ExtResource("2_xtno3")
+
+[node name="TextureRect" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = 13.3684
+offset_top = -207.174
+offset_right = 1201.37
+offset_bottom = 583.826
+auto_translate = false
+localize_numeral_system = false
+texture = ExtResource("2_c68du")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -340.0
+offset_right = 260.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="QuestionLabel1" type="Label" parent="Tasks/VBoxContainer"]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Question will appear here."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 139
+language = "de"
+
+[node name="AnswerInput" type="LineEdit" parent="Tasks/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "write here"
+
+[node name="SubmitButton" type="Button" parent="Tasks/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Submit Answer"
+
+[node name="Quit Button" type="Button" parent="Tasks"]
+layout_mode = 0
+offset_left = 963.0
+offset_top = -31.0
+offset_right = 995.0
+auto_translate = false
+localize_numeral_system = false
+text = "x"
+
+[node name="doneButton" type="Button" parent="Tasks"]
+visible = false
+texture_filter = 2
+texture_repeat = 1
+layout_mode = 0
+offset_left = 507.998
+offset_top = 439.791
+offset_right = 587.998
+offset_bottom = 470.791
+theme = SubResource("Theme_k6e5p")
+theme_override_colors/font_color = Color(0.560784, 0.898039, 0.360784, 1)
+text = "done"
+script = ExtResource("3_pbswq")
+
+[connection signal="button_down" from="Tasks/Quit Button" to="." method="_on_quit_button_button_down"]
