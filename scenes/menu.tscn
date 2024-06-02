@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://7v4ke8jqwgm2"]
+[gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_4tn2u"]
-[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_h08pf"]
-[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_wdran"]
-[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="4_k8rjw"]
-[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="5_mamtk"]
-[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_ijmbc"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
+[ext_resource type="Texture2D" uid="uid://c72fkghc05my1" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
+[ext_resource type="Texture2D" uid="uid://b7wm7hru1b14i" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://ryc83j5qjltv" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://mrqn4cwknpup" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://bqikbq2qu5nae" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://bvmmdrbh7asew" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="AudioStream" uid="uid://b2mu54l056egn" path="res://resources/audio/bgm/menu.mp3" id="7_ynx3d"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -54,10 +56,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 30.0
-offset_top = 343.0
-offset_right = -818.0
-offset_bottom = -30.0
+offset_left = 34.0
+offset_top = 231.0
+offset_right = -805.0
+offset_bottom = -312.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxLine_6nmb8")
@@ -65,15 +67,28 @@ icon = ExtResource("4_k8rjw")
 icon_alignment = 1
 expand_icon = true
 
+[node name="Play_Button" type="Label" parent="Play"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 22.0
+offset_right = 264.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 30
+text = "Spielen"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="Quit" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-offset_left = 1022.0
-offset_top = 30.0
-offset_right = -30.0
-offset_bottom = 130.0
+offset_left = 27.0
+offset_top = 460.0
+offset_right = -804.0
+offset_bottom = 571.0
 grow_horizontal = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_b08wr")
 icon = ExtResource("5_mamtk")
@@ -81,18 +96,44 @@ text_overrun_behavior = 4
 icon_alignment = 1
 expand_icon = true
 
+[node name="Quit_Button" type="Label" parent="Quit"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 37.0
+offset_right = 307.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 30
+text = "Beenden"
+uppercase = true
+
 [node name="Options" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-offset_left = 30.0
-offset_top = 30.0
-offset_right = 130.0
-offset_bottom = 130.0
+offset_left = 1.0
+offset_top = 342.0
+offset_right = 372.0
+offset_bottom = 451.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_74qox")
 icon = ExtResource("6_ijmbc")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Options_Button" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 40.0
+offset_right = 393.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("5_88lf4")
+theme_override_font_sizes/font_size = 24
+text = "Einstellungen"
+uppercase = true
+
+[node name="AudioStreamPlayer-BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ynx3d")
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]
