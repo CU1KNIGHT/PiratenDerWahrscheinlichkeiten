@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://y74guqpsbmnh" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://besl7yi2svl58" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
 [ext_resource type="Script" path="res://Scripts/goToOverview.gd" id="3_pbswq"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
