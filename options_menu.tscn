@@ -1,14 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://df836nf75tnti"]
+[gd_scene load_steps=7 format=3 uid="uid://ctisrxu8fgusk"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_tg73c"]
-[ext_resource type="Texture2D" uid="uid://b06g3kw2qhp6x" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_klx23"]
-[ext_resource type="Texture2D" uid="uid://b8dapd4rfnuhm" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_p364j"]
+[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_klx23"]
+[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_p364j"]
 [ext_resource type="Texture2D" uid="uid://cmpeu55myc6ot" path="res://resources/Game UI Design/icons/go back.svg" id="4_8iam4"]
 [ext_resource type="Texture2D" uid="uid://s2gv3k6t8al" path="res://resources/Game UI Design/icons/volume.svg" id="5_6wfvq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5ad6"]
 
-[node name="Menu" type="Control"]
+[node name="Menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
