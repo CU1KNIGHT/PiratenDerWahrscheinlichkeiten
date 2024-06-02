@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
+[gd_scene load_steps=11 format=3 uid="uid://i2hyi4f1k7mi"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
 [ext_resource type="Texture2D" uid="uid://c72fkghc05my1" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://mrqn4cwknpup" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
 [ext_resource type="FontFile" uid="uid://bqikbq2qu5nae" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
 [ext_resource type="Texture2D" uid="uid://bvmmdrbh7asew" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
-[ext_resource type="AudioStream" uid="uid://b2mu54l056egn" path="res://resources/audio/bgm/menu.mp3" id="7_ynx3d"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -130,10 +129,6 @@ theme_override_fonts/font = ExtResource("5_88lf4")
 theme_override_font_sizes/font_size = 24
 text = "Einstellungen"
 uppercase = true
-
-[node name="AudioStreamPlayer-BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_ynx3d")
-autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]
