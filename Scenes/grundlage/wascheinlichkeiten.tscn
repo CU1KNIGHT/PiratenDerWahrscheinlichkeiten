@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgr4bdcst76ko"]
 
 [ext_resource type="Script" path="res://Scripts/wascheinlichkeiten.gd" id="1_bpa32"]
-[ext_resource type="Texture2D" uid="uid://cxu1c01rl2v7w" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_83y2s"]
-[ext_resource type="Texture2D" uid="uid://jswbbmjm8m6" path="res://resources/character design/pirat captain (player)x160.png" id="3_g5kr3"]
-[ext_resource type="Texture2D" uid="uid://bjpw3da2ynt52" path="res://quistion and task UI/Frage Fenster2.0.png" id="4_edaed"]
-[ext_resource type="Texture2D" uid="uid://dq4tuh64a5h7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_vjpy2"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_83y2s"]
+[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_g5kr3"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="4_edaed"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_vjpy2"]
 
 [node name="basic_islands" type="Node2D"]
 script = ExtResource("1_bpa32")

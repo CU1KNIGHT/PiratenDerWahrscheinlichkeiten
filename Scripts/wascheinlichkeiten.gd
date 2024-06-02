@@ -27,6 +27,6 @@ func _on_OkButton_pressed():
 	else:
 		show_object()
 func _on_DoneButton_pressed():
-	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Tasks.tscn")
 	
 
