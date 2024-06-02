@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://df836nf75tnti"]
+[gd_scene load_steps=19 format=3 uid="uid://cwyiln5j3krld"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_tg73c"]
 [ext_resource type="Texture2D" uid="uid://c72fkghc05my1" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_klx23"]

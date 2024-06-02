@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
+[gd_scene load_steps=11 format=3 uid="uid://dftr6jws57wl1"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
-[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="FontFile" uid="uid://c8lk4v8tnmygb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
-[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
-[ext_resource type="AudioStream" uid="uid://b2mu54l056egn" path="res://resources/audio/bgm/menu.mp3" id="7_ynx3d"]
+[ext_resource type="Texture2D" uid="uid://c72fkghc05my1" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
+[ext_resource type="Texture2D" uid="uid://b7wm7hru1b14i" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://ryc83j5qjltv" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://mrqn4cwknpup" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://bqikbq2qu5nae" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://bvmmdrbh7asew" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -18,7 +17,7 @@ thickness = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74qox"]
 
-[node name="Menu2" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

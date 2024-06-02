@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7rr1kv2tlwku"]
+[gd_scene load_steps=5 format=3 uid="uid://crjjiemuxww4k"]
 
-[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://pigap6s42ujq" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
-[ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="3_drdil"]
-[ext_resource type="AudioStream" uid="uid://codsk633b5nyh" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
-[ext_resource type="AudioStream" uid="uid://bwfkn408in7f5" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
+[ext_resource type="Texture2D" uid="uid://dbily5iqvop27" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
+[ext_resource type="Texture2D" uid="uid://dmvmdsabpral2" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="AudioStream" uid="uid://bhrblf7fx10so" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
+[ext_resource type="AudioStream" uid="uid://cnuaa3mub31yl" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
 
 [node name="intro" type="Control"]
 layout_mode = 3
@@ -43,7 +42,6 @@ offset_bottom = 646.0
 size_flags_vertical = 8
 texture_normal = ExtResource("1_xn6fr")
 ignore_texture_size = true
-script = ExtResource("3_drdil")
 
 [node name="Schrift_Button" type="Label" parent="."]
 layout_mode = 0
