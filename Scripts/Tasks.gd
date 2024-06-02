@@ -14,7 +14,8 @@ var current_island = ""
 
 
 func _ready():
-
+	current_island = get_tree().current_scene
+	print(" current_island name:", current_island.name)
 	var doneButton = $Tasks/doneButton
 	doneButton.disabled = true
 	# Seed the random number generator
@@ -167,7 +168,4 @@ func show_score():
 
 
 
-func _on_quit_button_button_down():
-	get_tree().quit()  
-	# if user wants turn to main game scene
-	# get_tree().change_scene("res://path_to_your_scene.tscn")
+

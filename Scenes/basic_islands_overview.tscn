@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4s82km2wjipt"]
+[gd_scene load_steps=9 format=3 uid="uid://c4s82km2wjipt"]
 
-[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="1_0jtun"]
-[ext_resource type="Texture2D" uid="uid://c24uevncj57x8" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
-[ext_resource type="Texture2D" uid="uid://d3g0yraq74ksr" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
-[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
+[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
+[ext_resource type="Script" path="res://Scripts/goToEreignisseIsland.gd" id="5_01ysn"]
 [ext_resource type="Script" path="res://Scripts/changeSceneToTask.gd" id="5_o7otc"]
+[ext_resource type="Script" path="res://Scripts/goToLaplaceIsland.gd" id="6_s4m4t"]
+[ext_resource type="Script" path="res://Scripts/goToZufallsexperimentIsland.gd" id="7_dmvh0"]
+[ext_resource type="Script" path="res://Scripts/goToIceIslands.gd" id="8_dixof"]
 
 [node name="basic_islands" type="Node2D"]
 
@@ -14,7 +17,6 @@ offset_top = -28.0
 offset_right = 1328.0
 offset_bottom = 1472.0
 scale = Vector2(0.989114, 0.483818)
-texture = ExtResource("1_0jtun")
 
 [node name="Islands" type="TextureRect" parent="."]
 offset_left = 318.926
@@ -32,7 +34,7 @@ offset_bottom = 1942.0
 scale = Vector2(0.0551913, 0.0690324)
 texture = ExtResource("3_g0ec6")
 
-[node name="text-buble" type="TextureButton" parent="."]
+[node name="wahrschinx-island" type="TextureButton" parent="."]
 offset_left = 46.0
 offset_top = 306.0
 offset_right = 735.0
@@ -43,7 +45,7 @@ texture_normal = ExtResource("4_eajb6")
 ignore_texture_size = true
 script = ExtResource("5_o7otc")
 
-[node name="Label" type="Label" parent="text-buble"]
+[node name="Label" type="Label" parent="wahrschinx-island"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 65.0
@@ -52,3 +54,114 @@ offset_bottom = 120.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Die erste Insel Wahrschinx"
+
+[node name="Ereignisse-island" type="TextureButton" parent="."]
+offset_left = 623.0
+offset_top = 333.0
+offset_right = 1143.0
+offset_bottom = 508.0
+scale = Vector2(1.00312, 0.89487)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_eajb6")
+ignore_texture_size = true
+script = ExtResource("5_01ysn")
+
+[node name="Label" type="Label" parent="Ereignisse-island"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 65.0
+offset_right = 515.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Ereignisse Insel"
+
+[node name="gegeereignis-island2" type="TextureButton" parent="."]
+offset_left = -46.0
+offset_top = 171.0
+offset_right = 474.0
+offset_bottom = 346.0
+scale = Vector2(1.00312, 0.89487)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_eajb6")
+ignore_texture_size = true
+script = ExtResource("5_01ysn")
+
+[node name="Label" type="Label" parent="gegeereignis-island2"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 65.0
+offset_right = 515.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Gegenereignis Insel"
+
+[node name="lapalce-island3" type="TextureButton" parent="."]
+offset_left = 516.0
+offset_top = 183.0
+offset_right = 1036.0
+offset_bottom = 358.0
+scale = Vector2(1.00312, 0.89487)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_eajb6")
+ignore_texture_size = true
+script = ExtResource("6_s4m4t")
+
+[node name="Label" type="Label" parent="lapalce-island3"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 65.0
+offset_right = 515.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Laplace Insel"
+
+[node name="zufallexperiment-island4" type="TextureButton" parent="."]
+offset_left = 6.00003
+offset_top = 14.0
+offset_right = 526.0
+offset_bottom = 189.0
+scale = Vector2(1.00312, 0.89487)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_eajb6")
+ignore_texture_size = true
+script = ExtResource("7_dmvh0")
+
+[node name="Label" type="Label" parent="zufallexperiment-island4"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 65.0
+offset_right = 515.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Zufallsexperiment Insel
+"
+
+[node name="nach Eis Insel" type="TextureButton" parent="."]
+offset_left = 889.0
+offset_top = -12.0
+offset_right = 1421.0
+offset_bottom = 163.0
+scale = Vector2(0.460947, 0.681345)
+size_flags_vertical = 8
+texture_normal = ExtResource("4_eajb6")
+ignore_texture_size = true
+script = ExtResource("8_dixof")
+
+[node name="Label" type="Label" parent="nach Eis Insel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.535
+anchor_right = 0.5
+anchor_bottom = 0.535
+offset_left = -94.6137
+offset_top = -27.5792
+offset_right = 99.3863
+offset_bottom = 27.4208
+theme_override_colors/font_color = Color(0.423529, 0.67451, 0.270588, 1)
+theme_override_font_sizes/font_size = 30
+text = "nach Eis Insel"
