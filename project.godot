@@ -27,6 +27,19 @@ project/assembly_name="Piraten Der Wahrscheinlichkeiten"
 
 script/templates_search_path="res://Scripts"
 
+[importer_defaults]
+
+animation_library={
+"animation/remove_immutable_tracks": false
+}
+csv_translation={
+"compress": false
+}
+
+[paths]
+
+scenes_path="res://scenes"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

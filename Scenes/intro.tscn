@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://crjjiemuxww4k"]
+[gd_scene load_steps=6 format=3 uid="uid://b7rr1kv2tlwku"]
 
-[ext_resource type="Texture2D" uid="uid://dbily5iqvop27" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://dmvmdsabpral2" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
-[ext_resource type="AudioStream" uid="uid://bhrblf7fx10so" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
-[ext_resource type="AudioStream" uid="uid://cnuaa3mub31yl" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
+[ext_resource type="Script" path="res://Scripts/Intro.gd" id="1_q0ntw"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
+[ext_resource type="Texture2D" uid="uid://bfqknbnnr0wdj" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="AudioStream" uid="uid://niy8p71la7ko" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
+[ext_resource type="AudioStream" uid="uid://buckdy4rm33k3" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
 
 [node name="intro" type="Control"]
 layout_mode = 3
@@ -15,40 +16,44 @@ grow_vertical = 2
 
 [node name="Hintergrund" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -20.0
-offset_right = 1152.0
-offset_bottom = 902.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1181.0
+offset_bottom = 806.0
 texture = ExtResource("2_45vkv")
 expand_mode = 1
 
 [node name="Sprechblase" type="Label" parent="."]
 layout_mode = 0
-offset_left = 279.0
-offset_top = 59.0
-offset_right = 976.0
-offset_bottom = 357.0
+offset_left = 289.0
+offset_top = 92.0
+offset_right = 986.0
+offset_bottom = 390.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_font_sizes/font_size = 22
 text = "\"Willkommen an Bord, junger Matrose! Ich bin Kapitän Flint und werde dich auf dieser Reise begleiten. Wir segeln von Insel zu Insel und lösen Aufgaben zur Wahrscheinlichkeitsrechnung. Jede Insel birgt ein Rätsel. Löse sie alle, und wir finden den Schatz der Wahrscheinlichkeit. Bist du bereit für das Abenteuer?\""
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 578.0
+offset_left = 581.0
 offset_top = 463.0
 offset_right = 1150.0
-offset_bottom = 646.0
+offset_bottom = 638.0
 size_flags_vertical = 8
 texture_normal = ExtResource("1_xn6fr")
 ignore_texture_size = true
+script = ExtResource("1_q0ntw")
 
-[node name="Schrift_Button" type="Label" parent="."]
-layout_mode = 0
-offset_left = 646.0
-offset_top = 514.0
-offset_right = 1080.0
-offset_bottom = 601.0
+[node name="Schrift_Button" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.119
+offset_left = 68.0
+offset_top = 51.0
+offset_right = 433.932
+offset_bottom = 138.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "Ja, los geht's!"
@@ -58,9 +63,9 @@ autowrap_mode = 3
 [node name="AudioStreamPlayer-Seagull" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_isyn2")
 autoplay = true
-bus = &"SFX"
 
 [node name="AudioStreamPlayer-ShipBell" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_jy4mb")
 autoplay = true
-bus = &"SFX"
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_losgehts_pressed"]

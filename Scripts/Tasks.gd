@@ -1,8 +1,8 @@
 extends Node2D
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
-var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q3.csv"
-var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv"
+var questions_file_path =null# "res://resources/Game-Task-and-Questions/Tasks/Q3.csv"
+var answers_file_path  =null #"res://resources/Game-Task-and-Questions/Tasks/user_answers.csv"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
 var questions = []
 var current_question = {}
