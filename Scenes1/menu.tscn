@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://i2hyi4f1k7mi"]
+[gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://ct6j6uhqiyjj0" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://bed7qqid27e32" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://bb6q0j316valm" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="FontFile" uid="uid://bvq60a0j315ld" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
-[ext_resource type="Texture2D" uid="uid://18k7pgvmc12k" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_qlvbo"]
+[ext_resource type="Texture2D" uid="uid://csrggsyvkcb3k" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://8rn8hk0thhfy" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://br8xx341yxc2x" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://c8lk4v8tnmygb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://bryeegrxfpihl" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="AudioStream" uid="uid://b2mu54l056egn" path="res://resources/audio/bgm/menu.mp3" id="7_ynx3d"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -36,6 +38,7 @@ offset_right = 177.0
 offset_bottom = 674.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_qlvbo")
 expand_mode = 2
 
 [node name="Inseln" type="TextureRect" parent="."]

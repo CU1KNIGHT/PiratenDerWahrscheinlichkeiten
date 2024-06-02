@@ -60,7 +60,9 @@ autowrap_mode = 3
 [node name="AudioStreamPlayer-Seagull" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_isyn2")
 autoplay = true
+bus = &"SFX"
 
 [node name="AudioStreamPlayer-ShipBell" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_jy4mb")
 autoplay = true
+bus = &"SFX"
