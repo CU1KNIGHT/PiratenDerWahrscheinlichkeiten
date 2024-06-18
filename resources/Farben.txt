@@ -1,1 +1,1 @@
-﻿Farben:Orange(hell): #ff960b Orange(dunkel): #ac6301Grün(hell): #8fe55c Grün(dunkel): # 6cac45Font: gut lesbar, schlicht, Helvetica
+Farben:Orange(hell): #ff960b Orange(dunkel): #ac6301Grün(hell): #8fe55c Grün(dunkel): # 6cac45Font: gut lesbar, schlicht, Helvetica

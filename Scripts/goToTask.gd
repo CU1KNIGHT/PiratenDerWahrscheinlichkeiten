@@ -1,5 +1,7 @@
 extends Node2D
+
 var richt_text_bubble
+
 func _read():
 	richt_text_bubble=$explanation_text
 func _pressed():
@@ -13,6 +15,6 @@ func _ready():
 
 
 func _on_DoneButton_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Tasks.tscn")
+	get_tree().change_scene_to_file("res://Scenes/grundlage/TasksMulti-choice.tscn")
 	
 

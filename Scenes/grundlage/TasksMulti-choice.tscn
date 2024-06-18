@@ -1,0 +1,296 @@
+[gd_scene load_steps=8 format=3 uid="uid://qk52qtuii62n"]
+
+[ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
+[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_ocu51"]
+[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="3_ew0hr"]
+[ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
+[ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
+[ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+
+[node name="2d_panel" type="Node2D"]
+light_mask = 0
+position = Vector2(277, 197)
+scale = Vector2(0.523624, 0.550261)
+script = ExtResource("1_pvu58")
+
+[node name="Tasks" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+
+[node name="background" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -373.0
+offset_right = 1686.0
+offset_bottom = 832.0
+texture = ExtResource("2_ocu51")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = -941.515
+offset_top = -387.089
+offset_right = 1185.48
+offset_bottom = 732.911
+scale = Vector2(1.1586, 1.05906)
+auto_translate = false
+localize_numeral_system = false
+texture = ExtResource("3_ew0hr")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1275.11
+offset_top = -592.702
+offset_right = -559.112
+offset_bottom = -304.702
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.991455, 0.935522)
+auto_translate = false
+localize_numeral_system = false
+
+[node name="Question-text" type="Label" parent="Tasks/VBoxContainer"]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Question will appear here."
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 139
+language = "de"
+
+[node name="answers" type="VBoxContainer" parent="Tasks"]
+visible = false
+layout_direction = 2
+layout_mode = 2
+offset_left = -269.277
+offset_top = -96.3179
+offset_right = 891.723
+offset_bottom = 252.682
+scale = Vector2(1.02604, 1)
+
+[node name="answers_box" type="BoxContainer" parent="Tasks"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -269.277
+offset_top = -389.163
+offset_right = -269.277
+offset_bottom = -389.163
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Answer_A" type="TextureButton" parent="Tasks/answers_box"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_A"]
+layout_mode = 0
+offset_left = -975.834
+offset_top = 87.2313
+offset_right = -879.834
+offset_bottom = 171.231
+mouse_default_cursor_shape = 2
+texture = ExtResource("4_ot06x")
+expand_mode = 1
+
+[node name="Answer" type="Label" parent="Tasks/answers_box/Answer_A"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -868.887
+offset_top = 101.77
+offset_right = 231.113
+offset_bottom = 174.77
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "answer"
+vertical_alignment = 1
+
+[node name="Answer_B" type="TextureButton" parent="Tasks/answers_box"]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_B"]
+layout_mode = 0
+offset_left = -995.834
+offset_top = 174.463
+offset_right = -899.834
+offset_bottom = 258.462
+mouse_default_cursor_shape = 2
+texture = ExtResource("5_go3nq")
+expand_mode = 1
+
+[node name="Answer" type="Label" parent="Tasks/answers_box/Answer_B"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -888.887
+offset_top = 189.001
+offset_right = 165.113
+offset_bottom = 247.001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "answer"
+vertical_alignment = 1
+
+[node name="Answer_C" type="TextureButton" parent="Tasks/answers_box"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_C"]
+layout_mode = 0
+offset_left = -1015.83
+offset_top = 261.694
+offset_right = -919.835
+offset_bottom = 345.694
+mouse_default_cursor_shape = 2
+texture = ExtResource("6_a6qia")
+expand_mode = 1
+
+[node name="Answer" type="Label" parent="Tasks/answers_box/Answer_C"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -908.887
+offset_top = 276.233
+offset_right = -22.8875
+offset_bottom = 333.233
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "answer"
+vertical_alignment = 1
+
+[node name="Answer_D" type="TextureButton" parent="Tasks/answers_box"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_D"]
+layout_mode = 0
+offset_left = -1035.83
+offset_top = 348.925
+offset_right = -939.834
+offset_bottom = 432.925
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+texture = ExtResource("7_ba4sp")
+expand_mode = 1
+
+[node name="Answer" type="Label" parent="Tasks/answers_box/Answer_D"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -928.887
+offset_top = 363.464
+offset_right = 141.113
+offset_bottom = 420.464
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "answer"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="title" type="Label" parent="Tasks"]
+layout_mode = 1
+offset_left = 5.72928
+offset_top = -139.934
+offset_right = 652.729
+offset_bottom = -75.9341
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "title"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="quesetion_size" type="Label" parent="Tasks"]
+layout_mode = 0
+offset_left = 784.914
+offset_top = -52.7023
+offset_right = 886.914
+offset_bottom = -29.7023
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "question size"
+
+[node name="show_score" type="Label" parent="Tasks"]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 136.0
+offset_right = 678.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
+text = "show score"
+
+[node name="doneButton" type="Button" parent="Tasks"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.127
+anchor_top = 0.531
+anchor_right = 0.127
+anchor_bottom = 0.531
+offset_left = -24.2168
+offset_top = -15.563
+offset_right = 23.7832
+offset_bottom = 15.437
+text = "Done"

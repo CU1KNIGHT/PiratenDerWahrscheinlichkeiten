@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://1bpmlnov4ty3"]
+[gd_scene load_steps=7 format=3 uid="uid://1bpmlnov4ty3"]
 
-[ext_resource type="Texture2D" uid="uid://d4d48rnj7d425" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle100x100.svg" id="1_3aipm"]
-[ext_resource type="Texture2D" uid="uid://d3q2djkpa3uxk" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_ptal2"]
-[ext_resource type="Texture2D" uid="uid://d3g0yraq74ksr" path="res://resources/character design/pirat captain (player)x160.png" id="3_1ifby"]
-[ext_resource type="Texture2D" uid="uid://dy712sjab51vk" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_i1ocm"]
+[ext_resource type="Texture2D" uid="uid://br43ng1jplx78" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle100x100.svg" id="1_3aipm"]
+[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_1ifby"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_i1ocm"]
 [ext_resource type="Script" path="res://Scripts/goToBasicIslands.gd" id="5_6ubwj"]
 [ext_resource type="Script" path="res://Scripts/goToIceIslands.gd" id="6_wupfv"]
 [ext_resource type="Script" path="res://Scripts/goToLavaIslands.gd" id="7_wk1bo"]
@@ -24,7 +23,6 @@ offset_top = -44.0
 offset_right = 3523.0
 offset_bottom = 2603.0
 scale = Vector2(0.40552, 0.282576)
-texture = ExtResource("2_ptal2")
 
 [node name="islands" type="TextureRect" parent="Control"]
 layout_mode = 1
