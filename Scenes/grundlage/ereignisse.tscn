@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca7uhep8t0n42"]
 
 [ext_resource type="Script" path="res://Scripts/goToTask.gd" id="1_uds1q"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
-[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
+[ext_resource type="Texture2D" uid="uid://danegfuikpo2p" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
+[ext_resource type="Texture2D" uid="uid://cvm2nuwsqopqp" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
+[ext_resource type="Texture2D" uid="uid://s4ok0wgr6y43" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
 
 [node name="ereignisse" type="Node2D"]
 script = ExtResource("1_uds1q")
