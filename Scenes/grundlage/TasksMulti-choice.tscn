@@ -294,3 +294,13 @@ offset_top = -15.563
 offset_right = 23.7832
 offset_bottom = 15.437
 text = "Done"
+
+[node name="correctAnswerFeedback" type="Label" parent="Tasks"]
+visible = false
+layout_mode = 0
+offset_left = 219.623
+offset_top = 572.456
+offset_right = 259.623
+offset_bottom = 595.456
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "correct"

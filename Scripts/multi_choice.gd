@@ -151,20 +151,25 @@ func _on_answer_button_pressed(button):
 	submitAnswer(answer)
 
 func submitAnswer(user_answer):
-
+	
 	var is_correct = check_answer(user_answer, current_question["correct_answer"])
 	save_answer(current_question["ID"], current_question["question_text"], current_question["correct_answer"], user_answer, answers_file_path)
-
+	var feedBackLabel=$Tasks/correctAnswerFeedback
 	if is_correct:
 		print("Correct!")
+		feedBackLabel.text="richtig!"
 		total_correct += 1
 	else:
 		print("Incorrect. The correct answer is: " + current_question["correct_answer"])
-
-	#$Tasks/VBoxContainer/AnswerInput.text = ""
+		feedBackLabel.text="falsch!"
+	feedBackLabel.show()
+	await get_tree().create_timer(1).timeout	
+	feedBackLabel.hide()
 	select_random_question()
 
 func check_answer(user_answer, correct_answer):
+	print("check_answer:user_answer '"+user_answer+"'")
+	print("check_answer:correct_answer '"+correct_answer+"'")
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
 func save_answer(question_id: String, question_text: String, correct_answer: String, user_answer: String, file_path: String):
