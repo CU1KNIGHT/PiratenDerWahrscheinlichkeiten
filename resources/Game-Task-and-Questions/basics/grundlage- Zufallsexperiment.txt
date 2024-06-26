@@ -1,5 +1,6 @@
-Ein Zufallsexperiment ist wie ein Spiel mit ungewissem Ausgang:
-1.	Grundlegendes Verständnis: Ein Zufallsexperiment ist ein Experiment, bei dem das Ergebnis vom Zufall abhängt. Es kann sich um das Werfen einer Münze, das Würfeln eines Würfels oder das Ziehen einer Karte aus einem Stapel handeln.
-2.	Verschiedene mögliche Ergebnisse: Bei einem Zufallsexperiment gibt es mehrere mögliche Ergebnisse oder Ereignisse, die eintreten können. Zum Beispiel können beim Werfen einer Münze die möglichen Ergebnisse "Kopf" oder "Zahl" sein.
-3.	Unvorhersehbarkeit: Da das Ergebnis eines Zufallsexperiments vom Zufall abhängt, kann man vorher nicht sicher sagen, welches Ergebnis eintreten wird. Dies macht das Experiment spannend und unvorhersehbar.
-4.	Anwendung auf verschiedene Situationen: Zufallsexperimente können in vielen verschiedenen Situationen auftreten, nicht nur beim Spielen. Zum Beispiel kann das Ergebnis einer medizinischen Studie, das Wetter oder das Ergebnis einer Umfrage als Zufallsexperiment betrachtet werden.
+Ein Zufallsexperiment ist ein Spiel mit ungewissem Ausgang:
+
+1.Grundprinzip: Das Ergebnis hängt vom Zufall ab, wie beim Münzwurf, Würfeln oder Kartenziehen.
+2.Mögliche Ergebnisse: Es gibt mehrere mögliche Ergebnisse, z.B. "Kopf" oder "Zahl" beim Münzwurf.
+3.Unvorhersehbarkeit: Das Ergebnis ist nicht vorhersagbar, was das Experiment spannend und unvorhersehbar macht.
+4.Anwendungen: Zufallsexperimente treten in vielen Situationen auf, wie bei medizinischen Studien, Wettervorhersagen oder Umfrageergebnissen.
