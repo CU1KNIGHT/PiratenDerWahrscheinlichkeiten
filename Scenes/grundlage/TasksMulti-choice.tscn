@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://ba5owpj4rxl3y" path="res://resources/design/Frage Fenster.png" id="3_ew0hr"]
-[ext_resource type="Texture2D" uid="uid://o2mjshxrl8jc" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
-[ext_resource type="Texture2D" uid="uid://dljtsofabvt6a" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
-[ext_resource type="Texture2D" uid="uid://c52m382ott1vf" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
-[ext_resource type="Texture2D" uid="uid://dcofc5lunyyw2" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://vhgmc5d01mvx" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
+[ext_resource type="Texture2D" uid="uid://ccvohw8m1hw1n" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
+[ext_resource type="Texture2D" uid="uid://dccjtpsxy5wxe" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
+[ext_resource type="Texture2D" uid="uid://bp5par5pq40y5" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="Texture2D" uid="uid://d4ftqq756gtes" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
 
 [node name="2d_panel" type="Node2D"]
 light_mask = 0
@@ -38,7 +38,7 @@ offset_bottom = 737.0
 scale = Vector2(1.1586, 1.05906)
 auto_translate = false
 localize_numeral_system = false
-texture = ExtResource("3_ew0hr")
+texture = ExtResource("2_l12s5")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
@@ -188,10 +188,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -790.482
-offset_top = 276.233
-offset_right = 95.5174
-offset_bottom = 333.233
+offset_left = -790.0
+offset_top = 276.0
+offset_right = 516.0
+offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -278,9 +278,9 @@ anchor_left = 0.127
 anchor_top = 0.531
 anchor_right = 0.127
 anchor_bottom = 0.531
-offset_left = 449.16
-offset_top = -4.48004
-offset_right = 619.16
-offset_bottom = 93.52
+offset_left = 598.367
+offset_top = -70.0826
+offset_right = 768.367
+offset_bottom = 27.9175
 theme_override_font_sizes/font_size = 30
 text = "Done"
