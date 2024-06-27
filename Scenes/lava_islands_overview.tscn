@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbl46sav83l4m"]
+[gd_scene load_steps=6 format=3 uid="uid://dbl46sav83l4m"]
 
-[ext_resource type="Texture2D" uid="uid://col4tvwfuev0n" path="res://resources/Game-Task-and-Questions/islands/Inseln-Experte.svg" id="2_u6xit"]
-[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_k3w20"]
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_xsws8"]
+[ext_resource type="Texture2D" uid="uid://bdwfmeyv86ajc" path="res://resources/Game-Task-and-Questions/islands/Inseln-Experte.svg" id="2_u6xit"]
+[ext_resource type="Texture2D" uid="uid://dbsj3rm3e87e6" path="res://resources/character design/pirat captain (player)x160.png" id="3_k3w20"]
+[ext_resource type="Texture2D" uid="uid://cycnddu630ah1" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_xsws8"]
+[ext_resource type="Script" path="res://Scripts/goTOEndscene.gd" id="5_oq05r"]
 [ext_resource type="Script" path="res://Scripts/changeSceneToTask.gd" id="5_w3gxr"]
 
 [node name="basic_islands" type="Node2D"]
@@ -50,3 +51,12 @@ offset_bottom = 122.049
 theme_override_colors/font_color = Color(0.960784, 0.247059, 0.129412, 1)
 theme_override_font_sizes/font_size = 30
 text = "Die Lava Insel - für Profis!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 363.0
+offset_top = 269.0
+offset_right = 863.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 50
+text = "Check your treasure"
+script = ExtResource("5_oq05r")
