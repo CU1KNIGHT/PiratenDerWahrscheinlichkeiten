@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddtnr7oj72y2t"]
 
-[ext_resource type="Script" path="res://Scripts/goToTask.gd" id="1_ei5ou"]
-[ext_resource type="Texture2D" uid="uid://danegfuikpo2p" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_fhofg"]
-[ext_resource type="Texture2D" uid="uid://cvm2nuwsqopqp" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_vs2yy"]
-[ext_resource type="Texture2D" uid="uid://s4ok0wgr6y43" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_cmygd"]
+[ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_ei5ou"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_fhofg"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_vs2yy"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_cmygd"]
 
 [node name="laplace-versuch" type="Node2D"]
 script = ExtResource("1_ei5ou")
