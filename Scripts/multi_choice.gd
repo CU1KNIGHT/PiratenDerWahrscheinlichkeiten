@@ -11,13 +11,33 @@ var asked_indices = []
 var column_mapping = {}
 var islands_subject_map = {}
 var current_island = "Grundlage-Wahrscheinlichkeiten"
-var filterQuestions=[] 
-
+var filterQuestions=[]
+var doneButton = null
+var nextButton = null
+var buttonAtexture=null
+var buttonBtexture=null
+var buttonCtexture=null
+var buttonDtexture=null
+var rightIcon = "res://resources/Game UI Design/icons/right.svg"
+var wrongIcon = "res://resources/Game UI Design/icons/false.svg"
+var texture_rect = null
+var initTextureRectButtonA=null
+var initTextureRectButtonB=null
+var initTextureRectButtonC=null
+var initTextureRectButtonD=null
 func _ready():
 	current_island = Global.global_current_island
-	
+	doneButton =  $Tasks/doneButton
+	nextButton =  $Tasks/next
+	buttonAtexture=$Tasks/answers_box/Answer_A/TextureRect
+	buttonBtexture=$Tasks/answers_box/Answer_B/TextureRect
+	buttonCtexture=$Tasks/answers_box/Answer_C/TextureRect
+	buttonDtexture=$Tasks/answers_box/Answer_D/TextureRect
+	initTextureRectButtonA = buttonAtexture.texture
+	initTextureRectButtonB = buttonBtexture.texture
+	initTextureRectButtonC = buttonCtexture.texture
+	initTextureRectButtonD = buttonDtexture.texture
 	print(" current_island name:", current_island)
-	var doneButton = $Tasks/doneButton
 
 	# Seed the random number generator
 	randomize()
@@ -30,17 +50,21 @@ func _ready():
 
 	# Load islands-subject mapper tions from file
 	load_islands_names(island_names_mapper_file_path)
-	# Connect the button press signal to the handler function
+	# Connect the button press signal to the handler function,buttonBtexture
 	#$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
-	$Tasks/answers_box/Answer_A.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_A/Answer))
-	$Tasks/answers_box/Answer_B.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_B/Answer))
-	$Tasks/answers_box/Answer_C.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_C/Answer))
-	$Tasks/answers_box/Answer_D.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_D/Answer))
+	$Tasks/answers_box/Answer_A.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_A/Answer,buttonAtexture))
+	$Tasks/answers_box/Answer_B.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_B/Answer,buttonBtexture))
+	$Tasks/answers_box/Answer_C.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_C/Answer,buttonCtexture))
+	$Tasks/answers_box/Answer_D.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_D/Answer,buttonDtexture))
 	# Select and display the first question
 	select_random_question()
 
 	doneButton.connect("pressed",Callable(self, "_on_DoneButton_pressed"))
-	
+	nextButton.connect("pressed",Callable(self, "_on_nextButton_pressed"))
+func _on_nextButton_pressed():
+	select_random_question()
+	nextButton.hide()
+
 func _on_DoneButton_pressed():
 	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
 
@@ -93,7 +117,7 @@ func load_questions_from_file(file_path):
 			filterQuestions.append(item)
 	print(filterQuestions)
 
-		
+
 func parse_csv_line(line: String) -> Array:
 	var result = []
 	var current = ""
@@ -118,7 +142,10 @@ func parse_csv_line(line: String) -> Array:
 	return result
 
 func select_random_question():
-	
+	buttonAtexture.texture=initTextureRectButtonA
+	buttonBtexture.texture=initTextureRectButtonB
+	buttonCtexture.texture=initTextureRectButtonC
+	buttonDtexture.texture=initTextureRectButtonD
 	if filterQuestions.size() > 0:
 		if asked_indices.size() == filterQuestions.size():
 			show_score()
@@ -143,28 +170,34 @@ func select_random_question():
 		$"Tasks/quesetion_size".text= str(asked_indices.size())+"/"+str(filterQuestions.size())
 	else:
 		$"Tasks/VBoxContainer/Question-text".text = "No questions available."
-func _on_answer_button_pressed(button):
+func _on_answer_button_pressed(button,textureRect):
+
 
 
 	var answer = button.text
 	print("Button text: "+answer)
-	submitAnswer(answer)
+	submitAnswer(answer,textureRect)
+	#button.texture =load(rightIcon)
 
-func submitAnswer(user_answer):
+func submitAnswer(user_answer,textureRect):
 
 	var is_correct = check_answer(user_answer, current_question["correct_answer"])
 	save_answer(current_question["ID"], current_question["question_text"], current_question["correct_answer"], user_answer, answers_file_path)
 
 	if is_correct:
+
+		textureRect.texture=load(rightIcon)
 		print("Correct!")
+
 		total_correct += 1
 	else:
+		textureRect.texture=load(wrongIcon)
 		print("Incorrect. The correct answer is: " + current_question["correct_answer"])
-
-	#$Tasks/VBoxContainer/AnswerInput.text = ""
-	select_random_question()
+	nextButton.show()
 
 func check_answer(user_answer, correct_answer):
+	print("check_answer:user_answer '"+user_answer+"'")
+	print("check_answer:correct_answer '"+correct_answer+"'")
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
 func save_answer(question_id: String, question_text: String, correct_answer: String, user_answer: String, file_path: String):
@@ -191,7 +224,7 @@ func show_score():
 	$Tasks/answers_box.hide()
 	$Tasks/title.hide()
 	$Tasks/doneButton.show()
-	
+
 	#$Tasks/doneButton.disabled=false
 	#var doneButton = $Tasks/doneButton
 	#doneButton.disabled = false

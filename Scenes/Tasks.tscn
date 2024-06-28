@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cx45mucyy5s8k"]
+[gd_scene load_steps=5 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
 [ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
 [ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
-[ext_resource type="Script" path="res://Scripts/goToOverview.gd" id="3_pbswq"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
 
@@ -103,4 +102,3 @@ offset_bottom = 470.791
 theme = SubResource("Theme_k6e5p")
 theme_override_colors/font_color = Color(0.560784, 0.898039, 0.360784, 1)
 text = "done"
-script = ExtResource("3_pbswq")

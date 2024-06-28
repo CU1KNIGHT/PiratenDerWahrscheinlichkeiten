@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bol2ugkt4k1np"]
 
-[ext_resource type="Script" path="res://Scripts/goToTask.gd" id="1_nq1vf"]
+[ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_nq1vf"]
 [ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_k4ytl"]
 [ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_yesal"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_u25m7"]

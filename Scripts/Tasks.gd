@@ -31,6 +31,7 @@ func _ready():
 	load_islands_names(island_names_mapper_file_path)
 	# Connect the button press signal to the handler function
 	$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
+	$Tasks/doneButton.connect("pressed", Callable(self, "_on_done_button_pressed"))
 	
 	# Select and display the first question
 	select_random_question()
@@ -137,6 +138,8 @@ func _on_SubmitButton_pressed():
 	select_random_question()
 
 func check_answer(user_answer, correct_answer):
+	print("user answer"+ user_answer)
+	print("correct_answer"+ correct_answer)
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
 func save_answer(question_id: String, question_text: String, correct_answer: String, user_answer: String, file_path: String):
@@ -166,5 +169,11 @@ func show_score():
 	doneButton.visible =true
 	
 
+
+
+
+
+func _on_done_button_pressed():
+	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
 
 
