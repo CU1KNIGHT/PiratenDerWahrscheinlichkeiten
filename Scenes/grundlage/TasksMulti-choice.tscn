@@ -295,12 +295,16 @@ offset_right = 23.7832
 offset_bottom = 15.437
 text = "Done"
 
-[node name="correctAnswerFeedback" type="Label" parent="Tasks"]
+[node name="next" type="Button" parent="Tasks"]
 visible = false
-layout_mode = 0
-offset_left = 219.623
-offset_top = 572.456
-offset_right = 259.623
-offset_bottom = 595.456
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "correct"
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.127
+anchor_top = 0.531
+anchor_right = 0.127
+anchor_bottom = 0.531
+offset_left = 52.1739
+offset_top = -15.563
+offset_right = 101.174
+offset_bottom = 15.437
+text = "next"
