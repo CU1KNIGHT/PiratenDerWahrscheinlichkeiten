@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://qk52qtuii62n"]
+[gd_scene load_steps=7 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_ocu51"]
-[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="3_ew0hr"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
 [ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
 [ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
 [ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
@@ -30,28 +29,17 @@ size_flags_vertical = 3
 auto_translate = false
 localize_numeral_system = false
 
-[node name="background" type="TextureRect" parent="Tasks"]
-layout_mode = 0
-offset_left = -600.0
-offset_top = -373.0
-offset_right = 1686.0
-offset_bottom = 832.0
-texture = ExtResource("2_ocu51")
-expand_mode = 2
-stretch_mode = 5
-
 [node name="TextureRect" type="TextureRect" parent="Tasks"]
 layout_mode = 0
-offset_left = -941.515
-offset_top = -387.089
-offset_right = 1185.48
-offset_bottom = 732.911
+offset_left = -466.0
+offset_top = -325.0
+offset_right = 1266.0
+offset_bottom = 737.0
 scale = Vector2(1.1586, 1.05906)
 auto_translate = false
 localize_numeral_system = false
-texture = ExtResource("3_ew0hr")
-expand_mode = 2
-stretch_mode = 3
+texture = ExtResource("2_l12s5")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
 layout_mode = 1
@@ -60,10 +48,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1275.11
-offset_top = -592.702
-offset_right = -559.112
-offset_bottom = -304.702
+offset_left = -1160.0
+offset_top = -531.0
+offset_right = -165.0
+offset_bottom = -309.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.991455, 0.935522)
@@ -77,7 +65,7 @@ size_flags_vertical = 3
 auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 30
 text = "Question will appear here."
 vertical_alignment = 1
 autowrap_mode = 3
@@ -118,10 +106,10 @@ mouse_default_cursor_shape = 2
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_A"]
 layout_mode = 0
-offset_left = -975.834
-offset_top = 87.2313
-offset_right = -879.834
-offset_bottom = 171.231
+offset_left = -861.249
+offset_top = 61.7894
+offset_right = -765.249
+offset_bottom = 145.789
 mouse_default_cursor_shape = 2
 texture = ExtResource("4_ot06x")
 expand_mode = 1
@@ -133,14 +121,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -868.887
-offset_top = 101.77
-offset_right = 231.113
-offset_bottom = 174.77
+offset_left = -748.572
+offset_top = 72.6933
+offset_right = 351.428
+offset_bottom = 145.693
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "answer"
 vertical_alignment = 1
 
@@ -151,10 +139,10 @@ mouse_default_cursor_shape = 2
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_B"]
 layout_mode = 0
-offset_left = -995.834
-offset_top = 174.463
-offset_right = -899.834
-offset_bottom = 258.462
+offset_left = -883.158
+offset_top = 161.742
+offset_right = -787.158
+offset_bottom = 245.741
 mouse_default_cursor_shape = 2
 texture = ExtResource("5_go3nq")
 expand_mode = 1
@@ -166,14 +154,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -888.887
-offset_top = 189.001
-offset_right = 165.113
-offset_bottom = 247.001
+offset_left = -774.302
+offset_top = 181.732
+offset_right = 279.698
+offset_bottom = 239.732
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "answer"
 vertical_alignment = 1
 
@@ -185,10 +173,10 @@ mouse_default_cursor_shape = 2
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_C"]
 layout_mode = 0
-offset_left = -1015.83
-offset_top = 261.694
-offset_right = -919.835
-offset_bottom = 345.694
+offset_left = -901.249
+offset_top = 259.877
+offset_right = -805.254
+offset_bottom = 343.877
 mouse_default_cursor_shape = 2
 texture = ExtResource("6_a6qia")
 expand_mode = 1
@@ -200,14 +188,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -908.887
-offset_top = 276.233
-offset_right = -22.8875
-offset_bottom = 333.233
+offset_left = -790.0
+offset_top = 276.0
+offset_right = 516.0
+offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "answer"
 vertical_alignment = 1
 
@@ -219,10 +207,10 @@ mouse_default_cursor_shape = 2
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/answers_box/Answer_D"]
 layout_mode = 0
-offset_left = -1035.83
-offset_top = 348.925
-offset_right = -939.834
-offset_bottom = 432.925
+offset_left = -921.248
+offset_top = 352.56
+offset_right = -825.253
+offset_bottom = 436.56
 size_flags_vertical = 8
 mouse_default_cursor_shape = 2
 texture = ExtResource("7_ba4sp")
@@ -235,27 +223,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -928.887
-offset_top = 363.464
-offset_right = 141.113
-offset_bottom = 420.464
+offset_left = -812.392
+offset_top = 368.916
+offset_right = 257.608
+offset_bottom = 425.916
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "answer"
 vertical_alignment = 1
 text_overrun_behavior = 3
 
 [node name="title" type="Label" parent="Tasks"]
 layout_mode = 1
-offset_left = 5.72928
-offset_top = -139.934
-offset_right = 652.729
-offset_bottom = -75.9341
+offset_left = 183.338
+offset_top = -116.308
+offset_right = 830.337
+offset_bottom = -47.3084
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 50
 text = "title"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -263,11 +251,12 @@ autowrap_mode = 3
 
 [node name="quesetion_size" type="Label" parent="Tasks"]
 layout_mode = 0
-offset_left = 784.914
-offset_top = -52.7023
-offset_right = 886.914
-offset_bottom = -29.7023
+offset_left = 1084.75
+offset_top = -12.7212
+offset_right = 1186.75
+offset_bottom = 10.2788
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
 text = "question size"
 
 [node name="show_score" type="Label" parent="Tasks"]
@@ -278,7 +267,7 @@ offset_top = 136.0
 offset_right = 678.0
 offset_bottom = 296.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 0
+theme_override_font_sizes/font_size = 30
 text = "show score"
 
 [node name="doneButton" type="Button" parent="Tasks"]
@@ -289,10 +278,11 @@ anchor_left = 0.127
 anchor_top = 0.531
 anchor_right = 0.127
 anchor_bottom = 0.531
-offset_left = -24.2168
-offset_top = -15.563
-offset_right = 23.7832
-offset_bottom = 15.437
+offset_left = 598.367
+offset_top = -70.0826
+offset_right = 768.367
+offset_bottom = 27.9175
+theme_override_font_sizes/font_size = 30
 text = "Done"
 
 [node name="next" type="Button" parent="Tasks"]
