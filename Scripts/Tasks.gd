@@ -160,6 +160,10 @@ func save_answer(question_id: String, question_text: String, correct_answer: Str
 func show_score():
 	var total_questions = questions.size()
 	var score_text = "You answered " + str(total_correct) + " out of " + str(total_questions) + " questions correctly."
+	if(Global.global_current_overview_scene_path==Global.LAVA_OVERVIEW_SCENE_PATH and total_questions==total_correct):
+		Global.is_the_game_finshed=true
+	else:
+		Global.is_the_game_finshed=false
 	$Tasks/VBoxContainer/QuestionLabel1.text = score_text
 	$Tasks/VBoxContainer/AnswerInput.hide()
 	$Tasks/VBoxContainer/SubmitButton.hide()
@@ -174,6 +178,7 @@ func show_score():
 
 
 func _on_done_button_pressed():
+
 	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
 
 

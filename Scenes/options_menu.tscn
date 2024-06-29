@@ -221,6 +221,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_aij43")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mb43l")
 
 [node name="sfx" type="HSlider" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
