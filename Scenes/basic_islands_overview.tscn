@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4s82km2wjipt"]
 
-[ext_resource type="Texture2D" uid="uid://bv3popl6k3l4b" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
-[ext_resource type="Texture2D" uid="uid://dbsj3rm3e87e6" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
-[ext_resource type="Texture2D" uid="uid://cycnddu630ah1" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
+[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
 [ext_resource type="Script" path="res://Scripts/goToGrundlageWahrscheinlichkeitenIsland.gd" id="4_hxvbl"]
 [ext_resource type="Script" path="res://Scripts/goToEreignisseIsland.gd" id="5_01ysn"]
 [ext_resource type="Script" path="res://Scripts/goToGegenEreignisseIsland.gd" id="6_0kbu3"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/goToZufallsexperimentIsland.gd" id="7_dmvh0"]
 [ext_resource type="Script" path="res://Scripts/goToIceIslands.gd" id="8_dixof"]
 
-[node name="basic_islands" type="Node2D"]
+[node name="basic_islands3" type="Node2D"]
 
 [node name="background" type="TextureRect" parent="."]
 offset_left = -172.0
