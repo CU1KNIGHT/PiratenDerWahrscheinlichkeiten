@@ -5,7 +5,7 @@ var paused = false
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 var island_names_mapper = null
-var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q1.csv1"
+var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q2.csv1"
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
 var questions = []
@@ -14,7 +14,7 @@ var total_correct = 0
 var asked_indices = []
 var column_mapping = {}
 var islands_subject_map = {}
-var current_island = "Grundlage-Wahrscheinlichkeiten"
+var current_island = ""
 var filterQuestions=[]
 var doneButton = null
 var nextButton = null
@@ -30,7 +30,7 @@ var initTextureRectButtonB=null
 var initTextureRectButtonC=null
 var initTextureRectButtonD=null
 func _ready():
-	current_island = Global.global_current_island
+	current_island = get_tree().current_scene
 	doneButton =  $Tasks/doneButton
 	nextButton =  $Tasks/next
 	buttonAtexture=$Tasks/answers_box/Answer_A/TextureRect
@@ -47,14 +47,18 @@ func _ready():
 	randomize()
 	TranslationServer.set_locale("de")
 		# Load islands-subject mapper tions from file
+	load_column_mapping(column_mapping_file_path)
+	print(column_mapping)
+	
+	load_questions_from_file(questions_file_path)
+	print(column_mapping)
+	
 	load_islands_names(island_names_mapper_file_path)
 	print(island_names_mapper)
 	# Load column mappings from file
-	load_column_mapping(column_mapping_file_path)
-	print(column_mapping)
+
 	# Load questions from file
-	load_questions_from_file(questions_file_path)
-	print(column_mapping)
+
 
 	# Connect the button press signal to the handler function,buttonBtexture
 	#$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
@@ -72,7 +76,7 @@ func _on_nextButton_pressed():
 	nextButton.hide()
 
 func _on_DoneButton_pressed():
-	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
+	get_tree().change_scene_to_file("res://scenes/ice_islands_overview.tscn")
 
 func load_islands_names(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
@@ -117,14 +121,7 @@ func load_questions_from_file(file_path):
 		file.close()
 	else:
 		print("Questions file not found!")
-	filterQuestionList(questions)
 
-func filterQuestionList(questions):
-	for item in questions:
-		if item.subject == island_names_mapper[current_island]:
-			print(item.subject +"=="+current_island)
-			filterQuestions.append(item)
-	print(filterQuestions)
 	
 func parse_csv_line(line: String) -> Array:
 	var result = []
@@ -154,18 +151,18 @@ func select_random_question():
 	buttonBtexture.texture=initTextureRectButtonB
 	buttonCtexture.texture=initTextureRectButtonC
 	buttonDtexture.texture=initTextureRectButtonD
-	if filterQuestions.size() > 0:
-		if asked_indices.size() == filterQuestions.size():
+	if questions.size() > 0:
+		if asked_indices.size() == questions.size():
 			show_score()
 			return
 
 		var index = -1
 		while index == -1 or index in asked_indices:
-			index = randi() % filterQuestions.size()
+			index = randi() % questions.size()
 		asked_indices.append(index)
 		print("index:")
 		print(index)
-		current_question = filterQuestions[index]
+		current_question = questions[index]
 		print(current_question)
 		print("options:")
 		print(current_question.options)
@@ -175,7 +172,7 @@ func select_random_question():
 		$"Tasks/answers_box/Answer_B/Answer".text=current_question.options[1]
 		$"Tasks/answers_box/Answer_C/Answer".text=current_question.options[2]
 		$"Tasks/answers_box/Answer_D/Answer".text=current_question.options[3]
-		$"Tasks/quesetion_size".text= str(asked_indices.size())+"/"+str(filterQuestions.size())
+		$"Tasks/quesetion_size".text= str(asked_indices.size())+"/"+str(questions.size())
 	else:
 		$"Tasks/VBoxContainer/Question-text".text = "No questions available."
 func _on_answer_button_pressed(button,textureRect):
@@ -224,7 +221,7 @@ func save_answer(question_id: String, question_text: String, correct_answer: Str
 		print("Failed to open file for writing.")
 
 func show_score():
-	var total_questions = filterQuestions.size()
+	var total_questions = questions.size()
 	var score_text = "You answered " + str(total_correct) + " out of " + str(total_questions) + " questions correctly."
 	$Tasks/show_score.text = score_text
 	$Tasks/show_score.show()
@@ -232,33 +229,13 @@ func show_score():
 	$Tasks/answers_box.hide()
 	$Tasks/title.hide()
 	$Tasks/doneButton.show()
-	var next_island=get_next_key(Global.basics_islands,current_island)
-	if(total_correct==total_questions):
-		Global.basics_islands[next_island]=true
+	if(Global.Q2==Global.current_questions_file_path and total_correct==total_questions):
+		Global.lava=true
 	else:
-		Global.basics_islands[next_island]=false
-	var are_basics_island_finished=check_all_true(Global.basics_islands)
-	print("are_basics_island_finished:")
-	print(are_basics_island_finished)
-	
-	if(are_basics_island_finished and total_correct==total_questions):
-		Global.eis=true
-	else:
-		Global.eis=false
+		Global.lava=false
 	#$Tasks/doneButton.disabled=false
 	#var doneButton = $Tasks/doneButton
 	#doneButton.disabled = false
-func get_next_key(map, current_key):
-	var keys = map.keys()
-	var current_index = keys.find(current_key)
-	print("current_index")
-	print(current_index)
-	if current_index != -1 and current_index < keys.size() - 1:
-		print("next Island key")
-		print(keys[current_index + 1])
-		return keys[current_index + 1]
-	return null
-
 
 func check_all_true(dict):
 	for value in dict.values():
@@ -278,6 +255,7 @@ func _on_pause_pressed():
 		Engine.time_scale = 0
 		
 	paused = !paused 
+
 
 func _on_back_to_islands_pressed():
 	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
