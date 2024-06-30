@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca7uhep8t0n42"]
+[gd_scene load_steps=10 format=3 uid="uid://ca7uhep8t0n42"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_uds1q"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
-[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
+[ext_resource type="Texture2D" uid="uid://3d0w3grncesh" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
+[ext_resource type="Texture2D" uid="uid://dsoy0amqjs3c8" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
+[ext_resource type="Texture2D" uid="uid://b6t5mnqe67otf" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
+[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="5_f5ac5"]
+[ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_m5qi8"]
+[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_afi21"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mo8p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yget6"]
 
 [node name="ereignisse" type="Node2D"]
 script = ExtResource("1_uds1q")
@@ -64,3 +71,27 @@ scale = Vector2(2.67291, 1.15257)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "done"
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 1076.0
+offset_top = 10.0
+offset_right = 1194.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6mo8p")
+icon = ExtResource("5_f5ac5")
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_m5qi8")]
+visible = false
+
+[node name="BackToIslands" type="Button" parent="."]
+offset_left = 1076.0
+offset_top = 83.0
+offset_right = 1194.0
+offset_bottom = 201.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yget6")
+icon = ExtResource("7_afi21")
+
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="BackToIslands" to="." method="_on_back_to_islands_pressed"]

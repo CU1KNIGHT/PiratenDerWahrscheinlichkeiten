@@ -8,3 +8,7 @@ func _ready():
 	else:
 		$treasure.hide()
 		
+
+
+func _on_nach_ei_insel_pressed():
+	get_tree().change_scene_to_file("res://scenes/ice_islands_overview.tscn")

@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://qk52qtuii62n"]
+[gd_scene load_steps=11 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
-[ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
-[ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
-[ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
-[ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://3d0w3grncesh" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
+[ext_resource type="Texture2D" uid="uid://cbog2d0sjmnkt" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
+[ext_resource type="Texture2D" uid="uid://bx682i5glgevh" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
+[ext_resource type="Texture2D" uid="uid://o2tctwxtjilp" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_2neo2"]
+[ext_resource type="Texture2D" uid="uid://cqra20lhfsfcs" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
+[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2ebi"]
 
 [node name="2d_panel" type="Node2D"]
 light_mask = 0
@@ -298,3 +303,30 @@ offset_top = -15.563
 offset_right = 101.174
 offset_bottom = 15.437
 text = "next"
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 1508.72
+offset_top = -328.935
+offset_right = 1626.72
+offset_bottom = -210.935
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
+icon = ExtResource("8_qupoe")
+
+[node name="BackToIslands" type="Button" parent="."]
+offset_left = 1508.72
+offset_top = -187.184
+offset_right = 1626.72
+offset_bottom = -69.1839
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
+icon = ExtResource("9_o8dlw")
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_2neo2")]
+visible = false
+offset_left = -567.201
+offset_top = -387.089
+offset_right = -567.201
+offset_bottom = -387.089
+scale = Vector2(2, 2)
+
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="BackToIslands" to="." method="_on_back_to_islands_pressed"]

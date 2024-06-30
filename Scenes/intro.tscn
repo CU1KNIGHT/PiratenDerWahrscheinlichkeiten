@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7rr1kv2tlwku"]
 
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://bfqknbnnr0wdj" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="Texture2D" uid="uid://b6t5mnqe67otf" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
+[ext_resource type="Texture2D" uid="uid://de0l7iwdlbm2m" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
 [ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="3_drdil"]
-[ext_resource type="AudioStream" uid="uid://niy8p71la7ko" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
-[ext_resource type="AudioStream" uid="uid://buckdy4rm33k3" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
+[ext_resource type="AudioStream" uid="uid://cmyr1w0iyt2b5" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
+[ext_resource type="AudioStream" uid="uid://bn6toajgxuekr" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
 
 [node name="intro" type="Control"]
 layout_mode = 3

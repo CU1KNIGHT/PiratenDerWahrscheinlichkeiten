@@ -1,10 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx45mucyy5s8k"]
+[gd_scene load_steps=9 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Texture2D" uid="uid://5w1rntnicchi" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://b8eg0fd6dg1r" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hre3g"]
 
 [node name="Tasks" type="Node2D"]
 position = Vector2(277, 197)
@@ -102,3 +107,27 @@ offset_bottom = 470.791
 theme = SubResource("Theme_k6e5p")
 theme_override_colors/font_color = Color(0.560784, 0.898039, 0.360784, 1)
 text = "done"
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 1508.72
+offset_top = -328.935
+offset_right = 1626.72
+offset_bottom = -210.935
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hre3g")
+icon = ExtResource("4_dkfeo")
+
+[node name="BackToIslands" type="Button" parent="."]
+offset_left = 1508.72
+offset_top = -187.184
+offset_right = 1626.72
+offset_bottom = -69.1839
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hre3g")
+icon = ExtResource("5_pdomd")
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_rar3a")]
+visible = false
+offset_left = -567.201
+offset_top = -387.089
+offset_right = -567.201
+offset_bottom = -387.089
+scale = Vector2(2, 2)

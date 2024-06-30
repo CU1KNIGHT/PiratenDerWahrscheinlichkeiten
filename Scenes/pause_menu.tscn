@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu2sqwh1j3cby"]
+
+[ext_resource type="Texture2D" uid="uid://df0yq4lfwyhik" path="res://resources/Game UI Design/pause menu/resume.svg" id="1_1mfov"]
+[ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_p5x46"]
+[ext_resource type="FontFile" uid="uid://uyyqvdpd6r37" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rbtn"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p5x46")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.52549)
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 180.0
+offset_right = 907.0
+offset_bottom = 647.0
+scale = Vector2(0.6, 0.6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
+icon = ExtResource("1_1mfov")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Resume"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 387.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("2_mpit2")
+theme_override_font_sizes/font_size = 40
+text = "FORTSETZEN"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
+icon = ExtResource("1_1mfov")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Settings"]
+layout_mode = 0
+offset_right = 460.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("2_mpit2")
+theme_override_font_sizes/font_size = 35
+text = "EINSTELLUNGEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
+icon = ExtResource("1_1mfov")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Main Menu"]
+layout_mode = 0
+offset_right = 457.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("2_mpit2")
+theme_override_font_sizes/font_size = 40
+text = "HAUPTMENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

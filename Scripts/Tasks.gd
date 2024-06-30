@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var pause_menu = $PauseMenu
+var paused = false
+
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
@@ -32,6 +35,8 @@ func _ready():
 	# Connect the button press signal to the handler function
 	$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
 	$Tasks/doneButton.connect("pressed", Callable(self, "_on_done_button_pressed"))
+	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
+	$BackToIslands.connect("pressed",Callable(self, "_on_back_to_islands_pressed"))
 	
 	# Select and display the first question
 	select_random_question()
@@ -183,6 +188,20 @@ func show_score():
 
 func _on_done_button_pressed():
 
+	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
+	
+func _on_pause_pressed():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+		
+	paused = !paused 
+
+
+func _on_back_to_islands_pressed():
 	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
 
 

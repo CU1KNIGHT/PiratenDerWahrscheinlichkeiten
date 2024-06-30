@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var pause_menu = $PauseMenu
+var paused = false
+
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 var island_names_mapper = null
 var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q1.csv1"
@@ -264,3 +267,18 @@ func check_all_true(dict):
 	return true
 
 
+
+
+func _on_pause_pressed():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+		
+	paused = !paused 
+
+
+func _on_back_to_islands_pressed():
+	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
