@@ -2,5 +2,5 @@ extends TextureButton
 
 
 func _pressed():
-	Global.global_current_island="Grundlage-Laplace-Versuch"
+	Global.global_current_island="lapalce-island"
 	get_tree().change_scene_to_file("res://Scenes/grundlage/laplace-versuch.tscn")

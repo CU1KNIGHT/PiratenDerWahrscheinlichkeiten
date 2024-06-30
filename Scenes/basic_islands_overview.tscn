@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4s82km2wjipt"]
+[gd_scene load_steps=11 format=3 uid="uid://c4s82km2wjipt"]
 
+[ext_resource type="Script" path="res://Scripts/basic_islands_overview.gd" id="1_tydjn"]
 [ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
 [ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
@@ -10,7 +11,8 @@
 [ext_resource type="Script" path="res://Scripts/goToZufallsexperimentIsland.gd" id="7_dmvh0"]
 [ext_resource type="Script" path="res://Scripts/goToIceIslands.gd" id="8_dixof"]
 
-[node name="basic_islands3" type="Node2D"]
+[node name="basic_islands" type="Node2D"]
+script = ExtResource("1_tydjn")
 
 [node name="background" type="TextureRect" parent="."]
 offset_left = -172.0
@@ -56,7 +58,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Die erste Insel Wahrschinx"
 
-[node name="Ereignisse-island" type="TextureButton" parent="."]
+[node name="ereignisse-island" type="TextureButton" parent="."]
 offset_left = 623.0
 offset_top = 333.0
 offset_right = 1143.0
@@ -67,7 +69,7 @@ texture_normal = ExtResource("4_eajb6")
 ignore_texture_size = true
 script = ExtResource("5_01ysn")
 
-[node name="Label" type="Label" parent="Ereignisse-island"]
+[node name="Label" type="Label" parent="ereignisse-island"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 65.0
@@ -77,7 +79,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Ereignisse Insel"
 
-[node name="gegeereignis-island2" type="TextureButton" parent="."]
+[node name="gegenereignis-island" type="TextureButton" parent="."]
 offset_left = -46.0
 offset_top = 171.0
 offset_right = 474.0
@@ -88,7 +90,7 @@ texture_normal = ExtResource("4_eajb6")
 ignore_texture_size = true
 script = ExtResource("6_0kbu3")
 
-[node name="Label" type="Label" parent="gegeereignis-island2"]
+[node name="Label" type="Label" parent="gegenereignis-island"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 65.0
@@ -98,7 +100,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Gegenereignis Insel"
 
-[node name="lapalce-island3" type="TextureButton" parent="."]
+[node name="lapalce-island" type="TextureButton" parent="."]
 offset_left = 516.0
 offset_top = 183.0
 offset_right = 1036.0
@@ -109,7 +111,7 @@ texture_normal = ExtResource("4_eajb6")
 ignore_texture_size = true
 script = ExtResource("6_s4m4t")
 
-[node name="Label" type="Label" parent="lapalce-island3"]
+[node name="Label" type="Label" parent="lapalce-island"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 65.0
@@ -119,7 +121,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Laplace Insel"
 
-[node name="zufallexperiment-island4" type="TextureButton" parent="."]
+[node name="zufallexperiment-island" type="TextureButton" parent="."]
 offset_left = 6.00003
 offset_top = 14.0
 offset_right = 526.0
@@ -130,7 +132,7 @@ texture_normal = ExtResource("4_eajb6")
 ignore_texture_size = true
 script = ExtResource("7_dmvh0")
 
-[node name="Label" type="Label" parent="zufallexperiment-island4"]
+[node name="Label" type="Label" parent="zufallexperiment-island"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 65.0
@@ -142,6 +144,7 @@ text = "Zufallsexperiment Insel
 "
 
 [node name="nach Eis Insel" type="TextureButton" parent="."]
+visible = false
 offset_left = 889.0
 offset_top = -12.0
 offset_right = 1421.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbl46sav83l4m"]
 
-[ext_resource type="Script" path="res://Scenes/lava_islands_overview.gd" id="1_iyo4x"]
+[ext_resource type="Script" path="res://Scripts/lava_islands_overview.gd" id="1_iyo4x"]
 [ext_resource type="Texture2D" uid="uid://col4tvwfuev0n" path="res://resources/Game-Task-and-Questions/islands/Inseln-Experte.svg" id="2_u6xit"]
 [ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_k3w20"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_xsws8"]

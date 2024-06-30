@@ -1,7 +1,7 @@
 extends Node2D
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
-var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q3.csv1"
+
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
 var questions = []
@@ -25,7 +25,7 @@ func _ready():
 	load_column_mapping(column_mapping_file_path)
 	
 	# Load questions from file
-	load_questions_from_file(questions_file_path)
+	load_questions_from_file(Global.current_questions_file_path)
 		
 	# Load islands-subject mapper tions from file
 	load_islands_names(island_names_mapper_file_path)
@@ -164,6 +164,10 @@ func show_score():
 		Global.is_the_game_finshed=true
 	else:
 		Global.is_the_game_finshed=false
+	if(Global.Q2==Global.current_questions_file_path and total_correct==total_questions):
+		Global.lava=true
+	else:
+		Global.lava=false
 	$Tasks/VBoxContainer/QuestionLabel1.text = score_text
 	$Tasks/VBoxContainer/AnswerInput.hide()
 	$Tasks/VBoxContainer/SubmitButton.hide()

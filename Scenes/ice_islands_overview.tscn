@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://djchxutvudp72"]
+[gd_scene load_steps=7 format=3 uid="uid://djchxutvudp72"]
 
+[ext_resource type="Script" path="res://Scripts/ice_islands_overview.gd" id="1_i3akt"]
 [ext_resource type="Texture2D" uid="uid://fp6vb34mv4nd" path="res://resources/Game-Task-and-Questions/islands/Inseln-Mittel.svg" id="1_ypjy5"]
 [ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_kuaog"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_ncuhw"]
 [ext_resource type="Script" path="res://Scripts/changeSceneToTask.gd" id="5_6kvu5"]
 [ext_resource type="Script" path="res://Scripts/goToLavaIslands.gd" id="5_weg35"]
 
-[node name="basic_islands" type="Node2D"]
+[node name="Eis-Island" type="Node2D"]
+script = ExtResource("1_i3akt")
 
 [node name="background" type="TextureRect" parent="."]
 offset_left = -172.0

@@ -1,6 +1,7 @@
 extends Node2D
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
+var island_names_mapper = null
 var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q1.csv1"
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
@@ -42,14 +43,16 @@ func _ready():
 	# Seed the random number generator
 	randomize()
 	TranslationServer.set_locale("de")
+		# Load islands-subject mapper tions from file
+	load_islands_names(island_names_mapper_file_path)
+	print(island_names_mapper)
 	# Load column mappings from file
 	load_column_mapping(column_mapping_file_path)
-
+	print(column_mapping)
 	# Load questions from file
 	load_questions_from_file(questions_file_path)
+	print(column_mapping)
 
-	# Load islands-subject mapper tions from file
-	load_islands_names(island_names_mapper_file_path)
 	# Connect the button press signal to the handler function,buttonBtexture
 	#$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
 	$Tasks/answers_box/Answer_A.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_A/Answer,buttonAtexture))
@@ -72,7 +75,7 @@ func load_islands_names(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file:
 		var json = file.get_as_text()
-		column_mapping = JSON.parse_string(json)
+		island_names_mapper = JSON.parse_string(json)
 		file.close()
 	else:
 		print("island names mapper file not found!")
@@ -91,11 +94,11 @@ func load_questions_from_file(file_path):
 	if file:
 		#file.get_line()  # Skip header row
 		var header = file.get_line().strip_edges().split(",")
-		print(header)
+		#print(header)
 		while not file.eof_reached():
 			var line = file.get_line()
 			var data = parse_csv_line(line)
-			print(data)
+			#print(data)
 			var question = {
 				"ID": data[header.find(column_mapping["ID"])],
 				"subject": data[header.find(column_mapping["subject"])],
@@ -106,18 +109,20 @@ func load_questions_from_file(file_path):
 			}
 
 			questions.append(question)
-			print(question)
+			#print(question)
 
 		file.close()
 	else:
 		print("Questions file not found!")
+	filterQuestionList(questions)
+
+func filterQuestionList(questions):
 	for item in questions:
-		if item.subject == current_island:
+		if item.subject == island_names_mapper[current_island]:
 			print(item.subject +"=="+current_island)
 			filterQuestions.append(item)
 	print(filterQuestions)
-
-
+	
 func parse_csv_line(line: String) -> Array:
 	var result = []
 	var current = ""
@@ -224,13 +229,38 @@ func show_score():
 	$Tasks/answers_box.hide()
 	$Tasks/title.hide()
 	$Tasks/doneButton.show()
-
+	var next_island=get_next_key(Global.basics_islands,current_island)
+	if(total_correct==total_questions):
+		Global.basics_islands[next_island]=true
+	else:
+		Global.basics_islands[next_island]=false
+	var are_basics_island_finished=check_all_true(Global.basics_islands)
+	print("are_basics_island_finished:")
+	print(are_basics_island_finished)
+	
+	if(are_basics_island_finished and total_correct==total_questions):
+		Global.eis=true
+	else:
+		Global.eis=false
 	#$Tasks/doneButton.disabled=false
 	#var doneButton = $Tasks/doneButton
 	#doneButton.disabled = false
+func get_next_key(map, current_key):
+	var keys = map.keys()
+	var current_index = keys.find(current_key)
+	print("current_index")
+	print(current_index)
+	if current_index != -1 and current_index < keys.size() - 1:
+		print("next Island key")
+		print(keys[current_index + 1])
+		return keys[current_index + 1]
+	return null
 
 
-
-
+func check_all_true(dict):
+	for value in dict.values():
+		if not value:
+			return false
+	return true
 
 
