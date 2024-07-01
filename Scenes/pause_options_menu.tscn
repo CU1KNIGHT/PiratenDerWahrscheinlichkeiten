@@ -1,0 +1,223 @@
+[gd_scene load_steps=18 format=3 uid="uid://dh8nbett4j3m3"]
+
+[ext_resource type="Script" path="res://Scripts/pause_options_menu.gd" id="1_ew7ro"]
+[ext_resource type="Texture2D" uid="uid://cgbebufwurj2" path="res://resources/settings/settings_board.png" id="3_s7t71"]
+[ext_resource type="FontFile" uid="uid://uyyqvdpd6r37" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="4_akxcv"]
+[ext_resource type="Texture2D" uid="uid://ykdd6hm6a0gs" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="5_6elo5"]
+[ext_resource type="Texture2D" uid="uid://l6apkuun2lbk" path="res://resources/Game UI Design/icons/go back.svg" id="6_kxvmx"]
+[ext_resource type="Texture2D" uid="uid://dxsk031wx1sdr" path="res://resources/Game UI Design/icons/volume_muted.svg" id="7_m78cj"]
+[ext_resource type="Texture2D" uid="uid://b846exyemfeo6" path="res://resources/Game UI Design/icons/volume.svg" id="8_x86qt"]
+[ext_resource type="Script" path="res://volume_slider.gd" id="9_hwguj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5ad6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caa4q"]
+atlas = ExtResource("7_m78cj")
+region = Rect2(0, 0, 292, 289)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaxtk"]
+atlas = ExtResource("8_x86qt")
+region = Rect2(0, 0, 292, 289)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tymve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caa4q")
+}],
+"loop": true,
+"name": &"muted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaxtk")
+}],
+"loop": true,
+"name": &"unmuted",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lppr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6g3p7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x716q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aij43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mb43l"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ew7ro")
+
+[node name="Board" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 41.0
+offset_right = 1027.0
+offset_bottom = 618.0
+texture = ExtResource("3_s7t71")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Board"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 36.0
+offset_right = 758.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("4_akxcv")
+theme_override_font_sizes/font_size = 45
+text = "Einstellungen"
+uppercase = true
+
+[node name="Inseln" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 679.0
+offset_top = 201.0
+offset_right = 1129.0
+offset_bottom = 468.0
+texture = ExtResource("5_6elo5")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 124.0
+offset_top = 50.0
+offset_right = 236.0
+offset_bottom = 162.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r5ad6")
+icon = ExtResource("6_kxvmx")
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 198.0
+offset_right = 933.0
+offset_bottom = 507.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="masterButtonSprite" type="AnimatedSprite2D" parent="Margin/VBox"]
+position = Vector2(-42, 3)
+scale = Vector2(0.146194, 0.146194)
+sprite_frames = SubResource("SpriteFrames_tymve")
+animation = &"unmuted"
+
+[node name="masterButton" type="Button" parent="Margin/VBox/masterButtonSprite"]
+offset_left = -164.165
+offset_top = -150.485
+offset_right = 138.835
+offset_bottom = 152.515
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0lppr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6g3p7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x716q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aij43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mb43l")
+metadata/_edit_use_anchors_ = true
+
+[node name="master" type="HSlider" parent="Margin/VBox"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("9_hwguj")
+bus_name = "Master"
+
+[node name="Master Volume" type="Label" parent="Margin/VBox/master"]
+modulate = Color(0.0911214, 0.0911215, 0.0911214, 1)
+layout_mode = 0
+offset_left = 209.0
+offset_top = -38.0
+offset_right = 433.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 25
+text = "Master-Lautstärke"
+
+[node name="musicButtonSprite" type="AnimatedSprite2D" parent="Margin/VBox"]
+position = Vector2(-40, 102)
+scale = Vector2(0.146194, 0.146194)
+sprite_frames = SubResource("SpriteFrames_tymve")
+animation = &"unmuted"
+
+[node name="musicButton" type="Button" parent="Margin/VBox/musicButtonSprite"]
+offset_left = -150.485
+offset_top = -157.325
+offset_right = 152.515
+offset_bottom = 145.675
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0lppr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6g3p7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x716q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aij43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mb43l")
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="HSlider" parent="Margin/VBox"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("9_hwguj")
+bus_name = "Music"
+
+[node name="Music Volume" type="Label" parent="Margin/VBox/music"]
+modulate = Color(0.0911214, 0.0911215, 0.0911214, 1)
+layout_mode = 0
+offset_left = 209.0
+offset_top = -38.0
+offset_right = 433.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 25
+text = "Hintergrundmusik"
+
+[node name="sfxButtonSprite" type="AnimatedSprite2D" parent="Margin/VBox"]
+position = Vector2(-40, 199)
+scale = Vector2(0.146194, 0.146194)
+sprite_frames = SubResource("SpriteFrames_tymve")
+animation = &"unmuted"
+
+[node name="sfxButton" type="Button" parent="Margin/VBox/sfxButtonSprite"]
+offset_left = -150.485
+offset_top = -143.645
+offset_right = 152.515
+offset_bottom = 159.355
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0lppr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6g3p7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x716q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aij43")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mb43l")
+metadata/_edit_use_anchors_ = true
+
+[node name="sfx" type="HSlider" parent="Margin/VBox"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("9_hwguj")
+bus_name = "SFX"
+
+[node name="SFX Volume" type="Label" parent="Margin/VBox/sfx"]
+modulate = Color(0.0911214, 0.0911215, 0.0911214, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = -38.0
+offset_right = 430.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 25
+text = "Geräuscheffekte"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Margin/VBox/masterButtonSprite/masterButton" to="." method="_on_master_button_pressed"]
+[connection signal="pressed" from="Margin/VBox/musicButtonSprite/musicButton" to="." method="_on_music_button_pressed"]
+[connection signal="pressed" from="Margin/VBox/sfxButtonSprite/sfxButton" to="." method="_on_sfx_button_pressed"]

@@ -280,4 +280,4 @@ func _on_pause_pressed():
 	paused = !paused 
 
 func _on_back_to_islands_pressed():
-	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
+	get_tree().change_scene_to_file("res://Scenes/basic_islands_overview.tscn")

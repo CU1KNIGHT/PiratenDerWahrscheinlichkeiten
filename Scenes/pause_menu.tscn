@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu2sqwh1j3cby"]
+[gd_scene load_steps=6 format=3 uid="uid://cu2sqwh1j3cby"]
 
 [ext_resource type="Texture2D" uid="uid://df0yq4lfwyhik" path="res://resources/Game UI Design/pause menu/resume.svg" id="1_1mfov"]
 [ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_p5x46"]
 [ext_resource type="FontFile" uid="uid://uyyqvdpd6r37" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
+[ext_resource type="PackedScene" uid="uid://dh8nbett4j3m3" path="res://Scenes/pause_options_menu.tscn" id="4_fen65"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rbtn"]
 
@@ -78,5 +79,15 @@ text = "HAUPTMENU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Menu" parent="." instance=ExtResource("4_fen65")]
+visible = false
+layout_mode = 1
+offset_left = 183.0
+offset_top = 96.0
+offset_right = 183.0
+offset_bottom = 96.0
+scale = Vector2(0.7, 0.7)
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
