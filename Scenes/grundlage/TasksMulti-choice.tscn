@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://3d0w3grncesh" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
-[ext_resource type="Texture2D" uid="uid://cbog2d0sjmnkt" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
-[ext_resource type="Texture2D" uid="uid://bx682i5glgevh" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
-[ext_resource type="Texture2D" uid="uid://o2tctwxtjilp" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="Texture2D" uid="uid://cgdqtftddi0ag" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
+[ext_resource type="Texture2D" uid="uid://dr527v4v22gjd" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
+[ext_resource type="Texture2D" uid="uid://bae1rami88jm0" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
+[ext_resource type="Texture2D" uid="uid://tshjbcunuhh7" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_2neo2"]
-[ext_resource type="Texture2D" uid="uid://cqra20lhfsfcs" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
-[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
-[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
+[ext_resource type="Texture2D" uid="uid://canau6la2mjls" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://p31w0ixbnfnc" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
+[ext_resource type="Texture2D" uid="uid://bv66pce8d1nj8" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2ebi"]
 
@@ -71,7 +71,7 @@ auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Question will appear here."
+text = "Frage"
 vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 139
@@ -134,7 +134,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "answer"
+text = "Antwort"
 vertical_alignment = 1
 
 [node name="Answer_B" type="TextureButton" parent="Tasks/answers_box"]
@@ -167,7 +167,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "answer"
+text = "Antwort"
 vertical_alignment = 1
 
 [node name="Answer_C" type="TextureButton" parent="Tasks/answers_box"]
@@ -201,7 +201,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "answer"
+text = "Antwort"
 vertical_alignment = 1
 
 [node name="Answer_D" type="TextureButton" parent="Tasks/answers_box"]
@@ -237,7 +237,7 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "answer"
+text = "Antwort"
 vertical_alignment = 1
 text_overrun_behavior = 3
 

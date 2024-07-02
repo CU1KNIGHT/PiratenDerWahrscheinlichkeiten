@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://lv8ny2c37xlp"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_r6y8t"]
-[ext_resource type="Texture2D" uid="uid://3d0w3grncesh" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_4tdaa"]
-[ext_resource type="Texture2D" uid="uid://dsoy0amqjs3c8" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_eq67g"]
-[ext_resource type="Texture2D" uid="uid://b6t5mnqe67otf" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_c86xn"]
-[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="5_570b7"]
+[ext_resource type="Texture2D" uid="uid://cgdqtftddi0ag" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_4tdaa"]
+[ext_resource type="Texture2D" uid="uid://cqw3oyagy0d1c" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_eq67g"]
+[ext_resource type="Texture2D" uid="uid://c8yyp6d8rmyep" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_c86xn"]
+[ext_resource type="Texture2D" uid="uid://p31w0ixbnfnc" path="res://resources/Game UI Design/pause menu/pause.png" id="5_570b7"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_ottvj"]
-[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_udlib"]
+[ext_resource type="Texture2D" uid="uid://bv66pce8d1nj8" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_udlib"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayiqd"]
 
@@ -36,16 +36,18 @@ scale = Vector2(1.29565, 1.28938)
 texture = ExtResource("2_4tdaa")
 
 [node name="explanation_text" type="TextEdit" parent="."]
-offset_left = 157.0
-offset_top = 180.0
-offset_right = 886.0
-offset_bottom = 377.0
-text = "Das Gegenereignis ist wie die andere Seite einer Münze:
-1.	Komplementäres Ereignis: Das Gegenereignis ist das Ereignis, das passiert, wenn ein bestimmtes Ereignis nicht eintritt. Wenn das Ereignis \"Kopf werfen\" ist, ist das Gegenereignis \"Zahl werfen\".
-2.	Verwandte Ereignisse: Das Gegenereignis ist immer eng mit einem bestimmten Ereignis verbunden. Wenn man die Wahrscheinlichkeit eines Ereignisses kennt, kann man die Wahrscheinlichkeit seines Gegenereignisses leicht berechnen.
-3.	Einfaches Verständnis: Denke daran, dass das Gegenereignis immer das Gegenteil des Ereignisses ist. Wenn das Ereignis \"es regnet\", ist das Gegenereignis \"es regnet nicht\".
-4.	Wahrscheinlichkeit berechnen: Man kann die Wahrscheinlichkeit eines Gegenereignisses leicht berechnen, indem man die Wahrscheinlichkeit des ursprünglichen Ereignisses von 1 subtrahiert.
-"
+offset_left = 146.0
+offset_top = 179.0
+offset_right = 971.0
+offset_bottom = 403.0
+text = "Ahoi, Seefahrer! Auf unseren Reisen müssen wir stets vorbereitet sein, um klug zu handeln.
+Gegenereignisse sind dabei besonders hilfreich.
+
+Stell dir vor, du hoffst auf Rückenwind. Ein Gegenereignis ist, dass der Wind ausbleibt oder entgegenweht.
+Wenn du die Wahrscheinlichkeit für Rückenwind kennst, weißt du auch, wie wahrscheinlich es ist,
+dass du Gegenwind oder Flaute hast.
+
+Halte immer alle Möglichkeiten im Blick, um weise Entscheidungen zu treffen."
 placeholder_text = "here text"
 scroll_fit_content_height = true
 
@@ -68,7 +70,7 @@ offset_bottom = 123.992
 scale = Vector2(2.67291, 1.15257)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "done"
+text = "okay"
 
 [node name="Pause" type="Button" parent="."]
 offset_left = 1076.0

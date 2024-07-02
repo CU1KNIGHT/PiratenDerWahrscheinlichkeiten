@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bol2ugkt4k1np"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_nq1vf"]
-[ext_resource type="Texture2D" uid="uid://dsoy0amqjs3c8" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_k4ytl"]
-[ext_resource type="Texture2D" uid="uid://3d0w3grncesh" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_yesal"]
-[ext_resource type="Texture2D" uid="uid://b6t5mnqe67otf" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_u25m7"]
-[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="5_bh8dt"]
+[ext_resource type="Texture2D" uid="uid://cqw3oyagy0d1c" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_k4ytl"]
+[ext_resource type="Texture2D" uid="uid://cgdqtftddi0ag" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_yesal"]
+[ext_resource type="Texture2D" uid="uid://c8yyp6d8rmyep" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_u25m7"]
+[ext_resource type="Texture2D" uid="uid://p31w0ixbnfnc" path="res://resources/Game UI Design/pause menu/pause.png" id="5_bh8dt"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_gptp2"]
-[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_iseg4"]
+[ext_resource type="Texture2D" uid="uid://bv66pce8d1nj8" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_iseg4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72sso"]
 
@@ -36,16 +36,19 @@ scale = Vector2(1.29565, 1.28938)
 texture = ExtResource("2_yesal")
 
 [node name="explanation_text" type="TextEdit" parent="."]
-offset_left = 157.0
-offset_top = 180.0
-offset_right = 886.0
-offset_bottom = 377.0
-text = "Ein Zufallsexperiment ist wie ein Spiel mit ungewissem Ausgang:
-1.	Grundlegendes Verständnis: Ein Zufallsexperiment ist ein Experiment, bei dem das Ergebnis vom Zufall abhängt. Es kann sich um das Werfen einer Münze, das Würfeln eines Würfels oder das Ziehen einer Karte aus einem Stapel handeln.
-2.	Verschiedene mögliche Ergebnisse: Bei einem Zufallsexperiment gibt es mehrere mögliche Ergebnisse oder Ereignisse, die eintreten können. Zum Beispiel können beim Werfen einer Münze die möglichen Ergebnisse \"Kopf\" oder \"Zahl\" sein.
-3.	Unvorhersehbarkeit: Da das Ergebnis eines Zufallsexperiments vom Zufall abhängt, kann man vorher nicht sicher sagen, welches Ergebnis eintreten wird. Dies macht das Experiment spannend und unvorhersehbar.
-4.	Anwendung auf verschiedene Situationen: Zufallsexperimente können in vielen verschiedenen Situationen auftreten, nicht nur beim Spielen. Zum Beispiel kann das Ergebnis einer medizinischen Studie, das Wetter oder das Ergebnis einer Umfrage als Zufallsexperiment betrachtet werden.
-"
+offset_left = 138.0
+offset_top = 165.0
+offset_right = 982.0
+offset_bottom = 416.0
+text = "Ahoi, tapferer Seefahrer! Auf unseren  Abenteuern ist es entscheidend,
+die Grundlagen von Zufallsexperimenten zu kennen, um klug zu spielen und zu gewinnen.
+
+Vielleicht trittst du bald in einer Taverne gegen andere Abenteurer an. Ein Zufallsexperiment ist genau das: 
+ein Spiel mit ungewissem Ausgang.
+Ein Zufallsexperiment hat verschiedene mögliche Ergebnisse.
+Zum Beispiel, wenn du eine Karte aus einem Stapel ziehst, gibt es viele mögliche Ergebnisse.
+Nimm die Anzahl der günstigen Ergebnisse durch die Gesamtanzahl.
+So triffst du immer die besten Entscheidungen und bleibst in jedem Spiel der klügste Seefahrer!!"
 placeholder_text = "here text"
 scroll_fit_content_height = true
 
