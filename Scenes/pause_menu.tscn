@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cu2sqwh1j3cby"]
 
-[ext_resource type="Texture2D" uid="uid://df0yq4lfwyhik" path="res://resources/Game UI Design/pause menu/resume.svg" id="1_1mfov"]
+[ext_resource type="Texture2D" uid="uid://c5cg108tpmmok" path="res://resources/Game UI Design/pause menu/resume.svg" id="1_1mfov"]
 [ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_p5x46"]
-[ext_resource type="FontFile" uid="uid://uyyqvdpd6r37" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
+[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
 [ext_resource type="PackedScene" uid="uid://dh8nbett4j3m3" path="res://Scenes/pause_options_menu.tscn" id="4_fen65"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rbtn"]

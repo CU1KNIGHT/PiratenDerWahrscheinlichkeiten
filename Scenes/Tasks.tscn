@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cx45mucyy5s8k"]
+[gd_scene load_steps=10 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
 [ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
 [ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3w56"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
 
@@ -92,7 +94,11 @@ placeholder_text = "write here"
 layout_mode = 2
 auto_translate = false
 localize_numeral_system = false
+mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1.8049e-06, 0.4224, 3.85046e-07, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v3w56")
 text = "Submit Answer"
 
 [node name="doneButton" type="Button" parent="Tasks"]

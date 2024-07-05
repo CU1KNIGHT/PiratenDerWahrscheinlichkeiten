@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4s82km2wjipt"]
+[gd_scene load_steps=16 format=3 uid="uid://c4s82km2wjipt"]
 
 [ext_resource type="Script" path="res://Scripts/basic_islands_overview.gd" id="1_tydjn"]
+[ext_resource type="Texture2D" uid="uid://cew5lkeypxd28" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_8yoaj"]
 [ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_ab2d4"]
 [ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_g0ec6"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_eajb6"]
@@ -20,11 +21,12 @@
 script = ExtResource("1_tydjn")
 
 [node name="background" type="TextureRect" parent="."]
-offset_left = -172.0
+offset_left = -160.0
 offset_top = -28.0
-offset_right = 1328.0
+offset_right = 1340.0
 offset_bottom = 1472.0
 scale = Vector2(0.989114, 0.483818)
+texture = ExtResource("2_8yoaj")
 
 [node name="Islands" type="TextureRect" parent="."]
 offset_left = 318.926

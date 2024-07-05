@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://dh8nbett4j3m3"]
 
 [ext_resource type="Script" path="res://Scripts/pause_options_menu.gd" id="1_ew7ro"]
-[ext_resource type="Texture2D" uid="uid://cgbebufwurj2" path="res://resources/settings/settings_board.png" id="3_s7t71"]
-[ext_resource type="FontFile" uid="uid://uyyqvdpd6r37" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="4_akxcv"]
-[ext_resource type="Texture2D" uid="uid://ykdd6hm6a0gs" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="5_6elo5"]
-[ext_resource type="Texture2D" uid="uid://l6apkuun2lbk" path="res://resources/Game UI Design/icons/go back.svg" id="6_kxvmx"]
-[ext_resource type="Texture2D" uid="uid://dxsk031wx1sdr" path="res://resources/Game UI Design/icons/volume_muted.svg" id="7_m78cj"]
-[ext_resource type="Texture2D" uid="uid://b846exyemfeo6" path="res://resources/Game UI Design/icons/volume.svg" id="8_x86qt"]
+[ext_resource type="Texture2D" uid="uid://b3yjpm2wqnlf7" path="res://resources/settings/settings_board.png" id="3_s7t71"]
+[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="4_akxcv"]
+[ext_resource type="Texture2D" uid="uid://di46vbwu1wa1e" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="5_6elo5"]
+[ext_resource type="Texture2D" uid="uid://btajvujcjklih" path="res://resources/Game UI Design/icons/go back.svg" id="6_kxvmx"]
+[ext_resource type="Texture2D" uid="uid://b3q5ixvt5ugw2" path="res://resources/Game UI Design/icons/volume_muted.svg" id="7_m78cj"]
+[ext_resource type="Texture2D" uid="uid://db3q7xdlqun1h" path="res://resources/Game UI Design/icons/volume.svg" id="8_x86qt"]
 [ext_resource type="Script" path="res://volume_slider.gd" id="9_hwguj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5ad6"]
