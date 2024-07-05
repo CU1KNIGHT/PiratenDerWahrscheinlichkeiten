@@ -6,6 +6,9 @@ var paused = false
 var richt_text_bubble
 
 func _read():
+	var transparent_style = StyleBoxFlat.new()
+	# Set the background color to fully transparent
+	transparent_style.bg_color = Color(0, 0, 0, 0)
 	richt_text_bubble=$explanation_text
 func _pressed():
 	richt_text_bubble.visible = !richt_text_bubble.visible

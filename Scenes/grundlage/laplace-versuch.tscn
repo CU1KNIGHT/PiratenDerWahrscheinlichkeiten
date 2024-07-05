@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddtnr7oj72y2t"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_ei5ou"]
-[ext_resource type="Texture2D" uid="uid://cgdqtftddi0ag" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_fhofg"]
-[ext_resource type="Texture2D" uid="uid://cqw3oyagy0d1c" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_vs2yy"]
-[ext_resource type="Texture2D" uid="uid://c8yyp6d8rmyep" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_cmygd"]
-[ext_resource type="Texture2D" uid="uid://p31w0ixbnfnc" path="res://resources/Game UI Design/pause menu/pause.png" id="5_mvdxr"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_fhofg"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_vs2yy"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_cmygd"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="5_mvdxr"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_basn6"]
-[ext_resource type="Texture2D" uid="uid://bv66pce8d1nj8" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_qfu1n"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_qfu1n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbayy"]
 
@@ -40,6 +40,8 @@ offset_left = 134.0
 offset_top = 172.0
 offset_right = 967.0
 offset_bottom = 423.0
+theme_override_colors/background_color = Color(1, 0.976471, 0.933333, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ahoi, Abenteurer! Damit du in den Tavernen der Häfen nicht übers Ohr gehauen wirst, 
 musst du die Regeln fairer Spiele kennen. Ein Laplace-Versuch ist wie ein faires Spiel.
 

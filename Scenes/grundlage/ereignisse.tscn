@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://ca7uhep8t0n42"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_uds1q"]
-[ext_resource type="Texture2D" uid="uid://cgdqtftddi0ag" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
-[ext_resource type="Texture2D" uid="uid://cqw3oyagy0d1c" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
-[ext_resource type="Texture2D" uid="uid://c8yyp6d8rmyep" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
-[ext_resource type="Texture2D" uid="uid://p31w0ixbnfnc" path="res://resources/Game UI Design/pause menu/pause.png" id="5_f5ac5"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hbicu"]
+[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_obc6n"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="3_qu2ob"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="5_f5ac5"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_m5qi8"]
-[ext_resource type="Texture2D" uid="uid://bv66pce8d1nj8" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_afi21"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="7_afi21"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mo8p"]
 
@@ -40,6 +40,8 @@ offset_left = 157.0
 offset_top = 180.0
 offset_right = 886.0
 offset_bottom = 377.0
+theme_override_colors/background_color = Color(1, 0.976471, 0.933333, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Matrose, auf unseren Abenteuern ist es wichtig, verschiedene Möglichkeiten zu kennen,
 um immer die beste Entscheidung zu treffen. Ereignisse helfen uns dabei.
 

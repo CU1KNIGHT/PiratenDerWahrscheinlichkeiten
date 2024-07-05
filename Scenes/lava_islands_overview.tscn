@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://dbl46sav83l4m"]
 
 [ext_resource type="Script" path="res://Scripts/lava_islands_overview.gd" id="1_iyo4x"]
-[ext_resource type="Texture2D" uid="uid://47mwiq837auc" path="res://resources/Game-Task-and-Questions/islands/Inseln-Experte.svg" id="2_u6xit"]
-[ext_resource type="Texture2D" uid="uid://csh1ujsg0ymt6" path="res://resources/character design/pirat captain (player)x160.png" id="3_k3w20"]
-[ext_resource type="Texture2D" uid="uid://bmbuv7eads08k" path="res://resources/Game UI Design/toIceIslandFlipped.png" id="4_1xa0b"]
-[ext_resource type="Texture2D" uid="uid://b6t5mnqe67otf" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_xsws8"]
+[ext_resource type="Texture2D" uid="uid://col4tvwfuev0n" path="res://resources/Game-Task-and-Questions/islands/Inseln-Experte.svg" id="2_u6xit"]
+[ext_resource type="Texture2D" uid="uid://vupfa83g80mp" path="res://resources/character design/pirat captain (player)x160.png" id="3_k3w20"]
+[ext_resource type="Texture2D" uid="uid://dugrith0uwltm" path="res://resources/Game UI Design/toIceIslandFlipped.png" id="4_1xa0b"]
+[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_xsws8"]
 [ext_resource type="Script" path="res://Scripts/goTOEndscene.gd" id="5_oq05r"]
 [ext_resource type="Script" path="res://Scripts/changeSceneToTask.gd" id="5_w3gxr"]
-[ext_resource type="Texture2D" uid="uid://c84pbwce8u7oj" path="res://resources/character design/treasure.png" id="6_m8g5h"]
+[ext_resource type="Texture2D" uid="uid://bpuku4cg7ltd1" path="res://resources/character design/treasure.png" id="6_m8g5h"]
 
 [sub_resource type="Theme" id="Theme_6xf0j"]
 
@@ -38,7 +38,7 @@ offset_bottom = 1942.0
 scale = Vector2(0.0551913, 0.0690324)
 texture = ExtResource("3_k3w20")
 
-[node name="nach Ei Insel" type="TextureButton" parent="."]
+[node name="nach_eis_Insel" type="TextureButton" parent="."]
 offset_left = 8.0
 offset_top = 544.0
 offset_right = 519.0
@@ -93,4 +93,4 @@ mouse_default_cursor_shape = 2
 texture = ExtResource("6_m8g5h")
 stretch_mode = 3
 
-[connection signal="pressed" from="nach Ei Insel" to="." method="_on_nach_ei_insel_pressed"]
+[connection signal="pressed" from="nach_eis_Insel" to="." method="_on_nach_eis_insel_pressed"]

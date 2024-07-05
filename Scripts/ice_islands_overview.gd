@@ -9,6 +9,7 @@ var nachLavaInsel=null
 func _ready():
 	
 	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
+	$"die Eis Inseln".connect("pressed",Callable(self, "_on_die_eis_inseln_pressed"))
 		
 	nachLavaInsel=$"nach Lava Insel"
 	if(Global.lava):
@@ -32,3 +33,6 @@ func _on_pause_pressed():
 
 func _on_nach_grundlagen_insel_pressed():
 	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
+	
+func _on_die_eis_inseln_pressed():
+	get_tree().change_scene_to_file("res://Scenes/TasksMulti-choice-Eis.tscn")

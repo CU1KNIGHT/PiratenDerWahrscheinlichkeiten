@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://5w1rntnicchi" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://b8eg0fd6dg1r" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
-[ext_resource type="Texture2D" uid="uid://c4afseew7s0g7" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
-[ext_resource type="Texture2D" uid="uid://b7mnwsm32dirc" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
