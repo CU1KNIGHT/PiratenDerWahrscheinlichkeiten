@@ -29,7 +29,9 @@ var initTextureRectButtonA=null
 var initTextureRectButtonB=null
 var initTextureRectButtonC=null
 var initTextureRectButtonD=null
+var answerIsSubmited=false
 func _ready():
+	answerIsSubmited=false
 	current_island = get_tree().current_scene
 	doneButton =  $Tasks/doneButton
 	nextButton =  $Tasks/next
@@ -73,6 +75,7 @@ func _ready():
 	nextButton.connect("pressed",Callable(self, "_on_nextButton_pressed"))
 func _on_nextButton_pressed():
 	select_random_question()
+	answerIsSubmited=false
 	nextButton.hide()
 
 func _on_DoneButton_pressed():
@@ -176,13 +179,13 @@ func select_random_question():
 	else:
 		$"Tasks/VBoxContainer/Question-text".text = "No questions available."
 func _on_answer_button_pressed(button,textureRect):
-
-
-
 	var answer = button.text
 	print("Button text: "+answer)
-	submitAnswer(answer,textureRect)
-	#button.texture =load(rightIcon)
+	if(answerIsSubmited == false):
+		submitAnswer(answer,textureRect)
+	answerIsSubmited=true
+
+
 
 func submitAnswer(user_answer,textureRect):
 
