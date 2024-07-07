@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bol2ugkt4k1np"]
+[gd_scene load_steps=11 format=3 uid="uid://bol2ugkt4k1np"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_nq1vf"]
+[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_ct2b8"]
 [ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_k4ytl"]
 [ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_yesal"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_u25m7"]
@@ -21,6 +22,7 @@ offset_top = -28.0
 offset_right = 1328.0
 offset_bottom = 1472.0
 scale = Vector2(0.989114, 0.483818)
+texture = ExtResource("2_ct2b8")
 
 [node name="Islands" type="TextureRect" parent="."]
 offset_left = 318.926
@@ -36,14 +38,17 @@ scale = Vector2(1.29565, 1.28938)
 texture = ExtResource("2_yesal")
 
 [node name="explanation_text" type="TextEdit" parent="."]
-offset_left = 138.0
-offset_top = 165.0
-offset_right = 982.0
-offset_bottom = 416.0
+offset_left = 136.0
+offset_top = 146.0
+offset_right = 885.0
+offset_bottom = 424.0
+theme_override_colors/background_color = Color(1, 0.976471, 0.933333, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ahoi, tapferer Seefahrer! Auf unseren  Abenteuern ist es entscheidend,
 die Grundlagen von Zufallsexperimenten zu kennen, um klug zu spielen und zu gewinnen.
 
-Vielleicht trittst du bald in einer Taverne gegen andere Abenteurer an. Ein Zufallsexperiment ist genau das: 
+Vielleicht trittst du bald in einer Taverne gegen andere Abenteurer an.
+ Ein Zufallsexperiment ist genau das: 
 ein Spiel mit ungewissem Ausgang.
 Ein Zufallsexperiment hat verschiedene mögliche Ergebnisse.
 Zum Beispiel, wenn du eine Karte aus einem Stapel ziehst, gibt es viele mögliche Ergebnisse.

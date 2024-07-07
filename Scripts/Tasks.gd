@@ -3,7 +3,7 @@ extends Node2D
 @onready var pause_menu = $PauseMenu
 var paused = false
 
-var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
+#var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
@@ -14,32 +14,63 @@ var asked_indices = []
 var column_mapping = {}
 var islands_subject_map = {}
 var current_island = ""
-
+var feedback=null
+var nextButton=null
+var answerInputField=null
+var submitInputButton=null
+var doneButton=null
+var questionTextField=null
+var questionTitle=null
+var questionIndex=null
+var inputBackground=null
+var placeholder_text = "eingeben"
 
 func _ready():
+	TranslationServer.set_locale("de")
+	feedback=$Tasks/feedback
+	nextButton=$Tasks/nextQuestion
+	answerInputField=$Tasks/inputBackground/AnswerInput
+	submitInputButton=$Tasks/VBoxContainer/SubmitButton
+	doneButton = $Tasks/doneButton
+	questionTextField=$Tasks/VBoxContainer/questionText
+	questionTitle=$Tasks/title
+	questionIndex=$Tasks/questionIndex
+	inputBackground=$Tasks/inputBackground
+
 	current_island = get_tree().current_scene
 	print(" current_island name:", current_island.name)
-	var doneButton = $Tasks/doneButton
+	
 	doneButton.disabled = true
 	# Seed the random number generator
 	randomize()
-	TranslationServer.set_locale("de")
+
 	# Load column mappings from file
 	load_column_mapping(column_mapping_file_path)
-	
+
 	# Load questions from file
 	load_questions_from_file(Global.current_questions_file_path)
-		
+
 	# Load islands-subject mapper tions from file
-	load_islands_names(island_names_mapper_file_path)
+	#load_islands_names(island_names_mapper_file_path)
 	# Connect the button press signal to the handler function
+
 	$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
+
+	nextButton.set_texture_normal(load(Global.nextButtonImagePath))
+	nextButton.connect("pressed", Callable(self, "get_next_question"))
 	$Tasks/doneButton.connect("pressed", Callable(self, "_on_done_button_pressed"))
 	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
 	$BackToIslands.connect("pressed",Callable(self, "_on_back_to_islands_pressed"))
-	
+	answerInputField.connect("focus_entered",Callable(self, "_on_focus_answer_input_entered"))
+	answerInputField.connect("focus_exited",Callable(self, "_on_focus_answer_input_exited"))
+	randomizeQuestions(Global.questoinsLimit)
 	# Select and display the first question
 	select_random_question()
+	
+func randomizeQuestions(limitOfQuestions):
+	questions.shuffle()
+	questions=questions.slice(0,limitOfQuestions)
+	
 func load_islands_names(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file:
@@ -48,7 +79,7 @@ func load_islands_names(file_path):
 		file.close()
 	else:
 		print("island names mapper file not found!")
-		
+
 func load_column_mapping(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file:
@@ -57,7 +88,7 @@ func load_column_mapping(file_path):
 		file.close()
 	else:
 		print("Column mapping file not found!")
-		
+
 func load_questions_from_file(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file:
@@ -66,6 +97,8 @@ func load_questions_from_file(file_path):
 		print(header)
 		while not file.eof_reached():
 			var line = file.get_line()
+			if line == "":
+				continue
 			var data = parse_csv_line(line)
 			print(data)
 			var question = {
@@ -74,12 +107,12 @@ func load_questions_from_file(file_path):
 				#
 				"title": data[header.find(column_mapping["title"])],
 				"question_text": data[header.find(column_mapping["question_text"])],
-				"options": data[header.find(column_mapping["options"])].substr(1, data[header.find(column_mapping["options"])].length() - 2).split("; "),
+				#"options": data[header.find(column_mapping["options"])].substr(1, data[header.find(column_mapping["options"])].length() - 2).split("; "),
 				"correct_answer": data[header.find(column_mapping["correct_answer"])]
 			}
 			questions.append(question)
 			print(question)
-			
+
 		file.close()
 	else:
 		print("Questions file not found!")
@@ -107,14 +140,15 @@ func parse_csv_line(line: String) -> Array:
 	return result
 
 func select_random_question():
+	feedback.hide()
 	if questions.size() > 0:
 		if asked_indices.size() == questions.size():
 			show_score()
 			return
-			
+
 		var index = -1
 		while index == -1 or index in asked_indices:
-			index = randi() % questions.size()		
+			index = randi() % questions.size()
 		asked_indices.append(index)
 		print("index:")
 		print(index)
@@ -123,27 +157,44 @@ func select_random_question():
 		print(current_question)
 		#print(current_question)
 		#print(index)
-		
-		$Tasks/VBoxContainer/QuestionLabel1.text = current_question["question_text"]
+		questionIndex.text=str(asked_indices.size())+"/"+str(questions.size())
+		questionTextField.text = current_question["question_text"]
+		questionTitle.text=current_question["title"]
 	else:
-		$Tasks/VBoxContainer/QuestionLabel1.text = "No questions available."
+		questionTextField.text = "No questions available."
 
 func _on_SubmitButton_pressed():
-	var user_answer = $Tasks/VBoxContainer/AnswerInput.text
+	var user_answer = replaceComma(answerInputField.text)
+	print("user_anser is valid float: "+str(user_answer.is_valid_float()))
+	user_answer=String.num(float(user_answer),2)
+	print("user_answer: "+user_answer)
 	var is_correct = check_answer(user_answer, current_question["correct_answer"])
 	save_answer(current_question["ID"], current_question["question_text"], current_question["correct_answer"], user_answer, answers_file_path)
-
+		
 	if is_correct:
 		print("Correct!")
+		feedback.texture=load(Global.rightIcon)
 		total_correct += 1
 	else:
+		feedback.texture=load(Global.wrongIcon)
 		print("Incorrect. The correct answer is: " + current_question["correct_answer"])
+	feedback.show()
+	answerInputField.text = ""
+	nextButton.show()
+	answerInputField.editable=false
+	#answerInputField.disable=true
+	submitInputButton.disabled = true
 
-	$Tasks/VBoxContainer/AnswerInput.text = ""
+func get_next_question():
+	answerInputField.editable=true
+	submitInputButton.disabled = false
+	#answerInputField.disable=false
+	feedback.hide()
+	nextButton.hide()
 	select_random_question()
-
+	
 func check_answer(user_answer, correct_answer):
-	print("user answer"+ user_answer)
+	print("check answer: "+ user_answer)
 	print("correct_answer"+ correct_answer)
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
@@ -154,7 +205,7 @@ func save_answer(question_id: String, question_text: String, correct_answer: Str
 		file.seek_end()  # Move the file cursor to the end of the file
 	else:
 		file = FileAccess.open(file_path, FileAccess.WRITE)
-	
+
 	if file:
 		var entry = question_id + "," + question_text + "," + correct_answer + "," + user_answer + "\n"
 		file.store_string(entry)
@@ -169,19 +220,20 @@ func show_score():
 		Global.is_the_game_finshed=true
 	else:
 		Global.is_the_game_finshed=false
-	if(Global.Q2==Global.current_questions_file_path and total_correct==total_questions):
-		Global.lava=true
-	else:
-		Global.lava=false
-	$Tasks/VBoxContainer/QuestionLabel1.text = score_text
-	$Tasks/VBoxContainer/AnswerInput.hide()
+	#if(Global.Q2==Global.current_questions_file_path and total_correct==total_questions):
+		#Global.lava=true
+	#else:
+		#Global.lava=false
+	questionTextField.text = score_text
+	answerInputField.hide()
 	$Tasks/VBoxContainer/SubmitButton.hide()
 	$Tasks/doneButton.disabled=false
 	var doneButton = $Tasks/doneButton
 	doneButton.disabled = false
 	doneButton.visible =true
-	
-
+	answerInputField.hide()
+	inputBackground.hide()
+	questionTitle.hide()
 
 
 
@@ -189,7 +241,7 @@ func show_score():
 func _on_done_button_pressed():
 
 	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
-	
+
 func _on_pause_pressed():
 	if paused:
 		pause_menu.hide()
@@ -197,11 +249,30 @@ func _on_pause_pressed():
 	else:
 		pause_menu.show()
 		Engine.time_scale = 0
-		
-	paused = !paused 
+
+	paused = !paused
 
 
 func _on_back_to_islands_pressed():
 	get_tree().change_scene_to_file(Global.global_current_overview_scene_path)
 
+func _on_focus_answer_input_entered():
+	# Clear the placeholder text when the LineEdit gains focus
+	if answerInputField.text == "":
+		if(answerInputField.editable):
+			answerInputField.placeholder_text = ""
 
+func _on_focus_answer_input_exited():
+	# Restore the placeholder text if the LineEdit is empty
+	if answerInputField.text == "":
+		answerInputField.placeholder_text = placeholder_text
+		
+func replaceComma(new_text):
+	var valid_text = ""
+	for i in range(new_text.length()):
+		var char = new_text[i]
+		if char == ",":
+			valid_text += "."
+		elif char:
+			valid_text += char
+	return valid_text

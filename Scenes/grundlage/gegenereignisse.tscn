@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://lv8ny2c37xlp"]
+[gd_scene load_steps=11 format=3 uid="uid://lv8ny2c37xlp"]
 
 [ext_resource type="Script" path="res://Scripts/goToMultipleChoiceTask.gd" id="1_r6y8t"]
 [ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_4tdaa"]
 [ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="2_eq67g"]
+[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_jk05f"]
 [ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="4_c86xn"]
 [ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="5_570b7"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_ottvj"]
@@ -21,6 +22,7 @@ offset_top = -28.0
 offset_right = 1328.0
 offset_bottom = 1472.0
 scale = Vector2(0.989114, 0.483818)
+texture = ExtResource("2_jk05f")
 
 [node name="Islands" type="TextureRect" parent="."]
 offset_left = 318.926

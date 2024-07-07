@@ -22,6 +22,10 @@ var buttonAtexture=null
 var buttonBtexture=null
 var buttonCtexture=null
 var buttonDtexture=null
+var buttonA=null
+var buttonB=null
+var buttonC=null
+var buttonD=null
 var rightIcon = "res://resources/Game UI Design/icons/right.svg"
 var wrongIcon = "res://resources/Game UI Design/icons/false.svg"
 var texture_rect = null
@@ -31,10 +35,11 @@ var initTextureRectButtonC=null
 var initTextureRectButtonD=null
 var answerIsSubmited=false
 func _ready():
+	print("multi choice scene.")
 	answerIsSubmited=false
 	current_island = Global.global_current_island
 	doneButton =  $Tasks/doneButton
-	nextButton =  $Tasks/next
+	nextButton =  $Tasks/nextQuestion
 	buttonAtexture=$Tasks/answers_box/Answer_A/TextureRect
 	buttonBtexture=$Tasks/answers_box/Answer_B/TextureRect
 	buttonCtexture=$Tasks/answers_box/Answer_C/TextureRect
@@ -43,6 +48,10 @@ func _ready():
 	initTextureRectButtonB = buttonBtexture.texture
 	initTextureRectButtonC = buttonCtexture.texture
 	initTextureRectButtonD = buttonDtexture.texture
+	buttonA=$Tasks/answers_box/Answer_A
+	buttonB=$Tasks/answers_box/Answer_B
+	buttonC=$Tasks/answers_box/Answer_C
+	buttonD=$Tasks/answers_box/Answer_D
 	print(" current_island name:", current_island)
 
 	# Seed the random number generator
@@ -57,23 +66,30 @@ func _ready():
 	# Load questions from file
 	load_questions_from_file(questions_file_path)
 	print(column_mapping)
-
+	nextButton.set_texture_normal(load(Global.nextButtonImagePath))
 	# Connect the button press signal to the handler function,buttonBtexture
 	#$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
 	$Tasks/answers_box/Answer_A.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_A/Answer,buttonAtexture))
 	$Tasks/answers_box/Answer_B.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_B/Answer,buttonBtexture))
 	$Tasks/answers_box/Answer_C.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_C/Answer,buttonCtexture))
 	$Tasks/answers_box/Answer_D.connect("pressed",Callable(self,"_on_answer_button_pressed").bind($Tasks/answers_box/Answer_D/Answer,buttonDtexture))
-	# Select and display the first question
+
+	randomizeQuestions(Global.questoinsLimit)
 	select_random_question()
 
 	doneButton.connect("pressed",Callable(self, "_on_DoneButton_pressed"))
 	nextButton.connect("pressed",Callable(self, "_on_nextButton_pressed"))
+	
 func _on_nextButton_pressed():
 	select_random_question()
 	answerIsSubmited=false
 	nextButton.hide()
-
+	
+func randomizeQuestions(limitOfQuestions):
+	print("limitOfQuestions: "+str(limitOfQuestions))
+	filterQuestions.shuffle()
+	filterQuestions=filterQuestions.slice(0,limitOfQuestions)
+	
 func _on_DoneButton_pressed():
 	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
 
@@ -153,6 +169,10 @@ func parse_csv_line(line: String) -> Array:
 	return result
 
 func select_random_question():
+	buttonA.disabled =false
+	buttonB.disabled =false
+	buttonC.disabled =false
+	buttonD.disabled =false
 	buttonAtexture.texture=initTextureRectButtonA
 	buttonBtexture.texture=initTextureRectButtonB
 	buttonCtexture.texture=initTextureRectButtonC
@@ -205,6 +225,10 @@ func submitAnswer(user_answer,textureRect):
 		textureRect.texture=load(wrongIcon)
 		print("Incorrect. The correct answer is: " + current_question["correct_answer"])
 	nextButton.show()
+	buttonA.disabled =true
+	buttonB.disabled =true
+	buttonC.disabled =true
+	buttonD.disabled =true
 
 func check_answer(user_answer, correct_answer):
 	print("check_answer:user_answer '"+user_answer+"'")

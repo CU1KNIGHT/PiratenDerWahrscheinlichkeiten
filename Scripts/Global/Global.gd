@@ -21,3 +21,9 @@ var basics_islands = {
 	"lapalce-island": false,
 	"zufallexperiment-island": false
 }
+#buttons src path
+var rightIcon = "res://resources/Game UI Design/icons/right.svg"
+var wrongIcon = "res://resources/Game UI Design/icons/false.svg"
+var nextButtonImagePath="res://resources/images/next.png"
+#limits
+var questoinsLimit=2

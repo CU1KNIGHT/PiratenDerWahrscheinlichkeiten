@@ -1,13 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://cx45mucyy5s8k"]
+[gd_scene load_steps=14 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
 [ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://d2cvbhlw7jrmx" path="res://resources/Game-Task-and-Questions/islands/wave pattern-01.svg" id="2_xtno3"]
+[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_k04hj"]
+[ext_resource type="Texture2D" uid="uid://cfc7j0j2th5om" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
 [ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://caajifjgkk1qi" path="res://resources/images/Tasks/submit button.png" id="4_lejgu"]
+[ext_resource type="Texture2D" uid="uid://b1vgf8xnk0c5k" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
 [ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="Texture2D" uid="uid://cmpcavxvb3ysj" path="res://resources/images/next.png" id="6_av1qy"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3w56"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7ehg"]
 
 [sub_resource type="Theme" id="Theme_k6e5p"]
 
@@ -36,11 +40,11 @@ localize_numeral_system = false
 
 [node name="background" type="TextureRect" parent="Tasks"]
 layout_mode = 0
-offset_left = -600.0
-offset_top = -411.0
-offset_right = 1694.0
-offset_bottom = 832.0
-texture = ExtResource("2_xtno3")
+offset_left = -819.29
+offset_top = -634.244
+offset_right = 1762.71
+offset_bottom = 1448.76
+texture = ExtResource("2_k04hj")
 
 [node name="TextureRect" type="TextureRect" parent="Tasks"]
 layout_mode = 0
@@ -53,7 +57,38 @@ localize_numeral_system = false
 texture = ExtResource("2_c68du")
 expand_mode = 1
 
+[node name="inputBackground" type="TextureRect" parent="Tasks"]
+layout_mode = 2
+offset_left = 204.345
+offset_top = 339.839
+offset_right = 594.345
+offset_bottom = 503.839
+scale = Vector2(0.587136, 0.643928)
+auto_translate = false
+localize_numeral_system = false
+texture = ExtResource("4_wgg4t")
+
+[node name="AnswerInput" type="LineEdit" parent="Tasks/inputBackground"]
+layout_mode = 2
+offset_left = 26.0214
+offset_top = 67.7338
+offset_right = 342.021
+offset_bottom = 147.734
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.589096, 0.589096, 0.589096, 1)
+theme_override_colors/font_placeholder_color = Color(0.458405, 0.458405, 0.458405, 1)
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a7ehg")
+placeholder_text = "antwort"
+alignment = 1
+max_length = 11
+expand_to_text_length = true
+virtual_keyboard_type = 3
+clear_button_enabled = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,7 +104,7 @@ grow_vertical = 2
 auto_translate = false
 localize_numeral_system = false
 
-[node name="QuestionLabel1" type="Label" parent="Tasks/VBoxContainer"]
+[node name="questionText" type="Label" parent="Tasks/VBoxContainer"]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
 size_flags_vertical = 3
@@ -83,36 +118,77 @@ autowrap_mode = 3
 justification_flags = 139
 language = "de"
 
-[node name="AnswerInput" type="LineEdit" parent="Tasks/VBoxContainer"]
+[node name="SubmitButton" type="TextureButton" parent="Tasks/VBoxContainer"]
 layout_mode = 2
-auto_translate = false
-localize_numeral_system = false
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-placeholder_text = "write here"
+mouse_default_cursor_shape = 2
+stretch_mode = 3
 
-[node name="SubmitButton" type="Button" parent="Tasks/VBoxContainer"]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="Tasks/VBoxContainer/SubmitButton"]
+layout_mode = 0
+offset_left = 264.073
+offset_top = 68.9158
+offset_right = 1116.07
+offset_bottom = 428.916
+scale = Vector2(0.25, 0.25)
 auto_translate = false
 localize_numeral_system = false
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1.8049e-06, 0.4224, 3.85046e-07, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_v3w56")
-text = "Submit Answer"
+texture = ExtResource("4_lejgu")
 
 [node name="doneButton" type="Button" parent="Tasks"]
 visible = false
 texture_filter = 2
 texture_repeat = 1
 layout_mode = 0
-offset_left = 507.998
-offset_top = 439.791
-offset_right = 587.998
-offset_bottom = 470.791
+offset_left = 479.352
+offset_top = 586.994
+offset_right = 559.352
+offset_bottom = 617.994
 theme = SubResource("Theme_k6e5p")
-theme_override_colors/font_color = Color(0.560784, 0.898039, 0.360784, 1)
-text = "done"
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/doneButton"]
+layout_mode = 0
+offset_left = -152.781
+offset_top = -58.1542
+offset_right = 391.219
+offset_bottom = 95.8458
+mouse_default_cursor_shape = 2
+texture = ExtResource("6_av1qy")
+
+[node name="feedback" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = 693.246
+offset_top = 368.916
+offset_right = 2193.25
+offset_bottom = 1868.92
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_21dd8")
+
+[node name="nextQuestion" type="TextureButton" parent="Tasks"]
+layout_mode = 0
+offset_left = 204.345
+offset_top = 601.533
+offset_right = 785.345
+offset_bottom = 819.533
+mouse_default_cursor_shape = 2
+
+[node name="title" type="Label" parent="Tasks"]
+layout_mode = 2
+offset_left = 403.0
+offset_top = -67.0
+offset_right = 800.0
+offset_bottom = -23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "title"
+
+[node name="questionIndex" type="Label" parent="Tasks"]
+layout_mode = 2
+offset_left = 876.583
+offset_top = -67.2408
+offset_right = 998.583
+offset_bottom = -23.2408
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "question index"
 
 [node name="Pause" type="Button" parent="."]
 offset_left = 1508.72
