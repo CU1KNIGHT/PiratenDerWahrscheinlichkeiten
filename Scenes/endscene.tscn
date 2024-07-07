@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://3q2npxqertxk"]
 
 [ext_resource type="Script" path="res://Scripts/endscene.gd" id="1_j3ooi"]
-[ext_resource type="Texture2D" uid="uid://prml0nxqtrdo" path="res://resources/endscene design/endscene.png" id="1_rxx1q"]
-[ext_resource type="Texture2D" uid="uid://byr84sgmvkivn" path="res://resources/endscene design/back to gundlage island.png" id="2_n772g"]
-[ext_resource type="Texture2D" uid="uid://dp48f6feymru4" path="res://resources/endscene design/back to EIS island.png" id="4_8eot2"]
-[ext_resource type="Texture2D" uid="uid://dnbp118a0o8gl" path="res://resources/endscene design/back to LAVA island.png" id="5_bylfy"]
-[ext_resource type="Texture2D" uid="uid://cn0jsoxn3oeh8" path="res://resources/endscene design/end game button.png" id="6_0wpp3"]
+[ext_resource type="Texture2D" uid="uid://dx17ik5vmxg3w" path="res://resources/endscene design/endscene.png" id="1_rxx1q"]
+[ext_resource type="Texture2D" uid="uid://8yisq4j2igo2" path="res://resources/endscene design/back to gundlage island.png" id="2_n772g"]
+[ext_resource type="Texture2D" uid="uid://8k4q6wjjfv77" path="res://resources/endscene design/back to EIS island.png" id="4_8eot2"]
+[ext_resource type="Texture2D" uid="uid://8o5d5qdxkq7k" path="res://resources/endscene design/back to LAVA island.png" id="5_bylfy"]
+[ext_resource type="Texture2D" uid="uid://dheci33cm2obp" path="res://resources/endscene design/end game button.png" id="6_0wpp3"]
 
 [node name="Endscene" type="Node2D"]
 script = ExtResource("1_j3ooi")
@@ -19,10 +19,12 @@ texture = ExtResource("1_rxx1q")
 offset_left = 58.0
 offset_top = 78.0
 offset_right = 393.0
-offset_bottom = 164.0
+offset_bottom = 246.0
 theme_override_colors/font_color = Color(0.761318, 0.450069, 7.70092e-07, 1)
-theme_override_font_sizes/font_size = 50
-text = "TOTAL PUNKT"
+theme_override_font_sizes/font_size = 40
+text = "Du hast den 
+Schatz gefunden！
+"
 
 [node name="backToIslandBasics" type="Button" parent="Label"]
 layout_mode = 0
