@@ -119,6 +119,8 @@ func load_questions_from_file(file_path):
 		#print(header)
 		while not file.eof_reached():
 			var line = file.get_line()
+			if line == "":
+				continue
 			var data = parse_csv_line(line)
 			#print(data)
 			var question = {

@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_2neo2"]
 [ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="8_5rmt8"]
 [ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
-[ext_resource type="Texture2D" uid="uid://cmpcavxvb3ysj" path="res://resources/images/next.png" id="8_xm081"]
 [ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
 
 [sub_resource type="Theme" id="Theme_at6sl"]
@@ -287,39 +287,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "show score"
 
-[node name="doneButton1" type="Button" parent="Tasks"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.127
-anchor_top = 0.531
-anchor_right = 0.127
-anchor_bottom = 0.531
-offset_left = 598.367
-offset_top = -70.0826
-offset_right = 768.367
-offset_bottom = 27.9175
-theme_override_font_sizes/font_size = 30
-text = "Done"
-
-[node name="next" type="Button" parent="Tasks"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.127
-anchor_top = 0.531
-anchor_right = 0.127
-anchor_bottom = 0.531
-offset_left = 52.1739
-offset_top = -15.563
-offset_right = 101.174
-offset_bottom = 15.437
-text = "next"
-
 [node name="doneButton" type="Button" parent="Tasks"]
-visible = false
 texture_filter = 2
 texture_repeat = 1
+layout_mode = 0
 offset_left = 611.126
 offset_top = 714.207
 offset_right = 691.126
@@ -333,10 +304,11 @@ offset_top = -67.2408
 offset_right = 458.06
 offset_bottom = 86.7592
 mouse_default_cursor_shape = 2
-texture = ExtResource("8_xm081")
+texture = ExtResource("8_5rmt8")
 
 [node name="nextQuestion" type="TextureButton" parent="Tasks"]
 visible = false
+layout_mode = 0
 offset_left = -240.631
 offset_top = 650.6
 offset_right = 208.369

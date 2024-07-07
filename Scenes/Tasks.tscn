@@ -165,6 +165,7 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("4_21dd8")
 
 [node name="nextQuestion" type="TextureButton" parent="Tasks"]
+visible = false
 layout_mode = 0
 offset_left = 204.345
 offset_top = 601.533

@@ -34,7 +34,7 @@ func _ready():
 	answerIsSubmited=false
 	current_island = get_tree().current_scene
 	doneButton =  $Tasks/doneButton
-	nextButton =  $Tasks/next
+	nextButton =  $Tasks/nextQuestion
 	buttonAtexture=$Tasks/answers_box/Answer_A/TextureRect
 	buttonBtexture=$Tasks/answers_box/Answer_B/TextureRect
 	buttonCtexture=$Tasks/answers_box/Answer_C/TextureRect
@@ -44,7 +44,7 @@ func _ready():
 	initTextureRectButtonC = buttonCtexture.texture
 	initTextureRectButtonD = buttonDtexture.texture
 	print(" current_island name:", current_island)
-
+	nextButton.set_texture_normal(load(Global.nextButtonImagePath))
 	# Seed the random number generator
 	randomize()
 	TranslationServer.set_locale("de")
@@ -58,7 +58,7 @@ func _ready():
 	load_islands_names(island_names_mapper_file_path)
 	print(island_names_mapper)
 	# Load column mappings from file
-
+	randomizeQuestions(Global.questoinsLimit)
 	# Load questions from file
 
 
@@ -73,6 +73,11 @@ func _ready():
 
 	doneButton.connect("pressed",Callable(self, "_on_DoneButton_pressed"))
 	nextButton.connect("pressed",Callable(self, "_on_nextButton_pressed"))
+	
+func randomizeQuestions(limitOfQuestions):
+	print("limitOfQuestions: "+str(limitOfQuestions))
+	questions.shuffle()
+	questions=questions.slice(0,limitOfQuestions)
 func _on_nextButton_pressed():
 	select_random_question()
 	answerIsSubmited=false

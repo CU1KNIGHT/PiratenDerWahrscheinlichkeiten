@@ -1,14 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://k146esr0uhfg"]
+[gd_scene load_steps=14 format=3 uid="uid://k146esr0uhfg"]
 
-[ext_resource type="Script" path="res://Scenes/TasksMulti-choice-Eis.gd" id="1_q7rgu"]
+[ext_resource type="Script" path="res://Scripts/TasksMulti-choice-Eis.gd" id="1_q7rgu"]
 [ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hto3o"]
+[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_uc44h"]
 [ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="3_ky44r"]
 [ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="4_4ctwk"]
 [ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="5_51r4m"]
 [ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="6_lybj6"]
 [ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="7_xrqhp"]
 [ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="8_1ffse"]
+[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="8_b0sxr"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="9_fxsw2"]
+
+[sub_resource type="Theme" id="Theme_6xp4m"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2ebi"]
 
@@ -33,6 +37,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 auto_translate = false
 localize_numeral_system = false
+
+[node name="background" type="TextureRect" parent="Tasks"]
+layout_mode = 0
+offset_left = -569.111
+offset_top = -810.524
+offset_right = 1712.89
+offset_bottom = 1272.48
+texture = ExtResource("2_uc44h")
 
 [node name="TextureRect" type="TextureRect" parent="Tasks"]
 layout_mode = 0
@@ -276,34 +288,34 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "show score"
 
+[node name="nextQuestion" type="TextureButton" parent="Tasks"]
+visible = false
+layout_mode = 0
+offset_left = 129.864
+offset_top = 656.052
+offset_right = 578.864
+offset_bottom = 799.052
+mouse_default_cursor_shape = 2
+
 [node name="doneButton" type="Button" parent="Tasks"]
 visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.127
-anchor_top = 0.531
-anchor_right = 0.127
-anchor_bottom = 0.531
-offset_left = 598.367
-offset_top = -70.0826
-offset_right = 768.367
-offset_bottom = 27.9175
-theme_override_font_sizes/font_size = 30
-text = "Done"
+texture_filter = 2
+texture_repeat = 1
+layout_mode = 0
+offset_left = 611.126
+offset_top = 714.207
+offset_right = 691.126
+offset_bottom = 752.207
+theme = SubResource("Theme_6xp4m")
 
-[node name="next" type="Button" parent="Tasks"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.127
-anchor_top = 0.531
-anchor_right = 0.127
-anchor_bottom = 0.531
-offset_left = 52.1739
-offset_top = -15.563
-offset_right = 101.174
-offset_bottom = 15.437
-text = "next"
+[node name="TextureRect" type="TextureRect" parent="Tasks/doneButton"]
+layout_mode = 0
+offset_left = -85.9395
+offset_top = -67.2408
+offset_right = 458.06
+offset_bottom = 86.7592
+mouse_default_cursor_shape = 2
+texture = ExtResource("8_b0sxr")
 
 [node name="Pause" type="Button" parent="."]
 offset_left = 1508.72
