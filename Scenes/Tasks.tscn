@@ -126,15 +126,16 @@ stretch_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/VBoxContainer/SubmitButton"]
 layout_mode = 0
-offset_left = 264.073
-offset_top = 68.9158
-offset_right = 1116.07
-offset_bottom = 428.916
+offset_left = 237.337
+offset_top = 72.5504
+offset_right = 1322.34
+offset_bottom = 399.55
 scale = Vector2(0.25, 0.25)
 auto_translate = false
 localize_numeral_system = false
 mouse_default_cursor_shape = 2
 texture = ExtResource("4_lejgu")
+expand_mode = 1
 
 [node name="doneButton" type="Button" parent="Tasks"]
 visible = false
