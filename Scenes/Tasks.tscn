@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_k04hj"]
-[ext_resource type="Texture2D" uid="uid://cfc7j0j2th5om" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
-[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
-[ext_resource type="Texture2D" uid="uid://caajifjgkk1qi" path="res://resources/images/Tasks/submit button.png" id="4_lejgu"]
-[ext_resource type="Texture2D" uid="uid://b1vgf8xnk0c5k" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
-[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
-[ext_resource type="Texture2D" uid="uid://cmpcavxvb3ysj" path="res://resources/images/next.png" id="6_av1qy"]
+[ext_resource type="Texture2D" uid="uid://rqtxy46fms1b" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://bxbupax6pgiip" path="res://resources/images/wave pattern.png" id="2_k04hj"]
+[ext_resource type="Texture2D" uid="uid://bxm57atihp4cr" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
+[ext_resource type="Texture2D" uid="uid://sjart40w50kd" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://kc7dge6tssj8" path="res://resources/images/Tasks/submit button.png" id="4_lejgu"]
+[ext_resource type="Texture2D" uid="uid://ckri10gdx5820" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
+[ext_resource type="Texture2D" uid="uid://d0erwa6opsr52" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="Texture2D" uid="uid://b1rtcdgv4ols0" path="res://resources/images/next.png" id="6_av1qy"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7ehg"]
@@ -48,10 +48,10 @@ texture = ExtResource("2_k04hj")
 
 [node name="TextureRect" type="TextureRect" parent="Tasks"]
 layout_mode = 0
-offset_left = 13.3684
-offset_top = -207.174
-offset_right = 1201.37
-offset_bottom = 583.826
+offset_left = -311.0
+offset_top = -342.0
+offset_right = 1497.0
+offset_bottom = 793.0
 auto_translate = false
 localize_numeral_system = false
 texture = ExtResource("2_c68du")
@@ -111,6 +111,7 @@ size_flags_vertical = 3
 auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 text = "Question will appear here."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -180,6 +181,7 @@ offset_top = -67.0
 offset_right = 800.0
 offset_bottom = -23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 text = "title"
 
 [node name="questionIndex" type="Label" parent="Tasks"]
