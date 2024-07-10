@@ -59,6 +59,7 @@ texture = ExtResource("2_c68du")
 expand_mode = 1
 
 [node name="Tipp" type="Label" parent="Tasks"]
+layout_mode = 0
 offset_left = -9.54883
 offset_top = 514.301
 offset_right = 818.451

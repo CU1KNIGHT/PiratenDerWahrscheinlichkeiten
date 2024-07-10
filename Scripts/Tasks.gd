@@ -26,7 +26,7 @@ var inputBackground=null
 var placeholder_text = "eingeben"
 
 func _ready():
-	TranslationServer.set_locale("de")
+
 	feedback=$Tasks/feedback
 	nextButton=$Tasks/nextQuestion
 	answerInputField=$Tasks/inputBackground/AnswerInput

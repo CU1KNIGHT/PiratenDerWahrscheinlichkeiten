@@ -5,6 +5,7 @@ var paused = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	AudioPlayer._play_music_gameplay1()
+	Global.currentLevelSceneTasks=Global.MULTICHOICE_BASICS_SCENE_PATH
 	var texture_buttons = get_all_texture_buttons(self)
 	# Loop through each TextureButton and compare its name with the dictionary keys
 	for button in texture_buttons:

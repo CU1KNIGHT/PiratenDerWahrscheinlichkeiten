@@ -7,7 +7,7 @@ var nachLavaInsel=null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	Global.currentLevelSceneTasks=Global.MULTICHOICE_EIS_SCENE_PATH
 	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
 	$"die Eis Inseln".connect("pressed",Callable(self, "_on_die_eis_inseln_pressed"))
 		
@@ -35,4 +35,4 @@ func _on_nach_grundlagen_insel_pressed():
 	get_tree().change_scene_to_file("res://scenes/basic_islands_overview.tscn")
 	
 func _on_die_eis_inseln_pressed():
-	get_tree().change_scene_to_file("res://Scenes/TasksMulti-choice-Eis.tscn")
+	get_tree().change_scene_to_file(Global.currentLevelSceneTasks)

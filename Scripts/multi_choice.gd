@@ -3,7 +3,7 @@ extends Node2D
 @onready var pause_menu = $PauseMenu
 var paused = false
 
-var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
+var island_names_mapper_file_path = Global.island_names_mapper_file_path
 var island_names_mapper = null
 var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q1.csv1"
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
@@ -123,6 +123,8 @@ func load_questions_from_file(file_path):
 				continue
 			var data = parse_csv_line(line)
 			#print(data)
+			print("header.find(column_mapping[question_text]):"+str(header.find(column_mapping["question_text"])))
+			print("data:"+str(data))
 			var question = {
 				"ID": data[header.find(column_mapping["ID"])],
 				"subject": data[header.find(column_mapping["subject"])],
