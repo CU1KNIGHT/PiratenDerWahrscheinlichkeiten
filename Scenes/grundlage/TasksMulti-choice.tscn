@@ -288,6 +288,7 @@ theme_override_font_sizes/font_size = 30
 text = "show score"
 
 [node name="doneButton" type="Button" parent="Tasks"]
+visible = false
 texture_filter = 2
 texture_repeat = 1
 layout_mode = 0
