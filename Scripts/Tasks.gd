@@ -215,7 +215,7 @@ func save_answer(question_id: String, question_text: String, correct_answer: Str
 
 func show_score():
 	var total_questions = questions.size()
-	var score_text = "You answered " + str(total_correct) + " out of " + str(total_questions) + " questions correctly."
+	var score_text = "Du hast " + str(total_correct) + " von  " + str(total_questions) + " Fragen richtig beantwortet."
 	if(Global.global_current_overview_scene_path==Global.LAVA_OVERVIEW_SCENE_PATH and total_questions==total_correct):
 		Global.is_the_game_finshed=true
 	else:

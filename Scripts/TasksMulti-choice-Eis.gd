@@ -230,7 +230,7 @@ func save_answer(question_id: String, question_text: String, correct_answer: Str
 
 func show_score():
 	var total_questions = questions.size()
-	var score_text = "You answered " + str(total_correct) + " out of " + str(total_questions) + " questions correctly."
+	var score_text = "Du hast " + str(total_correct) + " von  " + str(total_questions) + " Fragen richtig beantwortet."
 	$Tasks/show_score.text = score_text
 	$Tasks/show_score.show()
 	$"Tasks/VBoxContainer/Question-text".hide()
