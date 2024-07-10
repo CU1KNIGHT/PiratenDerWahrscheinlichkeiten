@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://i2hyi4f1k7mi"]
+[gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://2tepl456d7kt" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_grmhl"]
-[ext_resource type="Texture2D" uid="uid://cwft72dsae04n" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://bi1tkcfi2v3cf" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://bu5tod2sx4bh7" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="FontFile" uid="uid://d6fesck206kg" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
-[ext_resource type="Texture2D" uid="uid://cimxekdq81f3m" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Texture2D" uid="uid://b8b1ctlambifn" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_grmhl"]
+[ext_resource type="Texture2D" uid="uid://djx2nymcaicsg" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
+[ext_resource type="Texture2D" uid="uid://1ay8ua7771nr" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://bc22ocepokrak" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://bkwa4pq4vt5e5" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://bur3c36sqgub2" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Texture2D" uid="uid://7wyhxfq7krm1" path="res://resources/design/Title-Logo.png" id="8_ixgxf"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -42,10 +43,10 @@ expand_mode = 2
 
 [node name="Inseln" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 286.0
-offset_top = -10.0
-offset_right = 1103.0
-offset_bottom = 740.0
+offset_left = 376.0
+offset_top = -52.0
+offset_right = 1193.0
+offset_bottom = 698.0
 texture = ExtResource("3_v2wmp")
 expand_mode = 1
 
@@ -55,10 +56,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 34.0
-offset_top = 231.0
-offset_right = -805.0
-offset_bottom = -312.0
+offset_left = 126.0
+offset_top = 268.0
+offset_right = -752.0
+offset_bottom = -288.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxLine_6nmb8")
@@ -68,10 +69,10 @@ expand_icon = true
 
 [node name="Play_Button" type="Label" parent="Play"]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 22.0
-offset_right = 264.0
-offset_bottom = 83.0
+offset_left = 75.0
+offset_top = 16.0
+offset_right = 249.0
+offset_bottom = 77.0
 theme_override_fonts/font = ExtResource("5_88lf4")
 theme_override_font_sizes/font_size = 30
 text = "Spielen"
@@ -84,10 +85,10 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-offset_left = 27.0
-offset_top = 460.0
-offset_right = -804.0
-offset_bottom = 571.0
+offset_left = 122.0
+offset_top = 488.0
+offset_right = -741.0
+offset_bottom = 588.0
 grow_horizontal = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_b08wr")
 icon = ExtResource("4_oi6gm")
@@ -97,10 +98,10 @@ expand_icon = true
 
 [node name="Quit_Button" type="Label" parent="Quit"]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 37.0
-offset_right = 307.0
-offset_bottom = 89.0
+offset_left = 102.0
+offset_top = 30.0
+offset_right = 297.0
+offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("5_88lf4")
 theme_override_font_sizes/font_size = 30
 text = "Beenden"
@@ -110,10 +111,10 @@ uppercase = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
-offset_left = 1.0
-offset_top = 342.0
-offset_right = 372.0
-offset_bottom = 451.0
+offset_left = 86.0
+offset_top = 368.0
+offset_right = 441.0
+offset_bottom = 473.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_74qox")
 icon = ExtResource("6_7vh5f")
 icon_alignment = 1
@@ -121,14 +122,19 @@ expand_icon = true
 
 [node name="Options_Button" type="Label" parent="Options"]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 40.0
-offset_right = 393.0
-offset_bottom = 77.0
+offset_left = 94.0
+offset_top = 37.0
+offset_right = 387.0
+offset_bottom = 74.0
 theme_override_fonts/font = ExtResource("5_88lf4")
 theme_override_font_sizes/font_size = 24
 text = "Einstellungen"
 uppercase = true
+
+[node name="Title-logo" type="Sprite2D" parent="."]
+position = Vector2(258, 140)
+scale = Vector2(0.39767, 0.39767)
+texture = ExtResource("8_ixgxf")
 
 [connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]

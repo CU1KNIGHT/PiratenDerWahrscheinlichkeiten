@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://cx45mucyy5s8k"]
+[gd_scene load_steps=15 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://rqtxy46fms1b" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://bxbupax6pgiip" path="res://resources/images/wave pattern.png" id="2_k04hj"]
-[ext_resource type="Texture2D" uid="uid://bxm57atihp4cr" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
-[ext_resource type="Texture2D" uid="uid://sjart40w50kd" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://bn50i8jrvvakw" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
+[ext_resource type="Texture2D" uid="uid://ctawxceu22ivp" path="res://resources/images/wave pattern.png" id="2_k04hj"]
+[ext_resource type="Texture2D" uid="uid://ch0qcekptncyf" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
+[ext_resource type="Texture2D" uid="uid://by1wb4f2d1wca" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
 [ext_resource type="Texture2D" uid="uid://kc7dge6tssj8" path="res://resources/images/Tasks/submit button.png" id="4_lejgu"]
-[ext_resource type="Texture2D" uid="uid://ckri10gdx5820" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
-[ext_resource type="Texture2D" uid="uid://d0erwa6opsr52" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
-[ext_resource type="Texture2D" uid="uid://b1rtcdgv4ols0" path="res://resources/images/next.png" id="6_av1qy"]
+[ext_resource type="Texture2D" uid="uid://cxtkqs4vhx2fu" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
+[ext_resource type="Texture2D" uid="uid://d3bmaruhvoql0" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="Texture2D" uid="uid://h4cvt1l2fjw7" path="res://resources/images/next.png" id="6_av1qy"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
+[ext_resource type="FontFile" uid="uid://dwcaqgo0ilcdj" path="res://resources/Game UI Design/icons/Century-Schoolbook/CENSCBK.TTF" id="11_kttqm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7ehg"]
 
@@ -217,3 +218,15 @@ offset_top = -387.089
 offset_right = -567.201
 offset_bottom = -387.089
 scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -9.54886
+offset_top = 514.301
+offset_right = 818.451
+offset_bottom = 646.301
+theme_override_colors/font_color = Color(0.544685, 0.318414, 0.130455, 1)
+theme_override_fonts/font = ExtResource("11_kttqm")
+theme_override_font_sizes/font_size = 26
+text = "Tipp : 
+Runde dein Antwort auf zwei Nachkommastellen!
+(z.B 0.235 -> 0.24, 0.133 -> 0.13)"
