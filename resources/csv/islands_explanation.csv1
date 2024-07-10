@@ -1,0 +1,41 @@
+island,title,text
+wahrscheinx,,Ahoy, Matrose!
+Auf hoher See müssen wir unsere Chancen kennen, um zu überleben und Schätze zu finden.
+Wahrscheinlichkeiten helfen uns dabei.
+
+Stell dir vor, du wettest aufs Wetter morgen.
+Wahrscheinlichkeiten zeigen dir, wie gut deine Chancen stehen.
+Sie liegen immer zwischen 0 (niemals) und 1 (sicher).
+ereignisse,,Matrose, auf unseren Abenteuern ist es wichtig, verschiedene Möglichkeiten zu kennen,
+um immer die beste Entscheidung zu treffen. Ereignisse helfen uns dabei.
+
+Stell dir vor, du fischst nach Schätzen im Meer.
+Ein Ereignis ist eine Möglichkeit oder ein Ergebnis, das passieren kann.
+Du könntest einen Goldschatz finden oder nur eine alte Flasche.
+gegenereignisse,,Ahoi, Seefahrer! Auf unseren Reisen müssen wir stets vorbereitet sein, um klug zu handeln.
+Gegenereignisse sind dabei besonders hilfreich.
+
+Stell dir vor, du hoffst auf Rückenwind. Ein Gegenereignis ist, dass der Wind ausbleibt oder entgegenweht.
+Wenn du die Wahrscheinlichkeit für Rückenwind kennst, weißt du auch, wie wahrscheinlich es ist,
+dass du Gegenwind oder Flaute hast.
+
+Halte immer alle Möglichkeiten im Blick, um weise Entscheidungen zu treffen.
+laplace,,Ahoi, Abenteurer! Damit du in den Tavernen der Häfen nicht übers Ohr gehauen wirst, 
+musst du die Regeln fairer Spiele kennen. Ein Laplace-Versuch ist wie ein faires Spiel.
+
+Der Wirt erlaubt nur faire Spiele in seiner Taverne, also zusagen nur Laplace-Spiele
+Stell dir vor, du wirfst einen fairen Würfel oder eine Münze. Jedes Ergebnis hat die gleiche Chance.
+Ein Laplace-Versuch hat eine feste Anzahl möglicher Ergebnisse.
+Zum Beispiel hat ein Würfel 6 (1 bis 6) und eine Münze 2 (Kopf oder Zahl).
+Die Wahrscheinlichkeit berechnest du wie bei jedem anderen Zufallsexperiment auch
+zufallsexperiment,,Ahoi, tapferer Seefahrer! Auf unseren  Abenteuern ist es entscheidend,
+die Grundlagen von Zufallsexperimenten zu kennen, um klug zu spielen und zu gewinnen.
+
+Vielleicht trittst du bald in einer Taverne gegen andere Abenteurer an.
+ Ein Zufallsexperiment ist genau das: 
+ein Spiel mit ungewissem Ausgang.
+Ein Zufallsexperiment hat verschiedene mögliche Ergebnisse.
+Zum Beispiel, wenn du eine Karte aus einem Stapel ziehst, gibt es viele mögliche Ergebnisse.
+Nimm die Anzahl der günstigen Ergebnisse durch die Gesamtanzahl.
+So triffst du immer die besten Entscheidungen und bleibst in jedem Spiel der klügste Seefahrer!!
+
