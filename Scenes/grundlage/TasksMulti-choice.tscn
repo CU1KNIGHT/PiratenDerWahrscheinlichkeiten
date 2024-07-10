@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://ciyh1ery5unpn" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
-[ext_resource type="Texture2D" uid="uid://dape3xihklcsq" path="res://resources/images/wave pattern.png" id="2_pspbb"]
-[ext_resource type="Texture2D" uid="uid://lsdmhge7yjqs" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
-[ext_resource type="Texture2D" uid="uid://d0s8l84mw5ies" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
-[ext_resource type="Texture2D" uid="uid://cyvhxwm43c54w" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
+[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_pspbb"]
+[ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
+[ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
+[ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_2neo2"]
-[ext_resource type="Texture2D" uid="uid://wu3ybtydh4eb" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
-[ext_resource type="Texture2D" uid="uid://cpfs5ce0wo3om" path="res://resources/images/done.png" id="8_5rmt8"]
-[ext_resource type="Texture2D" uid="uid://bhw7vvo3hcg02" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
-[ext_resource type="Texture2D" uid="uid://cvyfb00u6o7be" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
+[ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
+[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="8_5rmt8"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
 
 [sub_resource type="Theme" id="Theme_at6sl"]
 
@@ -296,14 +296,15 @@ offset_left = 611.126
 offset_top = 714.207
 offset_right = 691.126
 offset_bottom = 752.207
+scale = Vector2(0.75, 0.75)
 theme = SubResource("Theme_at6sl")
 
 [node name="TextureRect" type="TextureRect" parent="Tasks/doneButton"]
 layout_mode = 0
-offset_left = -86.0
-offset_top = -67.0
-offset_right = 411.0
-offset_bottom = 144.0
+offset_left = -96.7622
+offset_top = -135.694
+offset_right = 400.238
+offset_bottom = 75.3063
 mouse_default_cursor_shape = 2
 texture = ExtResource("8_5rmt8")
 expand_mode = 1
@@ -311,10 +312,11 @@ expand_mode = 1
 [node name="nextQuestion" type="TextureButton" parent="Tasks"]
 visible = false
 layout_mode = 0
-offset_left = -240.631
-offset_top = 650.6
-offset_right = 208.369
-offset_bottom = 793.6
+offset_left = -217.713
+offset_top = 617.889
+offset_right = 231.287
+offset_bottom = 760.889
+scale = Vector2(0.9, 0.9)
 mouse_default_cursor_shape = 2
 
 [node name="Pause" type="Button" parent="."]
