@@ -34,7 +34,7 @@ func _on_text_changed(new_text: String):
 	print(Global.questoinsLimit)
 	
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 
 
 

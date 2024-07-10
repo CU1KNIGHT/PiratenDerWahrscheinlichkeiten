@@ -227,6 +227,6 @@ offset_bottom = 646.301
 theme_override_colors/font_color = Color(0.544685, 0.318414, 0.130455, 1)
 theme_override_fonts/font = ExtResource("11_kttqm")
 theme_override_font_sizes/font_size = 26
-text = "Tipp : 
+text = "Tipp :
 Runde dein Antwort auf zwei Nachkommastellen!
 (z.B 0.235 -> 0.24, 0.133 -> 0.13)"

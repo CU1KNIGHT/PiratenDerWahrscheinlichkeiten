@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw7twrpok8xlq"]
+[gd_scene load_steps=10 format=3 uid="uid://b3cekmw4kb821"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
 [ext_resource type="Texture2D" uid="uid://di46vbwu1wa1e" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
