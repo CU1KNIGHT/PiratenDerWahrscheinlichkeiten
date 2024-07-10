@@ -7,8 +7,13 @@ extends Control
 @onready var MASTER_BUS_ID = AudioServer.get_bus_index("Master")
 @onready var MUSIC_BUS_ID = AudioServer.get_bus_index("Music")
 @onready var SFX_BUS_ID = AudioServer.get_bus_index("SFX")
+var frageLimit=null
 
 func _ready():
+	print("questoinsLimit: "+str(Global.questoinsLimit))
+	frageLimit=$question_limit
+	frageLimit.connect("text_changed", Callable(self, "_on_text_changed"))
+	frageLimit.text=str(Global.questoinsLimit)
 	if AudioServer.is_bus_mute(MASTER_BUS_ID):
 		masterButtonSprite.play("muted")
 	else :
@@ -24,6 +29,9 @@ func _ready():
 	else:
 		sfxButtonSprite.play("unmuted")
 
+func _on_text_changed(new_text: String):
+	Global.questoinsLimit=int(frageLimit.text)
+	print(Global.questoinsLimit)
 
 func _on_back_pressed():
 	hide()
