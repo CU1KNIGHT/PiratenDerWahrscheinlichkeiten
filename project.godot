@@ -13,7 +13,8 @@ config_version=5
 config/name="Piraten Der Wahrscheinlichkeiten"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://resources/pirat captain (player).png"
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
