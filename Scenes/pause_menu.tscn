@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cu2sqwh1j3cby"]
 
-[ext_resource type="Texture2D" uid="uid://c5cg108tpmmok" path="res://resources/Game UI Design/pause menu/resume.svg" id="1_1mfov"]
-[ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_p5x46"]
-[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
+[ext_resource type="Texture2D" uid="uid://c5cg108tpmmok" path="res://resources/images/common/pause menu/resume.svg" id="1_1mfov"]
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_p5x46"]
+[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/images/common/icons/Century-Schoolbook/SCHLBKB.TTF" id="2_mpit2"]
 [ext_resource type="PackedScene" uid="uid://dh8nbett4j3m3" path="res://Scenes/pause_options_menu.tscn" id="4_fen65"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rbtn"]
@@ -36,6 +36,7 @@ layout_mode = 2
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
 icon = ExtResource("1_1mfov")
 
@@ -45,12 +46,14 @@ offset_left = 87.0
 offset_top = 50.0
 offset_right = 387.0
 offset_bottom = 126.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_mpit2")
 theme_override_font_sizes/font_size = 40
 text = "FORTSETZEN"
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
 icon = ExtResource("1_1mfov")
 
@@ -58,6 +61,7 @@ icon = ExtResource("1_1mfov")
 layout_mode = 0
 offset_right = 460.0
 offset_bottom = 149.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_mpit2")
 theme_override_font_sizes/font_size = 35
 text = "EINSTELLUNGEN"
@@ -66,6 +70,7 @@ vertical_alignment = 1
 
 [node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6rbtn")
 icon = ExtResource("1_1mfov")
 
@@ -73,6 +78,7 @@ icon = ExtResource("1_1mfov")
 layout_mode = 0
 offset_right = 457.0
 offset_bottom = 147.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_mpit2")
 theme_override_font_sizes/font_size = 40
 text = "HAUPTMENU"

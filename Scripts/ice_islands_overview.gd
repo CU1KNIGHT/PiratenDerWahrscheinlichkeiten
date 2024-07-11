@@ -7,6 +7,8 @@ var nachLavaInsel=null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("current_questions_file_path: "+str(Global.current_questions_file_path))
+	Global.current_questions_file_path=Global.Q2
 	Global.currentLevelSceneTasks=Global.MULTICHOICE_EIS_SCENE_PATH
 	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
 	$"die Eis Inseln".connect("pressed",Callable(self, "_on_die_eis_inseln_pressed"))

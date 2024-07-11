@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://cx45mucyy5s8k"]
 
 [ext_resource type="Script" path="res://Scripts/Tasks.gd" id="1_vqom6"]
-[ext_resource type="Texture2D" uid="uid://bhnybud34exqv" path="res://resources/design/Frage Fenster.png" id="2_c68du"]
-[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_k04hj"]
-[ext_resource type="Texture2D" uid="uid://cfc7j0j2th5om" path="res://resources/Game UI Design/icons/right.svg" id="4_21dd8"]
-[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="4_dkfeo"]
+[ext_resource type="Texture2D" uid="uid://dtrop46rbte6k" path="res://resources/images/background/wave pattern.png" id="2_k04hj"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://resources/images/multiple_choice_Tasks/Frage Fenster2.0.png" id="3_x4vpj"]
+[ext_resource type="Texture2D" uid="uid://bdcgqjjjswoi8" path="res://resources/images/common/icons/right.svg" id="4_21dd8"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/images/common/pause menu/pause.png" id="4_dkfeo"]
 [ext_resource type="Texture2D" uid="uid://kc7dge6tssj8" path="res://resources/images/Tasks/submit button.png" id="4_lejgu"]
-[ext_resource type="Texture2D" uid="uid://b1vgf8xnk0c5k" path="res://resources/images/Eingabe_Fenster.png" id="4_wgg4t"]
-[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="5_pdomd"]
-[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="6_paljw"]
+[ext_resource type="Texture2D" uid="uid://cufp6jlpu5uh" path="res://resources/images/Tasks/Eingabe_Fenster.png" id="4_wgg4t"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/images/common/pause menu/backToIslands.png" id="5_pdomd"]
+[ext_resource type="Texture2D" uid="uid://8m68vslnjj7r" path="res://resources/images/buttons/done.png" id="6_paljw"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="6_rar3a"]
-[ext_resource type="FontFile" uid="uid://6qcbwyn7t0x3" path="res://resources/Game UI Design/icons/Century-Schoolbook/CENSCBK.TTF" id="11_kttqm"]
+[ext_resource type="FontFile" uid="uid://6qcbwyn7t0x3" path="res://resources/images/common/icons/Century-Schoolbook/CENSCBK.TTF" id="11_kttqm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7ehg"]
 
@@ -45,17 +45,18 @@ offset_left = -819.29
 offset_top = -634.244
 offset_right = 1762.71
 offset_bottom = 1448.76
+mouse_default_cursor_shape = 2
 texture = ExtResource("2_k04hj")
 
-[node name="TextureRect" type="TextureRect" parent="Tasks"]
+[node name="qestion_background" type="TextureRect" parent="Tasks"]
 layout_mode = 0
 offset_left = -311.0
 offset_top = -342.0
-offset_right = 1497.0
-offset_bottom = 793.0
+offset_right = 1389.0
+offset_bottom = 858.0
 auto_translate = false
 localize_numeral_system = false
-texture = ExtResource("2_c68du")
+texture = ExtResource("3_x4vpj")
 expand_mode = 1
 
 [node name="Tipp" type="Label" parent="Tasks"]
@@ -101,6 +102,30 @@ expand_to_text_length = true
 virtual_keyboard_type = 3
 clear_button_enabled = true
 
+[node name="SubmitButton" type="TextureButton" parent="Tasks"]
+layout_mode = 1
+offset_left = 479.0
+offset_top = 362.0
+offset_right = 727.0
+offset_bottom = 459.0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Tasks/SubmitButton"]
+layout_mode = 1
+offset_left = 4.17109
+offset_top = 17.8197
+offset_right = 944.171
+offset_bottom = 330.82
+scale = Vector2(0.25, 0.25)
+auto_translate = false
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+texture = ExtResource("4_lejgu")
+expand_mode = 2
+stretch_mode = 5
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 1
@@ -109,10 +134,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -440.0
+offset_left = -726.0
 offset_top = -340.0
-offset_right = 260.0
-offset_bottom = -40.0
+offset_right = 445.0
+offset_bottom = -136.0
 grow_horizontal = 2
 grow_vertical = 2
 auto_translate = false
@@ -132,24 +157,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 justification_flags = 139
 language = "de"
-
-[node name="SubmitButton" type="TextureButton" parent="Tasks/VBoxContainer"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-stretch_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Tasks/VBoxContainer/SubmitButton"]
-layout_mode = 0
-offset_left = 237.337
-offset_top = 72.5504
-offset_right = 1322.34
-offset_bottom = 399.55
-scale = Vector2(0.25, 0.25)
-auto_translate = false
-localize_numeral_system = false
-mouse_default_cursor_shape = 2
-texture = ExtResource("4_lejgu")
-expand_mode = 1
 
 [node name="doneButton" type="Button" parent="Tasks"]
 visible = false
@@ -173,10 +180,10 @@ texture = ExtResource("6_paljw")
 
 [node name="feedback" type="TextureRect" parent="Tasks"]
 layout_mode = 0
-offset_left = 693.246
-offset_top = 368.916
-offset_right = 2193.25
-offset_bottom = 1868.92
+offset_left = 781.095
+offset_top = 370.733
+offset_right = 2281.1
+offset_bottom = 1870.74
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("4_21dd8")
 
@@ -213,6 +220,7 @@ offset_left = 1508.72
 offset_top = -328.935
 offset_right = 1626.72
 offset_bottom = -210.935
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hre3g")
 icon = ExtResource("4_dkfeo")
 

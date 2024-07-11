@@ -5,7 +5,7 @@ var paused = false
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 var island_names_mapper = null
-var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q1.csv1"
+
 var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
 var questions = []

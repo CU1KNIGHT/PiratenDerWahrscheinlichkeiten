@@ -1,0 +1,6 @@
+Das Gegenereignis ist wie die andere Seite einer Münze:
+
+1.Komplementäres Ereignis: Das Gegenereignis tritt ein, wenn ein bestimmtes Ereignis nicht eintritt, z.B. "Zahl werfen" statt "Kopf werfen".
+2.Verwandte Ereignisse: Das Gegenereignis ist eng mit dem ursprünglichen Ereignis verbunden, und seine Wahrscheinlichkeit kann leicht berechnet werden.
+3.Einfaches Verständnis: Das Gegenereignis ist immer das Gegenteil des Ereignisses, z.B. "es regnet nicht" statt "es regnet".
+4.Wahrscheinlichkeit berechnen: Die Wahrscheinlichkeit des Gegenereignisses erhält man, indem man die Wahrscheinlichkeit des Ereignisses von 1 subtrahiert.

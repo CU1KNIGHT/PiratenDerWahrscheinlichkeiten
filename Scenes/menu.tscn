@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://i2hyi4f1k7mi"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_gjep7"]
-[ext_resource type="Texture2D" uid="uid://cew5lkeypxd28" path="res://resources/Game-Task-and-Questions/islands/Inseln - Hintergrund.svg" id="2_grmhl"]
-[ext_resource type="Texture2D" uid="uid://di46vbwu1wa1e" path="res://resources/Game-Task-and-Questions/islands/Inseln-Alle.svg" id="3_v2wmp"]
-[ext_resource type="Texture2D" uid="uid://d5h0mrk3arvp" path="res://resources/Game UI Design/icons/play.svg" id="3_x70r4"]
-[ext_resource type="Texture2D" uid="uid://cnmbtcxwe6857" path="res://resources/Game UI Design/icons/close.svg" id="4_oi6gm"]
-[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/Game UI Design/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
-[ext_resource type="Texture2D" uid="uid://gpj6e8qq8cc4" path="res://resources/Game UI Design/icons/settings.svg" id="6_7vh5f"]
-[ext_resource type="Texture2D" uid="uid://6shn4iqoj8nx" path="res://resources/design/Title-Logo.png" id="8_ixgxf"]
+[ext_resource type="Texture2D" uid="uid://nf1b7488fby1" path="res://resources/images/background/Inseln - Hintergrund.svg" id="2_5xk7r"]
+[ext_resource type="Texture2D" uid="uid://gsryculsaykr" path="res://resources/images/islands/Inseln-Alle.svg" id="3_hke5s"]
+[ext_resource type="Texture2D" uid="uid://dhoonq56x1qki" path="res://resources/images/common/icons/play.svg" id="3_x70r4"]
+[ext_resource type="Texture2D" uid="uid://dww12pesgjhul" path="res://resources/images/common/icons/close.svg" id="4_oi6gm"]
+[ext_resource type="FontFile" uid="uid://dw4iukt1mkhmb" path="res://resources/images/common/icons/Century-Schoolbook/SCHLBKB.TTF" id="5_88lf4"]
+[ext_resource type="Texture2D" uid="uid://6ocjonpena1k" path="res://resources/images/common/icons/settings.svg" id="6_7vh5f"]
+[ext_resource type="Texture2D" uid="uid://d3qegqluelvvp" path="res://resources/images/background/Title-Logo.png" id="8_jytmh"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6nmb8"]
 grow_begin = 0.0
@@ -18,7 +18,7 @@ thickness = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74qox"]
 
-[node name="Menu2" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +38,7 @@ offset_right = 177.0
 offset_bottom = 674.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_grmhl")
+texture = ExtResource("2_5xk7r")
 expand_mode = 2
 
 [node name="Inseln" type="TextureRect" parent="."]
@@ -47,7 +47,7 @@ offset_left = 376.0
 offset_top = -52.0
 offset_right = 1193.0
 offset_bottom = 698.0
-texture = ExtResource("3_v2wmp")
+texture = ExtResource("3_hke5s")
 expand_mode = 1
 
 [node name="Play" type="Button" parent="."]
@@ -140,7 +140,7 @@ uppercase = true
 [node name="Title-logo" type="Sprite2D" parent="."]
 position = Vector2(258, 140)
 scale = Vector2(0.39767, 0.39767)
-texture = ExtResource("8_ixgxf")
+texture = ExtResource("8_jytmh")
 
 [connection signal="pressed" from="Play" to="." method="_on_spielen_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_schließen_pressed"]

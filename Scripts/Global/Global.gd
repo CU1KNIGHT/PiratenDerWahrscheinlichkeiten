@@ -2,11 +2,12 @@ extends Node
 
 # Define your global variables here
 #from subject column in csv files
-const Q3="res://resources/Game-Task-and-Questions/Tasks/Q3.csv1"
-const Q2="res://resources/Game-Task-and-Questions/Tasks/Q2.csv1"
+const Q3="res://resources/csv/Tasks/Q3.csv1"
+const Q2="res://resources/csv/Tasks/Q2.csv1"
+const Q1="res://resources/csv/Tasks/Q1.csv1"
 const island_names_mapper_file_path="res://Scripts/jsonFiles/islandsMap.json"
 const EXPLANATION_TEXTS_JSON_PATH="res://resources/json/islands_explanation.json"
-var current_questions_file_path = Q2
+var current_questions_file_path = Q1
 const EIS_OVERVIEW_SCENE_PATH="res://Scenes/ice_islands_overview.tscn"
 const LAVA_OVERVIEW_SCENE_PATH="res://Scenes/lava_islands_overview.tscn"
 
@@ -28,11 +29,12 @@ var basics_islands = {
 	"ereignisse-island": false,
 	"gegenereignis-island": false,
 	"lapalce-island": false,
-	"zufallexperiment-island": false
+	"zufallexperiment-island": false,
+	"eis-island":false
 }
 #buttons src path
-var rightIcon = "res://resources/Game UI Design/icons/right.svg"
-var wrongIcon = "res://resources/Game UI Design/icons/false.svg"
-var nextButtonImagePath="res://resources/images/next.png"
+var rightIcon = "res://resources/images/common/icons/right.svg"
+var wrongIcon = "res://resources/images/common/icons/false.svg"
+var nextButtonImagePath="res://resources/images/buttons/next.png"
 #limits
 var questoinsLimit=2

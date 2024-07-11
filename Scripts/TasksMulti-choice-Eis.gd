@@ -5,8 +5,7 @@ var paused = false
 
 var island_names_mapper_file_path = "res://Scripts/jsonFiles/islandsMap.json"
 var island_names_mapper = null
-var questions_file_path = "res://resources/Game-Task-and-Questions/Tasks/Q2.csv1"
-var answers_file_path = "res://resources/Game-Task-and-Questions/Tasks/user_answers.csv1"
+var questions_file_path = null
 var column_mapping_file_path = "res://Scripts/jsonFiles/column_mapping.json"
 var questions = []
 var current_question = {}
@@ -22,8 +21,6 @@ var buttonAtexture=null
 var buttonBtexture=null
 var buttonCtexture=null
 var buttonDtexture=null
-var rightIcon = "res://resources/Game UI Design/icons/right.svg"
-var wrongIcon = "res://resources/Game UI Design/icons/false.svg"
 var texture_rect = null
 var initTextureRectButtonA=null
 var initTextureRectButtonB=null
@@ -31,6 +28,8 @@ var initTextureRectButtonC=null
 var initTextureRectButtonD=null
 var answerIsSubmited=false
 func _ready():
+	Global.current_questions_file_path=Global.Q2
+	print("current_questions_file_path: "+str(Global.current_questions_file_path))
 	answerIsSubmited=false
 	current_island = get_tree().current_scene
 	doneButton =  $Tasks/doneButton
@@ -47,12 +46,12 @@ func _ready():
 	nextButton.set_texture_normal(load(Global.nextButtonImagePath))
 	# Seed the random number generator
 	randomize()
-	TranslationServer.set_locale("de")
+
 		# Load islands-subject mapper tions from file
 	load_column_mapping(column_mapping_file_path)
 	print(column_mapping)
 	
-	load_questions_from_file(questions_file_path)
+	load_questions_from_file(Global.current_questions_file_path)
 	print(column_mapping)
 	
 	load_islands_names(island_names_mapper_file_path)
@@ -195,16 +194,15 @@ func _on_answer_button_pressed(button,textureRect):
 func submitAnswer(user_answer,textureRect):
 
 	var is_correct = check_answer(user_answer, current_question["correct_answer"])
-	save_answer(current_question["ID"], current_question["question_text"], current_question["correct_answer"], user_answer, answers_file_path)
 
 	if is_correct:
 
-		textureRect.texture=load(rightIcon)
+		textureRect.texture=load(Global.rightIcon)
 		print("Correct!")
 
 		total_correct += 1
 	else:
-		textureRect.texture=load(wrongIcon)
+		textureRect.texture=load(Global.wrongIcon)
 		print("Incorrect. The correct answer is: " + current_question["correct_answer"])
 	nextButton.show()
 
@@ -213,20 +211,6 @@ func check_answer(user_answer, correct_answer):
 	print("check_answer:correct_answer '"+correct_answer+"'")
 	return user_answer.strip_edges().to_lower() == correct_answer.strip_edges().to_lower()
 
-func save_answer(question_id: String, question_text: String, correct_answer: String, user_answer: String, file_path: String):
-	var file: FileAccess
-	if FileAccess.file_exists(file_path):
-		file = FileAccess.open(file_path, FileAccess.WRITE_READ)
-		file.seek_end()  # Move the file cursor to the end of the file
-	else:
-		file = FileAccess.open(file_path, FileAccess.WRITE)
-
-	if file:
-		var entry = question_id + "," + question_text + "," + correct_answer + "," + user_answer + "\n"
-		file.store_string(entry)
-		file.close()
-	else:
-		print("Failed to open file for writing.")
 
 func show_score():
 	var total_questions = questions.size()

@@ -30,7 +30,7 @@ func _ready():
 	feedback=$Tasks/feedback
 	nextButton=$Tasks/nextQuestion
 	answerInputField=$Tasks/inputBackground/AnswerInput
-	submitInputButton=$Tasks/VBoxContainer/SubmitButton
+	submitInputButton=$Tasks/SubmitButton
 	doneButton = $Tasks/doneButton
 	questionTextField=$Tasks/VBoxContainer/questionText
 	questionTitle=$Tasks/title
@@ -54,11 +54,11 @@ func _ready():
 	#load_islands_names(island_names_mapper_file_path)
 	# Connect the button press signal to the handler function
 
-	$Tasks/VBoxContainer/SubmitButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
+	submitInputButton.connect("pressed", Callable(self, "_on_SubmitButton_pressed"))
 
 	nextButton.set_texture_normal(load(Global.nextButtonImagePath))
 	nextButton.connect("pressed", Callable(self, "get_next_question"))
-	$Tasks/doneButton.connect("pressed", Callable(self, "_on_done_button_pressed"))
+	doneButton.connect("pressed", Callable(self, "_on_done_button_pressed"))
 	$Pause.connect("pressed",Callable(self, "_on_pause_pressed"))
 	$BackToIslands.connect("pressed",Callable(self, "_on_back_to_islands_pressed"))
 	answerInputField.connect("focus_entered",Callable(self, "_on_focus_answer_input_entered"))
@@ -108,7 +108,7 @@ func load_questions_from_file(file_path):
 				"title": data[header.find(column_mapping["title"])],
 				"question_text": data[header.find(column_mapping["question_text"])],
 				#"options": data[header.find(column_mapping["options"])].substr(1, data[header.find(column_mapping["options"])].length() - 2).split("; "),
-				"correct_answer": data[header.find(column_mapping["correct_answer"])]
+				"correct_answer": data[header.find(column_mapping["correct_answer"])].replace(",",".")
 			}
 			questions.append(question)
 			print(question)
@@ -226,9 +226,9 @@ func show_score():
 		#Global.lava=false
 	questionTextField.text = score_text
 	answerInputField.hide()
-	$Tasks/VBoxContainer/SubmitButton.hide()
-	$Tasks/doneButton.disabled=false
-	var doneButton = $Tasks/doneButton
+	submitInputButton.hide()
+	doneButton.disabled=false
+
 	doneButton.disabled = false
 	doneButton.visible =true
 	answerInputField.hide()
@@ -270,9 +270,9 @@ func _on_focus_answer_input_exited():
 func replaceComma(new_text):
 	var valid_text = ""
 	for i in range(new_text.length()):
-		var char = new_text[i]
-		if char == ",":
+		var charachter = new_text[i]
+		if charachter == ",":
 			valid_text += "."
-		elif char:
-			valid_text += char
+		elif charachter:
+			valid_text += charachter
 	return valid_text

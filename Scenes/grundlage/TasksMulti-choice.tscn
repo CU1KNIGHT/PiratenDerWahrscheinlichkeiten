@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://qk52qtuii62n"]
 
 [ext_resource type="Script" path="res://Scripts/multi_choice.gd" id="1_pvu58"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_l12s5"]
-[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_pspbb"]
-[ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="4_ot06x"]
-[ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="5_go3nq"]
-[ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="6_a6qia"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://resources/images/multiple_choice_Tasks/Frage Fenster2.0.png" id="2_l12s5"]
+[ext_resource type="Texture2D" uid="uid://dtrop46rbte6k" path="res://resources/images/background/wave pattern.png" id="2_pspbb"]
+[ext_resource type="Texture2D" uid="uid://b5eo0rm5s6vte" path="res://resources/images/multiple_choice_Tasks/OptionButton-A.png" id="4_btkdb"]
+[ext_resource type="Texture2D" uid="uid://bdqfqru0wsav" path="res://resources/images/multiple_choice_Tasks/OptionButton-B.png" id="5_n64ty"]
+[ext_resource type="Texture2D" uid="uid://dbias4c1oml1t" path="res://resources/images/multiple_choice_Tasks/OptionButton-C.png" id="6_rfm2w"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_2neo2"]
-[ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="7_ba4sp"]
-[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="8_5rmt8"]
-[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="8_qupoe"]
-[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="9_o8dlw"]
+[ext_resource type="Texture2D" uid="uid://dtjog6v672vtl" path="res://resources/images/multiple_choice_Tasks/OptionButton-D.png" id="8_5rmt8"]
+[ext_resource type="Texture2D" uid="uid://8m68vslnjj7r" path="res://resources/images/buttons/done.png" id="8_hnsas"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/images/common/pause menu/pause.png" id="8_qupoe"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/images/common/pause menu/backToIslands.png" id="9_o8dlw"]
 
 [sub_resource type="Theme" id="Theme_at6sl"]
 
@@ -128,7 +128,7 @@ offset_top = 61.7894
 offset_right = -765.249
 offset_bottom = 145.789
 mouse_default_cursor_shape = 2
-texture = ExtResource("4_ot06x")
+texture = ExtResource("4_btkdb")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_A"]
@@ -161,7 +161,7 @@ offset_top = 161.742
 offset_right = -787.158
 offset_bottom = 245.741
 mouse_default_cursor_shape = 2
-texture = ExtResource("5_go3nq")
+texture = ExtResource("5_n64ty")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_B"]
@@ -195,7 +195,7 @@ offset_top = 259.877
 offset_right = -805.254
 offset_bottom = 343.877
 mouse_default_cursor_shape = 2
-texture = ExtResource("6_a6qia")
+texture = ExtResource("6_rfm2w")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_C"]
@@ -230,7 +230,7 @@ offset_right = -825.253
 offset_bottom = 436.56
 size_flags_vertical = 8
 mouse_default_cursor_shape = 2
-texture = ExtResource("7_ba4sp")
+texture = ExtResource("8_5rmt8")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_D"]
@@ -306,7 +306,7 @@ offset_top = -135.694
 offset_right = 400.238
 offset_bottom = 75.3063
 mouse_default_cursor_shape = 2
-texture = ExtResource("8_5rmt8")
+texture = ExtResource("8_hnsas")
 expand_mode = 1
 
 [node name="nextQuestion" type="TextureButton" parent="Tasks"]
@@ -324,6 +324,7 @@ offset_left = 1508.72
 offset_top = -328.935
 offset_right = 1626.72
 offset_bottom = -210.935
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
 icon = ExtResource("8_qupoe")
 
@@ -332,6 +333,7 @@ offset_left = 1508.72
 offset_top = -187.184
 offset_right = 1626.72
 offset_bottom = -69.1839
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
 icon = ExtResource("9_o8dlw")
 

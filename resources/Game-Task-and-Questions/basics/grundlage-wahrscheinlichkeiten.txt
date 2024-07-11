@@ -1,7 +1,0 @@
-Wahrscheinlichkeiten sind wie Wetten mit Zahlen:
-
-1.Gewinne und Chancen: Sie zeigen, wie wahrscheinlich es ist, dass ein Ereignis eintritt, ähnlich wie die Chancen bei einer Wette.
-2.Zahlen zwischen 0 und 1: Eine Wahrscheinlichkeit von 0 bedeutet, dass das Ereignis nicht passiert, und 1 bedeutet, dass es sicher passiert.
-3.Einfache Experimente: Bei Spielen wie dem Münzwurf beträgt die Wahrscheinlichkeit für Kopf 0,5, da beide Ergebnisse gleich wahrscheinlich sind.
-4.Spaß mit Wahrscheinlichkeiten: Spiele helfen, Wahrscheinlichkeiten zu verstehen, z.B. die Chance, eine bestimmte Zahl zu würfeln oder dass ein Lieblingsteam gewinnt.
-5.Regeln beachten: Es gibt Regeln wie Addition und Multiplikation von Wahrscheinlichkeiten, die helfen, Chancen zu berechnen und kluge Wetten abzuschließen.

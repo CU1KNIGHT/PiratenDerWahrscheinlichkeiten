@@ -29,7 +29,7 @@ func _ready():
 	else:
 		sfxButtonSprite.play("unmuted")
 
-func _on_text_changed(new_text: String):
+func _on_text_changed(_t):
 	Global.questoinsLimit=int(frageLimit.text)
 	print(Global.questoinsLimit)
 

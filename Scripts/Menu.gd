@@ -16,3 +16,6 @@ func _on_optionen_pressed():
 
 func _on_schließen_pressed():
 	get_tree().quit()
+
+
+

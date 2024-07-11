@@ -1,0 +1,7 @@
+Ereignisse sind wie verschiedene Möglichkeiten bei einem Spiel:
+
+1.Verschiedene Ergebnisse: Ein Ereignis ist ein mögliches Ergebnis, z.B. "Kopf" oder "Zahl" beim Münzwurf.
+2.Teil eines Experiments: Ein Ereignis ist das Resultat einer Aktion, wie "eine gerade Zahl würfeln".
+3.Mehrere Ereignisse: Es gibt oft mehrere mögliche Ereignisse, z.B. "eine rote Karte ziehen" oder "eine Herz-Karte ziehen".
+4.Wahrscheinlichkeit: Die Wahrscheinlichkeit eines Ereignisses misst, wie wahrscheinlich es ist, dass es eintritt, und liegt zwischen 0 und 1.
+5.Alltagsbeispiele: Ereignisse finden sich im Alltag, z.B. "Regen" oder "Sonnenschein" bei der Wettervorhersage oder "Sieg" oder "Niederlage" bei einem Sportspiel.

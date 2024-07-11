@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7rr1kv2tlwku"]
 
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="1_xn6fr"]
-[ext_resource type="Texture2D" uid="uid://bfqknbnnr0wdj" path="res://resources/1.Szene(Story)/storytelling-01.svg" id="2_45vkv"]
+[ext_resource type="Texture2D" uid="uid://bnuw7jjcf1xf1" path="res://resources/images/introduction/storytelling-01.svg" id="1_1g8ui"]
+[ext_resource type="Texture2D" uid="uid://v8n7tihc1ma7" path="res://resources/images/introduction/ja_los.svg" id="2_3d1xd"]
 [ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="3_drdil"]
 [ext_resource type="AudioStream" uid="uid://niy8p71la7ko" path="res://resources/audio/sfx/intro/seagull.mp3" id="4_isyn2"]
 [ext_resource type="AudioStream" uid="uid://buckdy4rm33k3" path="res://resources/audio/sfx/intro/shipbell.wav" id="5_jy4mb"]
@@ -19,7 +19,7 @@ layout_mode = 0
 offset_top = -20.0
 offset_right = 1152.0
 offset_bottom = 902.0
-texture = ExtResource("2_45vkv")
+texture = ExtResource("1_1g8ui")
 expand_mode = 1
 
 [node name="Sprechblase" type="Label" parent="."]
@@ -34,14 +34,15 @@ text = "\"Willkommen an Bord, junger Matrose! Ich bin Kapitän Flint und werde d
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="ja_los_gehts" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 578.0
 offset_top = 463.0
 offset_right = 1150.0
 offset_bottom = 646.0
 size_flags_vertical = 8
-texture_normal = ExtResource("1_xn6fr")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_3d1xd")
 ignore_texture_size = true
 script = ExtResource("3_drdil")
 

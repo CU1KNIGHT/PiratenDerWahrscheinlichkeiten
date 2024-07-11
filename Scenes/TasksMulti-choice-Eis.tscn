@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://k146esr0uhfg"]
 
 [ext_resource type="Script" path="res://Scripts/TasksMulti-choice-Eis.gd" id="1_q7rgu"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="2_hto3o"]
-[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_uc44h"]
-[ext_resource type="Texture2D" uid="uid://drab1qpp0lprh" path="res://resources/design/OptionButton-A.png" id="3_ky44r"]
-[ext_resource type="Texture2D" uid="uid://cqq806aw4kagy" path="res://resources/design/OptionButton-B.png" id="4_4ctwk"]
-[ext_resource type="Texture2D" uid="uid://ia71iopkm8i3" path="res://resources/design/OptionButton-C.png" id="5_51r4m"]
-[ext_resource type="Texture2D" uid="uid://bh4vyj6myg36x" path="res://resources/design/OptionButton-D.png" id="6_lybj6"]
-[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="7_xrqhp"]
-[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="8_1ffse"]
-[ext_resource type="Texture2D" uid="uid://dhveeg1abgne8" path="res://resources/images/done.png" id="8_b0sxr"]
+[ext_resource type="Texture2D" uid="uid://dtrop46rbte6k" path="res://resources/images/background/wave pattern.png" id="2_uc44h"]
+[ext_resource type="Texture2D" uid="uid://bwoxi64dnrn3u" path="res://resources/images/multiple_choice_Tasks/Frage Fenster.png" id="3_4w8gy"]
+[ext_resource type="Texture2D" uid="uid://b5eo0rm5s6vte" path="res://resources/images/multiple_choice_Tasks/OptionButton-A.png" id="4_pj00j"]
+[ext_resource type="Texture2D" uid="uid://bdqfqru0wsav" path="res://resources/images/multiple_choice_Tasks/OptionButton-B.png" id="5_ps24y"]
+[ext_resource type="Texture2D" uid="uid://dbias4c1oml1t" path="res://resources/images/multiple_choice_Tasks/OptionButton-C.png" id="6_mjyny"]
+[ext_resource type="Texture2D" uid="uid://dtjog6v672vtl" path="res://resources/images/multiple_choice_Tasks/OptionButton-D.png" id="7_vkavf"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/images/common/pause menu/pause.png" id="7_xrqhp"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/images/common/pause menu/backToIslands.png" id="8_1ffse"]
+[ext_resource type="Texture2D" uid="uid://8m68vslnjj7r" path="res://resources/images/buttons/done.png" id="8_b0sxr"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="9_fxsw2"]
 
 [sub_resource type="Theme" id="Theme_6xp4m"]
@@ -55,7 +55,7 @@ offset_bottom = 737.0
 scale = Vector2(1.1586, 1.05906)
 auto_translate = false
 localize_numeral_system = false
-texture = ExtResource("2_hto3o")
+texture = ExtResource("3_4w8gy")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tasks"]
@@ -129,7 +129,7 @@ offset_top = 61.7894
 offset_right = -765.249
 offset_bottom = 145.789
 mouse_default_cursor_shape = 2
-texture = ExtResource("3_ky44r")
+texture = ExtResource("4_pj00j")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_A"]
@@ -162,7 +162,7 @@ offset_top = 161.742
 offset_right = -787.158
 offset_bottom = 245.741
 mouse_default_cursor_shape = 2
-texture = ExtResource("4_4ctwk")
+texture = ExtResource("5_ps24y")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_B"]
@@ -196,7 +196,7 @@ offset_top = 259.877
 offset_right = -805.254
 offset_bottom = 343.877
 mouse_default_cursor_shape = 2
-texture = ExtResource("5_51r4m")
+texture = ExtResource("6_mjyny")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_C"]
@@ -231,7 +231,7 @@ offset_right = -825.253
 offset_bottom = 436.56
 size_flags_vertical = 8
 mouse_default_cursor_shape = 2
-texture = ExtResource("6_lybj6")
+texture = ExtResource("7_vkavf")
 expand_mode = 1
 
 [node name="Answer" type="Label" parent="Tasks/answers_box/Answer_D"]
@@ -322,6 +322,7 @@ offset_left = 1508.72
 offset_top = -328.935
 offset_right = 1626.72
 offset_bottom = -210.935
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
 icon = ExtResource("7_xrqhp")
 
@@ -330,6 +331,7 @@ offset_left = 1508.72
 offset_top = -187.184
 offset_right = 1626.72
 offset_bottom = -69.1839
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_r2ebi")
 icon = ExtResource("8_1ffse")
 

@@ -1,0 +1,6 @@
+Ein Laplace-Versuch ist ein Experiment, bei dem jedes mögliche Ergebnis gleich wahrscheinlich ist, wie bei einem fairen Würfel oder einer fairen Münze.
+
+1.Grundprinzip: Jedes Ergebnis hat die gleiche Wahrscheinlichkeit.
+2.Anzahl der Ergebnisse: Die Anzahl der möglichen Ergebnisse entspricht den verschiedenen Ausgängen des Experiments (z.B. 6 bei einem Würfel, 2 bei einer Münze).
+3.Wahrscheinlichkeitsberechnung: Die Wahrscheinlichkeit eines Ereignisses wird berechnet, indem die Anzahl der günstigen Ergebnisse durch die Anzahl aller möglichen Ergebnisse geteilt wird.
+4.Anwendungen: Laplace-Versuche gelten für Szenarien wie das Ziehen von Kugeln aus einem Beutel oder das Würfeln eines Würfels, solange jedes Ergebnis gleich wahrscheinlich ist.

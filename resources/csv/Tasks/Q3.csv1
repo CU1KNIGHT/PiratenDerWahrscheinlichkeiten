@@ -1,0 +1,11 @@
+ID,subject,title,question,richtige Antwort
+1,Laplace-Versuch,Piraten und Würfelspiel,"Was ist die Wahrscheinlichkeit, dass die Summe der Augen 7 ist, wenn eine Gruppe von Piraten ein Würfelspiel mit zwei Würfeln spielt?","0,17"
+2,Laplace-Versuch,Piratenspiel mit Karten,"Was ist die Wahrscheinlichkeit, ein Ass zu ziehen, wenn ein Piratenspiel aus 52 Karten besteht?","0,08"
+3,Zufallsexperiment,Piratenglücksrad,"Was ist die Wahrscheinlichkeit, dass das Rad auf einem bestimmten Sektor landet, wenn ein Piratenglücksrad in 8 gleich große Sektoren unterteilt ist?","0,13"
+4,Zufallsexperiment,Piratenlose,"Was ist die Wahrscheinlichkeit, einen blauen Edelstein zu ziehen, wenn eine Schatztruhe 5 rote, 3 blaue und 2 grüne Edelsteine enthält?","0,3"
+5,Gegenereignis,Piratenmünzwurf,"Was ist die Wahrscheinlichkeit des Gegenereignisses von Kopf bei einem Münzwurf auf dem Piratenschiff?","0,5"
+6,Gegenereignis,Piratenwürfeln,"Was ist die Wahrscheinlichkeit des Gegenereignisses von einer 6 bei einem Würfelwurf?","0,83"
+7,Ereignisse,Piraten-Glücksspiel,"Was ist die Wahrscheinlichkeit, dass ein bestimmtes Symbol erscheint, wenn ein Glücksspielautomat auf dem Piratenschiff 10 Symbole hat?","0,1"
+8,Ereignisse,Piratenurne,"Was ist die Wahrscheinlichkeit, eine weiße Perle zu ziehen, wenn eine Urne auf dem Piratenschiff 4 weiße und 6 schwarze Perlen enthält?","0,4"
+9,Wahrscheinlichkeiten,Piratenschule,"Was ist die Wahrscheinlichkeit, dass ein zufällig gewählter Pirat weiblich ist, wenn auf einem Piratenschiff 12 weibliche und 18 männliche Piraten sind?","0,4"
+10,Wahrscheinlichkeiten,Piratenlotto,"Was ist die Wahrscheinlichkeit, dass die erste gezogene Zahl 7 ist, wenn man beim Piratenlotto 6 Zahlen aus 49 wählt?","0,02"

@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://brptu8uiook6b"]
 
 [ext_resource type="Script" path="res://Scripts/explanation.gd" id="1_c5fxr"]
-[ext_resource type="Texture2D" uid="uid://6v8myl0bgst4" path="res://resources/images/wave pattern.png" id="2_rejwp"]
-[ext_resource type="Texture2D" uid="uid://74jddlxa53o2" path="res://resources/Game-Task-and-Questions/islands/Inseln-Grundlagen.svg" id="3_rcfry"]
-[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://quistion and task UI/Frage Fenster2.0.png" id="4_6ks3n"]
-[ext_resource type="Texture2D" uid="uid://uxncq027kxy7" path="res://resources/1.Szene(Story)/Button 1.Szene.svg" id="5_gpkrd"]
-[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/Game UI Design/pause menu/pause.png" id="6_ae6wg"]
+[ext_resource type="Texture2D" uid="uid://dtrop46rbte6k" path="res://resources/images/background/wave pattern.png" id="2_rejwp"]
+[ext_resource type="Texture2D" uid="uid://ccrqrfd6aflpd" path="res://resources/images/islands/Inseln-Grundlagen.svg" id="3_rcfry"]
+[ext_resource type="Texture2D" uid="uid://cgt72wc7v4s5j" path="res://resources/images/multiple_choice_Tasks/Frage Fenster2.0.png" id="4_8y1nx"]
+[ext_resource type="Texture2D" uid="uid://b4wdau3wrw3rk" path="res://resources/images/buttons/white_button.svg" id="5_yfisk"]
+[ext_resource type="Texture2D" uid="uid://rt20u5iqsmym" path="res://resources/images/common/pause menu/pause.png" id="6_ae6wg"]
 [ext_resource type="PackedScene" uid="uid://cu2sqwh1j3cby" path="res://Scenes/pause_menu.tscn" id="7_e3pjf"]
-[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/Game UI Design/pause menu/backToIslands.png" id="8_bpjkl"]
+[ext_resource type="Texture2D" uid="uid://di08uaxmkwkst" path="res://resources/images/common/pause menu/backToIslands.png" id="8_bpjkl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mo8p"]
 
@@ -35,7 +35,7 @@ texture = ExtResource("3_rcfry")
 [node name="FrageFenster2_0" type="Sprite2D" parent="."]
 position = Vector2(573, 322)
 scale = Vector2(1.29565, 1.28938)
-texture = ExtResource("4_6ks3n")
+texture = ExtResource("4_8y1nx")
 
 [node name="explanation_text" type="TextEdit" parent="."]
 offset_left = 157.0
@@ -57,7 +57,8 @@ offset_right = 1245.0
 offset_bottom = 646.0
 scale = Vector2(0.471238, 0.724721)
 size_flags_vertical = 8
-texture_normal = ExtResource("5_gpkrd")
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_yfisk")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="DoneButton"]
